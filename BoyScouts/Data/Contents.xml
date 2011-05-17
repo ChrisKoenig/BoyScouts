@@ -6,4 +6,5 @@
   <Page Title="Ranks" PageIndex="4" ImagePath="/Images/Contents/Ranks.png" />
   <Page Title="Merit Badges" PageIndex="5" ImagePath="/Images/Contents/MeritBadges.png" />
   <Page Title="Links" PageIndex="6" ImagePath="/Images/Contents/Links.png" />
+  <Page Title="About" PageIndex="7" ImagePath="/Images/Contents/About.png" />
 </Contents>
