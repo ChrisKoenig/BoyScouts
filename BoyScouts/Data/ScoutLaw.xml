@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScoutLaw>
+  <Law>
+    <Title>Trustworthy</Title>
+    <Description>A Scout tells the truth. He is honest, and he keeps his promises. People can depend on him.</Description>
+  </Law>
+  <Law>
+    <Title>Loyal</Title>
+    <Description>A Scout is loyal to those to whom loyalty is due.</Description>
+  </Law>
+  <Law>
+    <Title>Helpful</Title>
+    <Description>A Scout cares about other people. He helps others without expecting payment or reward. He fulfills his duties to his family by helping at home.</Description>
+  </Law>
+  <Law>
+    <Title>Friendly</Title>
+    <Description>A Scout is a friend to all. He is a brother to other Scouts. He offers his friendship to people of all races, religions, and nations, and respects them even if their beliefs and customs are different from his own.</Description>
+  </Law>
+  <Law>
+    <Title>Courteous</Title>
+    <Description>A Scout is polite to people of all ages and positions. He understands that using good manners makes it easier for people to get along.</Description>
+  </Law>
+  <Law>
+    <Title>Kind</Title>
+    <Description>A Scout treats others as he wants to be treated. He knows there is strength in being gentle. He does not harm or kill any living thing without good reason.</Description>
+  </Law>
+  <Law>
+    <Title>Obedient</Title>
+    <Description>A Scout follows the rules of his family, school, and troop. He obeys the laws of his community and country. If he thinks these rules and laws are unfair, he seeks to have them changed in an orderly way.</Description>
+  </Law>
+  <Law>
+    <Title>Cheerful</Title>
+    <Description>A Scout looks for the bright side of life. He cheerfully does tasks that come his way and tries his best to make others happy, too.</Description>
+  </Law>
+  <Law>
+    <Title>Thrifty</Title>
+    <Description>A Scout works to pay his way and to help others. He saves for the future. He protects and conserves natural resources. He is careful in his use of time and property.</Description>
+  </Law>
+  <Law>
+    <Title>Brave</Title>
+    <Description>A Scout faces danger even if he is afraid.</Description>
+  </Law>
+  <Law>
+    <Title>Clean</Title>
+    <Description>A Scout is reverent toward God. He is faithful in his religious duties. He respects the beliefs of others.</Description>
+  </Law>
+  <Law>
+    <Title>Reverent</Title>
+    <Description>He is reverent toward God. He is faithful in his religious duties and respects the convictions of others in matters of custom and religion.</Description>
+  </Law>
+</ScoutLaw>
