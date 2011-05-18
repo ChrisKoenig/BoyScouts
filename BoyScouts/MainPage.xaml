@@ -15,7 +15,8 @@
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
                             DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
-                            shell:SystemTray.IsVisible="True" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
+                            shell:SystemTray.IsVisible="True"
+                            d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
 
         <!-- Contents ItemsPanel Templates -->
@@ -80,8 +81,7 @@
                 <StackPanel Grid.Column="1"
                             VerticalAlignment="Top">
                     <TextBlock Text="{Binding Name}"
-                               Style="{StaticResource PhoneTextLargeStyle}"
-                               FontFamily="{StaticResource PhoneFontFamilySemiBold}"
+                               Style="{StaticResource MeritBadgeNameStyle}"
                                Margin="12,-12,12,6" />
                     <Button Content="Handbook"
                             Click="HandbookButton_Click"
@@ -125,27 +125,27 @@
                 <TextBlock Text="{Binding Name}"
                            FontSize="56"
                            Opacity=".4"
-                           TextAlignment="Center" Width="420" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                <Image HorizontalAlignment="Center" Width="122" Height="150" VerticalAlignment="Center" Source="{Binding ImageUrl}"/>
+                           TextAlignment="Center"
+                           Width="420"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center" />
+                <Image HorizontalAlignment="Center"
+                       Width="122"
+                       Height="150"
+                       VerticalAlignment="Center"
+                       Source="{Binding ImageUrl}" />
             </Grid>
         </DataTemplate>
 
     </phone:PhoneApplicationPage.Resources>
 
-    <!-- Phone Resources -->
-    <phone:PhoneApplicationPage.FontFamily>
-        <StaticResource ResourceKey="PhoneFontFamilyNormal" />
-    </phone:PhoneApplicationPage.FontFamily>
-    <phone:PhoneApplicationPage.FontSize>
-        <StaticResource ResourceKey="PhoneFontSizeNormal" />
-    </phone:PhoneApplicationPage.FontSize>
-    <phone:PhoneApplicationPage.Foreground>
-        <StaticResource ResourceKey="PhoneForegroundBrush" />
-    </phone:PhoneApplicationPage.Foreground>
-
     <!-- LAYOUT ROOT -->
     <controls:Panorama x:Name="LayoutRoot"
                        Title="boy scouts">
+        <controls:Panorama.Background>
+            <ImageBrush ImageSource="/Images/background.png"
+                        Stretch="UniformToFill" />
+        </controls:Panorama.Background>
 
         <!-- CONTENTS -->
         <controls:PanoramaItem x:Name="ContentsPanel"

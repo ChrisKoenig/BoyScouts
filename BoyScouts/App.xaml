@@ -8,6 +8,13 @@
     <Application.Resources>
         <vm:GlobalViewModelLocator xmlns:vm="clr-namespace:BoyScouts.ViewModels"
                                    x:Key="Locator" />
+        <Style x:Key="MeritBadgeNameStyle"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily"
+                    Value="Segoe WP" />
+            <Setter Property="FontSize"
+                    Value="48" />
+        </Style>
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>
