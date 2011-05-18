@@ -14,5 +14,13 @@ namespace BoyScouts.Models
         public bool IsEagleRequired { get; set; }
 
         public string HandbookUrl { get; set; }
+
+        public string Key
+        {
+            get
+            {
+                return Name.Substring(0, 1);
+            }
+        }
     }
 }

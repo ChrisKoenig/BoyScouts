@@ -17,10 +17,13 @@
                             DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
                             shell:SystemTray.IsVisible="True">
     <phone:PhoneApplicationPage.Resources>
-        <!-- Contents Templates -->
+
+        <!-- Contents ItemsPanel Templates -->
         <ItemsPanelTemplate x:Key="ContentsItemsPanelTemplate">
             <toolkit:WrapPanel />
         </ItemsPanelTemplate>
+
+        <!-- Content Data Template -->
         <DataTemplate x:Key="ContentsDataTemplate">
             <Button Click="ContentButton_Click"
                     Tag="{Binding PageIndex}">
@@ -53,7 +56,8 @@
                 </Button.Template>
             </Button>
         </DataTemplate>
-        <!-- ScoutLaw Templates-->
+
+        <!-- ScoutLaw Data Template -->
         <DataTemplate x:Key="ScoutLawDataTemplate">
             <TextBlock Text="{Binding Title}"
                        FontSize="48"
@@ -61,7 +65,37 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center" />
         </DataTemplate>
+
+        <!-- Merit Badge Data Template -->
+        <DataTemplate x:Key="MeritBadgeListItemTemplate">
+            <TextBlock Text="{Binding Name}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="MeritBadgeListGroupHeaderTemplate">
+            <Border Background="{StaticResource PhoneAccentBrush}"
+                    Margin="{StaticResource PhoneTouchTargetOverhang}"
+                    Padding="{StaticResource PhoneTouchTargetOverhang}">
+                <TextBlock Text="{Binding Key}" />
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MeritBadgeListGroupItemTemplate">
+            <Border Background="{StaticResource PhoneAccentBrush}"
+                    Margin="{StaticResource PhoneTouchTargetOverhang}"
+                    Padding="{StaticResource PhoneTouchTargetOverhang}">
+                <TextBlock Text="{Binding Key}"
+                           Style="{StaticResource PhoneTextLargeStyle}" />
+            </Border>
+        </DataTemplate>
+
+        <DataTemplate x:Key="MeritBadgeListHeaderTemplate">
+            <TextBlock Text="Header"
+                       Style="{StaticResource PhoneTextTitle1Style}" />
+        </DataTemplate>
+
     </phone:PhoneApplicationPage.Resources>
+
+    <!-- Phone Resources -->
     <phone:PhoneApplicationPage.FontFamily>
         <StaticResource ResourceKey="PhoneFontFamilyNormal" />
     </phone:PhoneApplicationPage.FontFamily>
@@ -173,11 +207,15 @@
 
         <!-- MERIT BADGES -->
         <controls:PanoramaItem x:Name="MeritBadgesPanel"
-                               DataContext="MeritBadgesViewModel"
+                               DataContext="{Binding MeritBadgesViewModel}"
                                Header="merit badges">
             <toolkit:LongListSelector x:Name="MeritBadgeList"
-                                      ItemsSource="{Binding MeritBadges}"
-                                      SelectedItem="{Binding SelectedMeritBadge, Mode=TwoWay}" />
+                                      ItemsSource="{Binding MeritBadgeData}"
+                                      ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
+                                      GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}"
+                                      GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
+                                      ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}">
+            </toolkit:LongListSelector>
         </controls:PanoramaItem>
 
         <!-- LINKS -->

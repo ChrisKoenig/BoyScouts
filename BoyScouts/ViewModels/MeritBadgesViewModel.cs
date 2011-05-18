@@ -1,4 +1,7 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Xml.Linq;
 using BoyScouts.Messages;
 using BoyScouts.Models;
 using GalaSoft.MvvmLight;
@@ -16,6 +19,29 @@ namespace BoyScouts.ViewModels
             else
             {
                 // Code runs "for real": Connect to service, etc...
+                var doc = XDocument.Load("Data/MeritBadges.xml", LoadOptions.PreserveWhitespace);
+                foreach (var item in doc.Element("MeritBadges").Elements("MeritBadge"))
+                {
+                    var mb = new MeritBadge()
+                    {
+                        Name = item.Element("Title").Value,
+                        ImageUrl = item.Element("ImageUrl").Value,
+                        IsEagleRequired = bool.Parse(item.Element("IsEagleRequired").Value),
+                        HandbookUrl = item.Element("HandbookUrl").Value,
+                    };
+                    this.MeritBadges.Add(mb);
+                }
+            }
+        }
+
+        public IEnumerable<GroupingLayer<string, MeritBadge>> MeritBadgeData
+        {
+            get
+            {
+                var selected = this.MeritBadges
+                    .GroupBy(mb => mb.Key)
+                    .Select(mb => new GroupingLayer<string, MeritBadge>(mb));
+                return selected;
             }
         }
 
@@ -71,5 +97,30 @@ namespace BoyScouts.ViewModels
         }
 
         #endregion SelectedMeritBadge
+    }
+
+    public class GroupingLayer<TKey, TElement> : IGrouping<TKey, TElement>
+    {
+        private readonly IGrouping<TKey, TElement> grouping;
+
+        public GroupingLayer(IGrouping<TKey, TElement> unit)
+        {
+            grouping = unit;
+        }
+
+        public TKey Key
+        {
+            get { return grouping.Key; }
+        }
+
+        public IEnumerator<TElement> GetEnumerator()
+        {
+            return grouping.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return grouping.GetEnumerator();
+        }
     }
 }
