@@ -11,6 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Tasks;
 
 namespace BoyScouts
 {
@@ -34,6 +35,14 @@ namespace BoyScouts
             int pageIndex = Int32.Parse(tag);
             var targetItem = LayoutRoot.Items[pageIndex] as PanoramaItem;
             LayoutRoot.DefaultItem = targetItem;
+        }
+
+        private void HandbookButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = sender as Button;
+            WebBrowserTask task = new WebBrowserTask();
+            task.URL = button.Tag.ToString();
+            task.Show();
         }
     }
 }

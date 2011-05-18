@@ -31,19 +31,46 @@ namespace BoyScouts.ViewModels
                     };
                     this.MeritBadges.Add(mb);
                 }
+                this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
             }
         }
 
-        public IEnumerable<GroupingLayer<string, MeritBadge>> MeritBadgeData
+        //public IEnumerable<GroupingLayer<string, MeritBadge>> MeritBadgeData
+        //{
+        //    get
+        //    {
+        //        var selected = this.MeritBadges
+        //            .GroupBy(mb => mb.Key)
+        //            .Select(mb => new GroupingLayer<string, MeritBadge>(mb));
+        //        return selected;
+        //    }
+        //}
+
+        #region MeritBadgesByFirstLetter
+
+        private MeritBadgesByFirstLetter _mbbfl = null;
+
+        public MeritBadgesByFirstLetter MeritBadgesByFirstLetter
         {
             get
             {
-                var selected = this.MeritBadges
-                    .GroupBy(mb => mb.Key)
-                    .Select(mb => new GroupingLayer<string, MeritBadge>(mb));
-                return selected;
+                return _mbbfl;
+            }
+
+            set
+            {
+                if (_mbbfl == value)
+                {
+                    return;
+                }
+
+                var oldValue = _mbbfl;
+                _mbbfl = value;
+                RaisePropertyChanged(() => this.MeritBadgesByFirstLetter);
             }
         }
+
+        #endregion MeritBadgesByFirstLetter
 
         #region MeritBadges property
 
