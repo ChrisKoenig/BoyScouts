@@ -15,7 +15,7 @@
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
                             DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
-                            shell:SystemTray.IsVisible="True">
+                            shell:SystemTray.IsVisible="True" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
 
         <!-- Contents ItemsPanel Templates -->
