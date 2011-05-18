@@ -125,7 +125,8 @@
                 <TextBlock Text="{Binding Name}"
                            FontSize="56"
                            Opacity=".4"
-                           TextAlignment="Center" />
+                           TextAlignment="Center" Width="420" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Image HorizontalAlignment="Center" Width="122" Height="150" VerticalAlignment="Center" Source="{Binding ImageUrl}"/>
             </Grid>
         </DataTemplate>
 
