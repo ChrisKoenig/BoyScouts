@@ -71,18 +71,24 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush" />
     </phone:PhoneApplicationPage.Foreground>
+
+    <!-- LAYOUT ROOT -->
     <controls:Panorama x:Name="LayoutRoot"
                        Title="boy scouts">
+
+        <!-- CONTENTS -->
         <controls:PanoramaItem x:Name="ContentsPanel"
-                               DataContext="{Binding Contents}"
+                               DataContext="{Binding ContentsViewModel}"
                                Header="contents">
             <ListBox x:Name="ContentsListBox"
                      ItemsSource="{Binding Contents}"
                      ItemsPanel="{StaticResource ContentsItemsPanelTemplate}"
                      ItemTemplate="{StaticResource ContentsDataTemplate}" />
         </controls:PanoramaItem>
+
+        <!-- SCOUT LAW -->
         <controls:PanoramaItem x:Name="ScoutLawPanel"
-                               DataContext="{Binding ScoutLaw}"
+                               DataContext="{Binding ScoutLawViewModel}"
                                Header="scout law">
             <Grid>
                 <Grid.RowDefinitions>
@@ -99,6 +105,8 @@
                 </ScrollViewer>
             </Grid>
         </controls:PanoramaItem>
+
+        <!-- SCOUT OATH -->
         <controls:PanoramaItem x:Name="ScoutOathPanel"
                                Header="scout oath">
             <Grid>
@@ -126,6 +134,8 @@
                            Fill="Red" />
             </Grid>
         </controls:PanoramaItem>
+
+        <!-- OUTDOOR CODE -->
         <controls:PanoramaItem x:Name="OutdoorCodePanel"
                                Header="outdoor code">
             <Grid>
@@ -156,12 +166,25 @@
             </Grid>
 
         </controls:PanoramaItem>
+
+        <!-- RANKS -->
         <controls:PanoramaItem x:Name="RanksPanel"
                                Header="ranks" />
+
+        <!-- MERIT BADGES -->
         <controls:PanoramaItem x:Name="MeritBadgesPanel"
-                               Header="merit badges" />
+                               DataContext="MeritBadgesViewModel"
+                               Header="merit badges">
+            <toolkit:LongListSelector x:Name="MeritBadgeList"
+                                      ItemsSource="{Binding MeritBadges}"
+                                      SelectedItem="{Binding SelectedMeritBadge, Mode=TwoWay}" />
+        </controls:PanoramaItem>
+
+        <!-- LINKS -->
         <controls:PanoramaItem x:Name="LinksPanel"
                                Header="links" />
+
+        <!-- ABOUT -->
         <controls:PanoramaItem x:Name="AboutPanel"
                                Header="about">
             <Grid>

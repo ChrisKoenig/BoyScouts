@@ -12,7 +12,7 @@ namespace BoyScouts.ViewModels
 
         private ContentsViewModel _contents = new ContentsViewModel();
 
-        public ContentsViewModel Contents
+        public ContentsViewModel ContentsViewModel
         {
             get
             {
@@ -28,7 +28,7 @@ namespace BoyScouts.ViewModels
 
                 var oldValue = _contents;
                 _contents = value;
-                RaisePropertyChanged(() => this.Contents);
+                RaisePropertyChanged(() => this.ContentsViewModel);
             }
         }
 
@@ -38,7 +38,7 @@ namespace BoyScouts.ViewModels
 
         private ScoutLawViewModel _scoutLaw = new ScoutLawViewModel();
 
-        public ScoutLawViewModel ScoutLaw
+        public ScoutLawViewModel ScoutLawViewModel
         {
             get
             {
@@ -54,10 +54,36 @@ namespace BoyScouts.ViewModels
 
                 var oldValue = _scoutLaw;
                 _scoutLaw = value;
-                RaisePropertyChanged(() => this.ScoutLaw);
+                RaisePropertyChanged(() => this.ScoutLawViewModel);
             }
         }
 
         #endregion ScoutLawViewModel
+
+        #region MeritBadgesViewModel
+
+        private MeritBadgesViewModel _meritBadges = new MeritBadgesViewModel();
+
+        public MeritBadgesViewModel MeritBadgesViewModel
+        {
+            get
+            {
+                return _meritBadges;
+            }
+
+            set
+            {
+                if (_meritBadges == value)
+                {
+                    return;
+                }
+
+                var oldValue = _meritBadges;
+                _meritBadges = value;
+                RaisePropertyChanged(() => this.MeritBadgesViewModel);
+            }
+        }
+
+        #endregion MeritBadgesViewModel
     }
 }
