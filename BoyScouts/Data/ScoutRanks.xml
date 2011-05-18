@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ScoutRanks>
+  <Rank>
+    <Name>Scout</Name>
+    <ImageUrl>/Images/Ranks/Scout.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>Tenderfoot</Name>
+    <ImageUrl>/Images/Ranks/Tenderfoot.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>Second Class</Name>
+    <ImageUrl>/Images/Ranks/SecondClass.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>First Class</Name>
+    <ImageUrl>/Images/Ranks/FirstClass.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>Star</Name>
+    <ImageUrl>/Images/Ranks/Star.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>Life</Name>
+    <ImageUrl>/Images/Ranks/Life.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+  <Rank>
+    <Name>Eagle</Name>
+    <ImageUrl>/Images/Ranks/Eagle.jpg</ImageUrl>
+    <Requirements></Requirements>
+  </Rank>
+</ScoutRanks>

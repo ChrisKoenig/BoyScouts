@@ -85,5 +85,57 @@ namespace BoyScouts.ViewModels
         }
 
         #endregion MeritBadgesViewModel
+
+        #region ScoutRanksViewModel
+
+        private ScoutRanksViewModel _scoutRanksViewModel = new ScoutRanksViewModel();
+
+        public ScoutRanksViewModel ScoutRanksViewModel
+        {
+            get
+            {
+                return _scoutRanksViewModel;
+            }
+
+            set
+            {
+                if (_scoutRanksViewModel == value)
+                {
+                    return;
+                }
+
+                var oldValue = _scoutRanksViewModel;
+                _scoutRanksViewModel = value;
+                RaisePropertyChanged(() => this.ScoutRanksViewModel);
+            }
+        }
+
+        #endregion ScoutRanksViewModel
+
+        #region LinksViewModel
+
+        private LinksViewModel _linksViewModel = new LinksViewModel();
+
+        public LinksViewModel LinksViewModel
+        {
+            get
+            {
+                return _linksViewModel;
+            }
+
+            set
+            {
+                if (_linksViewModel == value)
+                {
+                    return;
+                }
+
+                var oldValue = _linksViewModel;
+                _linksViewModel = value;
+                RaisePropertyChanged(() => this.LinksViewModel);
+            }
+        }
+
+        #endregion LinksViewModel
     }
 }

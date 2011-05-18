@@ -86,15 +86,19 @@
     <Compile Include="Messages\MeritBadgeSelectedMessage.cs" />
     <Compile Include="Models\Content.cs" />
     <Compile Include="Models\Law.cs" />
+    <Compile Include="Models\Link.cs" />
+    <Compile Include="ViewModels\LinksViewModel.cs" />
     <Compile Include="Models\MeritBadge.cs" />
     <Compile Include="Models\MeritBadgesByFirstLetter.cs" />
     <Compile Include="Models\MeritBadgesInGroup.cs" />
+    <Compile Include="Models\Rank.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ContentsViewModel.cs" />
     <Compile Include="ViewModels\GlobalViewModelLocator.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MeritBadgesViewModel.cs" />
     <Compile Include="ViewModels\ScoutLawViewModel.cs" />
+    <Compile Include="ViewModels\ScoutRanksViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -120,6 +124,8 @@
     <Content Include="Data\Contents.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\Links.xml" />
+    <Content Include="Data\ScoutRanks.xml" />
     <Content Include="Images\MeritBadges\AART.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

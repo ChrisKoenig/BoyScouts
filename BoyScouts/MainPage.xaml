@@ -119,6 +119,16 @@
             </Border>
         </DataTemplate>
 
+        <!-- Ranks Templates -->
+        <DataTemplate x:Key="RanksListItemTemplate">
+            <Grid>
+                <TextBlock Text="{Binding Name}"
+                           FontSize="56"
+                           Opacity=".4"
+                           TextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+
     </phone:PhoneApplicationPage.Resources>
 
     <!-- Phone Resources -->
@@ -140,10 +150,12 @@
         <controls:PanoramaItem x:Name="ContentsPanel"
                                DataContext="{Binding ContentsViewModel}"
                                Header="contents">
-            <ListBox x:Name="ContentsListBox"
-                     ItemsSource="{Binding Contents}"
-                     ItemsPanel="{StaticResource ContentsItemsPanelTemplate}"
-                     ItemTemplate="{StaticResource ContentsDataTemplate}" />
+            <Grid>
+                <ListBox x:Name="ContentsListBox"
+                         ItemsSource="{Binding Contents}"
+                         ItemsPanel="{StaticResource ContentsItemsPanelTemplate}"
+                         ItemTemplate="{StaticResource ContentsDataTemplate}" />
+            </Grid>
         </controls:PanoramaItem>
 
         <!-- SCOUT LAW -->
@@ -229,32 +241,46 @@
 
         <!-- RANKS -->
         <controls:PanoramaItem x:Name="RanksPanel"
-                               Header="ranks" />
+                               DataContext="{Binding ScoutRanksViewModel}"
+                               Header="ranks">
+            <Grid>
+                <ListBox ItemsSource="{Binding Ranks}"
+                         ItemTemplate="{StaticResource RanksListItemTemplate}" />
+            </Grid>
+        </controls:PanoramaItem>
 
         <!-- MERIT BADGES -->
         <controls:PanoramaItem x:Name="MeritBadgesPanel"
                                DataContext="{Binding MeritBadgesViewModel}"
                                Header="merit badges">
-            <toolkit:LongListSelector x:Name="MeritBadgeList"
-                                      IsBouncy="True"
-                                      ShowListFooter="False"
-                                      ShowListHeader="False"
-                                      BufferSize="4"
-                                      ItemsSource="{Binding MeritBadgesByFirstLetter}"
-                                      ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
-                                      GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
-                                      GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}">
-                <toolkit:LongListSelector.GroupItemsPanel>
-                    <ItemsPanelTemplate>
-                        <toolkit:WrapPanel Orientation="Horizontal" />
-                    </ItemsPanelTemplate>
-                </toolkit:LongListSelector.GroupItemsPanel>
-            </toolkit:LongListSelector>
+            <Grid>
+                <toolkit:LongListSelector x:Name="MeritBadgeList"
+                                          IsBouncy="True"
+                                          ShowListFooter="False"
+                                          ShowListHeader="False"
+                                          BufferSize="4"
+                                          ItemsSource="{Binding MeritBadgesByFirstLetter}"
+                                          ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
+                                          GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
+                                          GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}">
+                    <toolkit:LongListSelector.GroupItemsPanel>
+                        <ItemsPanelTemplate>
+                            <toolkit:WrapPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </toolkit:LongListSelector.GroupItemsPanel>
+                </toolkit:LongListSelector>
+            </Grid>
         </controls:PanoramaItem>
 
         <!-- LINKS -->
         <controls:PanoramaItem x:Name="LinksPanel"
-                               Header="links" />
+                               DataContext="{Binding LinksViewModel}"
+                               Header="links">
+            <Grid>
+                <ListBox ItemsSource="{Binding Links}"
+                         DisplayMemberPath="Title" />
+            </Grid>
+        </controls:PanoramaItem>
 
         <!-- ABOUT -->
         <controls:PanoramaItem x:Name="AboutPanel"
