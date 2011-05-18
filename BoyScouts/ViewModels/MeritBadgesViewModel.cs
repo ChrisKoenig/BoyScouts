@@ -1,10 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using System.Xml.Linq;
 using BoyScouts.Messages;
 using BoyScouts.Models;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Threading;
 
 namespace BoyScouts.ViewModels
 {
@@ -18,20 +20,26 @@ namespace BoyScouts.ViewModels
             }
             else
             {
-                // Code runs "for real": Connect to service, etc...
-                var doc = XDocument.Load("Data/MeritBadges.xml", LoadOptions.PreserveWhitespace);
-                foreach (var item in doc.Element("MeritBadges").Elements("MeritBadge"))
+                ThreadPool.QueueUserWorkItem((cb) =>
                 {
-                    var mb = new MeritBadge()
+                    // Code runs "for real": Connect to service, etc...
+                    var doc = XDocument.Load("Data/MeritBadges.xml", LoadOptions.PreserveWhitespace);
+                    foreach (var item in doc.Element("MeritBadges").Elements("MeritBadge"))
                     {
-                        Name = item.Element("Title").Value,
-                        ImageUrl = item.Element("ImageUrl").Value,
-                        IsEagleRequired = bool.Parse(item.Element("IsEagleRequired").Value),
-                        HandbookUrl = item.Element("HandbookUrl").Value,
-                    };
-                    this.MeritBadges.Add(mb);
-                }
-                this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
+                        var mb = new MeritBadge()
+                        {
+                            Name = item.Element("Title").Value,
+                            ImageUrl = item.Element("ImageUrl").Value,
+                            IsEagleRequired = bool.Parse(item.Element("IsEagleRequired").Value),
+                            HandbookUrl = item.Element("HandbookUrl").Value,
+                        };
+                        this.MeritBadges.Add(mb);
+                    }
+                    DispatcherHelper.CheckBeginInvokeOnUI(() =>
+                    {
+                        this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
+                    });
+                });
             }
         }
 

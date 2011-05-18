@@ -108,7 +108,8 @@
         <DataTemplate x:Key="MeritBadgeListGroupItemTemplate">
             <Border Width="99"
                     Height="99"
-                    Margin="6">
+                    Margin="6"
+                    Background="{StaticResource PhoneAccentBrush}">
                 <TextBlock Text="{Binding Key}"
                            FontFamily="{StaticResource PhoneFontFamilySemiBold}"
                            FontSize="36"

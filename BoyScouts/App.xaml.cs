@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GalaSoft.MvvmLight.Threading;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 
@@ -28,7 +29,7 @@ namespace BoyScouts
         /// </summary>
         public App()
         {
-            // Global handler for uncaught exceptions. 
+            // Global handler for uncaught exceptions.
             UnhandledException += Application_UnhandledException;
 
             // Show graphics profiling information while debugging.
@@ -40,13 +41,15 @@ namespace BoyScouts
                 // Show the areas of the app that are being redrawn in each frame.
                 //Application.Current.Host.Settings.EnableRedrawRegions = true;
 
-                // Enable non-production analysis visualization mode, 
+                // Enable non-production analysis visualization mode,
                 // which shows areas of a page that are being GPU accelerated with a colored overlay.
                 //Application.Current.Host.Settings.EnableCacheVisualization = true;
             }
 
             // Standard Silverlight initialization
             InitializeComponent();
+
+            DispatcherHelper.Initialize();
 
             // Phone-specific initialization
             InitializePhoneApplication();
@@ -130,6 +133,6 @@ namespace BoyScouts
             RootFrame.Navigated -= CompleteInitializePhoneApplication;
         }
 
-        #endregion
+        #endregion Phone application initialization
     }
 }
