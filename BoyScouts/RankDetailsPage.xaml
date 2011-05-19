@@ -1,0 +1,70 @@
+﻿<phone:PhoneApplicationPage xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:Custom="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                            xmlns:GalaSoft_MvvmLight_Command="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.WP7"
+                            x:Class="BoyScouts.RankDetailsPage"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            SupportedOrientations="PortraitOrLandscape"
+                            Orientation="Portrait"
+                            OrientationChanged="PhoneApplicationPage_OrientationChanged"
+                            DataContext="{Binding RankDetailsViewModel, Source={StaticResource Locator}}"
+                            mc:Ignorable="d"
+                            shell:SystemTray.IsVisible="False"
+                            d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}"
+                            d:DesignHeight="800"
+                            d:DesignWidth="480">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid x:Name="PortraitLayout">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.532*" />
+                <RowDefinition Height="0.26*" />
+                <RowDefinition Height="0.208*" />
+            </Grid.RowDefinitions>
+
+            <Grid.Background>
+                <ImageBrush Stretch="None"
+                            ImageSource="/Images/SinglePageBackground.jpg" />
+            </Grid.Background>
+
+            <Button x:Name="RequirementsButton"
+                    Tag="{Binding RankObject.Requirements}"
+                    Content="Requirements"
+                    Click="RequirementsButton_Click"
+                    Foreground="{StaticResource BoyScoutBlue}"
+                    BorderBrush="{StaticResource BoyScoutBlue}"
+                    Grid.Row="2"
+                    Margin="25"
+                    FontSize="36" />
+
+            <TextBlock x:Name="RankName"
+                       TextWrapping="Wrap"
+                       Text="{Binding RankObject.Name}"
+                       FontSize="72"
+                       FontFamily="Segoe WP SemiLight"
+                       TextAlignment="Center"
+                       LineHeight="8"
+                       Foreground="{StaticResource BoyScoutBlue}"
+                       Grid.Row="1"
+                       VerticalAlignment="Center" />
+
+            <Image x:Name="BadgeImage"
+                   Source="{Binding RankObject.ImageUrl}"
+                   HorizontalAlignment="Center"
+                   Margin="0,50,0,76"
+                   Width="244" />
+        </Grid>
+
+        <Grid x:Name="LandscapeLayout"
+              d:IsHidden="True" />
+
+    </Grid>
+</phone:PhoneApplicationPage>

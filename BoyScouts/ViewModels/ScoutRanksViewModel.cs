@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
+using BoyScouts.Messages;
 using BoyScouts.Models;
 using GalaSoft.MvvmLight;
 
@@ -34,11 +35,14 @@ namespace BoyScouts.ViewModels
                         Name = item.Element("Name").Value,
                         Requirements = item.Element("Requirements").Value,
                         ImageUrl = item.Element("ImageUrl").Value,
+                        SequenceNumber = Int32.Parse(item.Element("SequenceNumber").Value),
                     };
                     this.Ranks.Add(r);
                 }
             }
         }
+
+        #region Ranks
 
         private ObservableCollection<Rank> _ranks = new ObservableCollection<Rank>();
 
@@ -61,5 +65,34 @@ namespace BoyScouts.ViewModels
                 RaisePropertyChanged(() => this.Ranks);
             }
         }
+
+        #endregion Ranks
+
+        #region SelectedRank
+
+        private Rank _selectedRank = null;
+
+        public Rank SelectedRank
+        {
+            get
+            {
+                return _selectedRank;
+            }
+
+            set
+            {
+                if (_selectedRank == value)
+                {
+                    return;
+                }
+
+                var oldValue = _selectedRank;
+                _selectedRank = value;
+                MessengerInstance.Send<RankSelectedMessage>(new RankSelectedMessage(value));
+                RaisePropertyChanged(() => this.SelectedRank);
+            }
+        }
+
+        #endregion SelectedRank
     }
 }

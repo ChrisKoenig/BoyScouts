@@ -3,10 +3,13 @@
                             xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
                             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
                             xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+                            xmlns:cc="clr-namespace:BoyScouts.Controls"
                             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                             xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
                             xmlns:ad="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
+                            xmlns:Custom="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+                            xmlns:ic="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
                             x:Class="BoyScouts.MainPage"
                             mc:Ignorable="d"
                             d:DesignWidth="480"
@@ -14,8 +17,7 @@
                             SupportedOrientations="Portrait"
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
-                            DataContext="{Binding Source={StaticResource Locator}, Path=MainViewModel}"
-                            shell:SystemTray.IsVisible="True"
+                            shell:SystemTray.IsVisible="False"
                             d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
 
@@ -24,13 +26,7 @@
             <toolkit:WrapPanel />
         </ItemsPanelTemplate>
 
-        <SolidColorBrush x:Key="BoyScoutBlue"
-                         Color="#FF005696" />
-
-        <SolidColorBrush x:Key="BoyScoutRed"
-                         Color="#FFD92F38" />
-
-        <!-- Content Data Template -->
+        <!-- Contents Data Template -->
         <DataTemplate x:Key="ContentsDataTemplate">
             <Button Click="ContentButton_Click"
                     Tag="{Binding PageIndex}">
@@ -48,7 +44,7 @@
                                    Margin="0"
                                    Width="99"
                                    Height="99"
-                                   Source="{Binding Path=ImagePath}"
+                                   Source="{Binding ImagePath}"
                                    HorizontalAlignment="Center"
                                    VerticalAlignment="Center" />
                             <TextBlock x:Name="DisplayTextBlock"
@@ -126,22 +122,70 @@
         </DataTemplate>
 
         <!-- Ranks Templates -->
-        <DataTemplate x:Key="RanksListItemTemplate">
-            <Grid>
-                <TextBlock Text="{Binding Name}"
-                           FontSize="56"
-                           Opacity=".4"
-                           TextAlignment="Center"
-                           Width="420"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center" />
-                <Image HorizontalAlignment="Center"
-                       Width="122"
-                       Height="150"
-                       VerticalAlignment="Center"
-                       Source="{Binding ImageUrl}" />
-            </Grid>
+        <DataTemplate x:Key="RanksListItemTemplate3">
+            <Image Width="122"
+                   Height="150"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="7"
+                   Source="{Binding ImageUrl}" />
         </DataTemplate>
+
+        <DataTemplate x:Key="RanksListItemTemplate2">
+            <TextBlock Text="{Binding Name}"
+                       Grid.Column="1"
+                       FontSize="56"
+                       VerticalAlignment="Center"
+                       Foreground="{StaticResource BoyScoutBlue}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="RanksListItemTemplate1">
+            <cc:ScoutRankDataTemplateSelector Content="{Binding}">
+                <cc:ScoutRankDataTemplateSelector.Odd>
+                    <DataTemplate>
+                        <Grid Width="420">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                   Width="122"
+                                   Height="150"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Source="{Binding ImageUrl}" />
+                            <TextBlock Text="{Binding Name}"
+                                       Grid.Column="1"
+                                       FontSize="56"
+                                       VerticalAlignment="Center"
+                                       Foreground="{StaticResource BoyScoutBlue}" />
+                        </Grid>
+                    </DataTemplate>
+                </cc:ScoutRankDataTemplateSelector.Odd>
+                <cc:ScoutRankDataTemplateSelector.Even>
+                    <DataTemplate>
+                        <Grid Width="420">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="1"
+                                   Width="122"
+                                   Height="150"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Source="{Binding ImageUrl}" />
+                            <TextBlock Text="{Binding Name}"
+                                       Grid.Column="0"
+                                       FontSize="56"
+                                       VerticalAlignment="Center"
+                                       Foreground="{StaticResource BoyScoutBlue}" />
+                        </Grid>
+                    </DataTemplate>
+                </cc:ScoutRankDataTemplateSelector.Even>
+            </cc:ScoutRankDataTemplateSelector>
+        </DataTemplate>
+
         <DataTemplate x:Key="PanoramaHeaderTemplate">
             <Grid>
                 <TextBlock TextWrapping="Wrap"
@@ -151,6 +195,7 @@
                            Foreground="{StaticResource BoyScoutBlue}" />
             </Grid>
         </DataTemplate>
+
         <DataTemplate x:Key="PanoramaTitleTemplate">
             <Grid>
                 <TextBlock Margin="0,105,1,0"
@@ -165,13 +210,18 @@
 
     </phone:PhoneApplicationPage.Resources>
 
+    <phone:PhoneApplicationPage.DataContext>
+        <Binding Path="MainViewModel"
+                 Source="{StaticResource Locator}" />
+    </phone:PhoneApplicationPage.DataContext>
+
     <!-- LAYOUT ROOT -->
     <controls:Panorama x:Name="LayoutRoot"
                        Title="Boy Scouts of America"
                        HeaderTemplate="{StaticResource PanoramaHeaderTemplate}"
                        TitleTemplate="{StaticResource PanoramaTitleTemplate}">
         <controls:Panorama.Background>
-            <ImageBrush ImageSource="/Images/background.png"
+            <ImageBrush ImageSource="/Images/background.jpg"
                         Stretch="UniformToFill" />
         </controls:Panorama.Background>
 
@@ -215,33 +265,31 @@
                                Header="scout oath">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}">On my honor, I will do my best</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="On my honor, I will do my best" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}">To do my duty to God and my country</TextBlock>
-                    <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">and to obey the Scout Law;</TextBlock>
-                    <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}">To help other people at all times;</TextBlock>
-                    <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}">To keep myself physically strong,</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To do my duty to God and my country" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">mentally awake and morally straight.</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="and to obey the Scout Law;" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To help other people at all times;" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To keep myself physically strong," /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="mentally awake and morally straight." /></TextBlock>
                 </StackPanel>
                 <Image Source="/Images/ScoutOath.jpg"
                        Grid.Row="1"
-                       Height="250"
-                       Width="480" />
-                <Rectangle Height="250"
-                           Width="480"
-                           Grid.Row="1"
-                           Fill="{StaticResource BoyScoutRed}" />
+                       Margin="10,20,20,10" />
+                <Rectangle Grid.Row="1"
+                           Margin="10,20,20,10"
+                           Fill="{StaticResource BoyScoutBlue}" />
             </Grid>
         </controls:PanoramaItem>
 
@@ -250,35 +298,33 @@
                                Header="outdoor code">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition />
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}">As an American, I will do my best to -</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="As an American, I will do my best to -" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"></TextBlock>
-                    <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">• Be clean in my outdoor manners</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}" />
                     <TextBlock FontSize="24"
                                Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">• Be careful with fire</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be clean in my outdoor manners" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">• Be considerate in the outdoors, and</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be careful with fire" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}">• Be conservation minded.</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be considerate in the outdoors, and" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be conservation minded." /></TextBlock>
                 </StackPanel>
                 <Image Source="/Images/ScoutOath.jpg"
-                       Grid.Row="1"
-                       Height="250"
-                       Width="480" />
-                <Rectangle Height="250"
-                           Width="480"
+                       Margin="10,20,20,10"
+                       Grid.Row="1" />
+                <Rectangle Margin="10,20,20,10"
                            Grid.Row="1"
-                           Fill="{StaticResource BoyScoutRed}" />
+                           Fill="{StaticResource BoyScoutBlue}" />
             </Grid>
 
         </controls:PanoramaItem>
@@ -289,7 +335,15 @@
                                Header="ranks">
             <Grid>
                 <ListBox ItemsSource="{Binding Ranks}"
-                         ItemTemplate="{StaticResource RanksListItemTemplate}" />
+                         ItemsPanel="{StaticResource ContentsItemsPanelTemplate}"
+                         ItemTemplate="{StaticResource RanksListItemTemplate3}"
+                         SelectedItem="{Binding SelectedRank, Mode=TwoWay}">
+                    <Custom:Interaction.Triggers>
+                        <Custom:EventTrigger EventName="SelectionChanged">
+                            <ic:NavigateToPageAction TargetPage="/RankDetailsPage.xaml" />
+                        </Custom:EventTrigger>
+                    </Custom:Interaction.Triggers>
+                </ListBox>
             </Grid>
         </controls:PanoramaItem>
 
@@ -307,13 +361,8 @@
                                           ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
                                           GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
                                           GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}"
-                                          ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}">
-                    <toolkit:LongListSelector.GroupItemsPanel>
-                        <ItemsPanelTemplate>
-                            <toolkit:WrapPanel Orientation="Horizontal" />
-                        </ItemsPanelTemplate>
-                    </toolkit:LongListSelector.GroupItemsPanel>
-                </toolkit:LongListSelector>
+                                          ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}"
+                                          GroupItemsPanel="{StaticResource ContentsItemsPanelTemplate}" />
             </Grid>
         </controls:PanoramaItem>
 

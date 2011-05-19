@@ -13,6 +13,8 @@ namespace BoyScouts.Models
 {
     public class Rank
     {
+        public int SequenceNumber { get; set; }
+
         public string Name { get; set; }
 
         public string ImageUrl { get; set; }
