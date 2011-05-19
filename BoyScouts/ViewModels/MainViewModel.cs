@@ -26,7 +26,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _contents;
                 _contents = value;
                 RaisePropertyChanged(() => this.ContentsViewModel);
             }
@@ -52,7 +51,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _scoutLaw;
                 _scoutLaw = value;
                 RaisePropertyChanged(() => this.ScoutLawViewModel);
             }
@@ -78,7 +76,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _meritBadges;
                 _meritBadges = value;
                 RaisePropertyChanged(() => this.MeritBadgesViewModel);
             }
@@ -104,7 +101,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _scoutRanksViewModel;
                 _scoutRanksViewModel = value;
                 RaisePropertyChanged(() => this.ScoutRanksViewModel);
             }
@@ -130,7 +126,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _linksViewModel;
                 _linksViewModel = value;
                 RaisePropertyChanged(() => this.LinksViewModel);
             }

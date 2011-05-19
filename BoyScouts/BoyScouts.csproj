@@ -66,6 +66,9 @@
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Newtonsoft.Json.WindowsPhone">
+      <HintPath>..\..\..\..\Users\chkoenig\Downloads\Json40r1\Bin\WindowsPhone\Newtonsoft.Json.WindowsPhone.dll</HintPath>
+    </Reference>
     <Reference Include="System.Device" />
     <Reference Include="System.Windows" />
     <Reference Include="system" />
@@ -89,7 +92,6 @@
       <DependentUpon>MeritBadgeDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Messages\MeritBadgeSelectedMessage.cs" />
-    <Compile Include="Messages\RankDetailsPageFromMessage.cs" />
     <Compile Include="Messages\RankSelectedMessage.cs" />
     <Compile Include="Models\Content.cs" />
     <Compile Include="Models\Law.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="RankDetailsPage.xaml.cs">
       <DependentUpon>RankDetailsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\GroupingLayer.cs" />
     <Compile Include="ViewModels\LinksViewModel.cs" />
     <Compile Include="Models\MeritBadge.cs" />
     <Compile Include="Models\MeritBadgesByFirstLetter.cs" />

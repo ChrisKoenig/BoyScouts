@@ -55,7 +55,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _links;
                 _links = value;
                 RaisePropertyChanged(() => this.Links);
             }

@@ -9,7 +9,6 @@ namespace BoyScouts.ViewModels
     {
         public MeritBadgeDetailsViewModel()
         {
-            MessengerInstance.Register<MeritBadgeSelectedMessage>(this, (message) => this.MeritBadgeObject = message.MeritBadge);
             if (IsInDesignMode)
             {
                 // Code runs in Blend --> create design time data.
@@ -32,13 +31,6 @@ namespace BoyScouts.ViewModels
             }
         }
 
-        public override void Cleanup()
-        {
-            // Clean own resources if needed
-            this.MeritBadgeObject = null;
-            base.Cleanup();
-        }
-
         #region MeritBadgeObject
 
         private MeritBadge _meritBadgeObject = null;
@@ -57,7 +49,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _meritBadgeObject;
                 _meritBadgeObject = value;
                 RaisePropertyChanged(() => this.MeritBadgeObject);
             }

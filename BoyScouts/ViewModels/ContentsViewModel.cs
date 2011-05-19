@@ -48,7 +48,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _contents;
                 _contents = value;
                 RaisePropertyChanged(() => this.Contents);
             }

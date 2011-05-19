@@ -1,13 +1,13 @@
 ﻿<Application x:Class="BoyScouts.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:BoyScouts.ViewModels"
              xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
              xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
 
     <!--Application Resources-->
     <Application.Resources>
-        <vm:GlobalViewModelLocator xmlns:vm="clr-namespace:BoyScouts.ViewModels"
-                                   x:Key="Locator" />
+        <vm:GlobalViewModelLocator x:Key="Locator" />
 
         <SolidColorBrush x:Key="BoyScoutBlue"
                          Color="#FF005696" />

@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BoyScouts.ViewModels;
 using GalaSoft.MvvmLight.Threading;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
@@ -65,12 +66,16 @@ namespace BoyScouts
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            GlobalViewModelLocator locator = this.Resources["Locator"] as GlobalViewModelLocator;
+            locator.LoadState();
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            GlobalViewModelLocator locator = this.Resources["Locator"] as GlobalViewModelLocator;
+            locator.SaveState();
         }
 
         // Code to execute when the application is closing (eg, user hit Back)

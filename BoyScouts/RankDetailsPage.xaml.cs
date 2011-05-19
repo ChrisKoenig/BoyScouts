@@ -13,6 +13,12 @@ namespace BoyScouts
         public RankDetailsPage()
         {
             InitializeComponent();
+            Loaded += new RoutedEventHandler(RankDetailsPage_Loaded);
+        }
+
+        private void RankDetailsPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            ResetOrientation();
         }
 
         private void RequirementsButton_Click(object sender, RoutedEventArgs e)
@@ -29,11 +35,11 @@ namespace BoyScouts
             }
         }
 
-        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        private void ResetOrientation()
         {
             if (Orientation == PageOrientation.Landscape ||
-                Orientation == PageOrientation.LandscapeLeft ||
-                Orientation == PageOrientation.LandscapeRight)
+                            Orientation == PageOrientation.LandscapeLeft ||
+                            Orientation == PageOrientation.LandscapeRight)
             {
                 //TODO: Replace with a storyboard
                 LandscapeLayout.Visibility = Visibility.Visible;
@@ -47,10 +53,9 @@ namespace BoyScouts
             }
         }
 
-        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)
+        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
-            Messenger.Default.Send<RankDetailsPageFromMessage>(new RankDetailsPageFromMessage());
-            base.OnNavigatedFrom(e);
+            ResetOrientation();
         }
     }
 }

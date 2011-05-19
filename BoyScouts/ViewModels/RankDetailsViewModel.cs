@@ -36,7 +36,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _rank;
                 _rank = value;
                 RaisePropertyChanged(() => this.RankObject);
             }

@@ -9,19 +9,36 @@
   DataContext="{Binding Source={StaticResource Locator}, Path=ViewModelName}"
 */
 
+using System;
+using System.IO;
+using System.IO.IsolatedStorage;
 using BoyScouts.Messages;
 using GalaSoft.MvvmLight.Messaging;
+using Newtonsoft.Json;
 
 namespace BoyScouts.ViewModels
 {
     public class GlobalViewModelLocator
     {
+        #region Infrastructure
+
         public GlobalViewModelLocator()
         {
-            Messenger.Default.Register<RankDetailsPageFromMessage>(this, (m) => RankDetailsViewModel.Cleanup());
             CreateMainViewModel();
             CreateRankDetailsViewModel();
+            CreateMeritBadgeDetailsViewModel();
         }
+
+        public static void Cleanup()
+        {
+            ClearMeritBadgeDetailsViewModel();
+            ClearRankDetailsViewModel();
+            ClearMainViewModel();
+        }
+
+        #endregion Infrastructure
+
+        #region MainViewModel
 
         private static MainViewModel _main;
 
@@ -75,6 +92,10 @@ namespace BoyScouts.ViewModels
             }
         }
 
+        #endregion MainViewModel
+
+        #region RankDetailsViewModel
+
         private static RankDetailsViewModel _rankDetails;
 
         /// <summary>
@@ -127,13 +148,102 @@ namespace BoyScouts.ViewModels
             }
         }
 
+        #endregion RankDetailsViewModel
+
+        #region MeritBadgeDetailsViewModel
+
+        private static MeritBadgeDetailsViewModel _meritBadgeDetails;
+
         /// <summary>
-        /// Cleans up all the resources.
+        /// Gets the MeritBadgeDetailsViewModel property.
         /// </summary>
-        public static void Cleanup()
+        public static MeritBadgeDetailsViewModel MeritBadgeDetailsViewModelStatic
         {
-            ClearRankDetailsViewModel();
-            ClearMainViewModel();
+            get
+            {
+                if (_meritBadgeDetails == null)
+                {
+                    CreateMeritBadgeDetailsViewModel();
+                }
+
+                return _meritBadgeDetails;
+            }
         }
+
+        /// <summary>
+        /// Gets the MeritBadgeDetailsViewModel property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1822:MarkMembersAsStatic",
+            Justification = "This non-static member is needed for data binding purposes.")]
+        public MeritBadgeDetailsViewModel MeritBadgeDetailsViewModel
+        {
+            get
+            {
+                return MeritBadgeDetailsViewModelStatic;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MeritBadgeDetailsViewModel property.
+        /// </summary>
+        public static void ClearMeritBadgeDetailsViewModel()
+        {
+            _meritBadgeDetails.Cleanup();
+            _meritBadgeDetails = null;
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MeritBadgeDetailsViewModel property.
+        /// </summary>
+        public static void CreateMeritBadgeDetailsViewModel()
+        {
+            if (_meritBadgeDetails == null)
+            {
+                _meritBadgeDetails = new MeritBadgeDetailsViewModel();
+            }
+        }
+
+        #endregion MeritBadgeDetailsViewModel
+
+        #region Tombstoning Support
+
+        public void SaveState()
+        {
+            SaveObject<MainViewModel>("MainViewModel", this.MainViewModel);
+            SaveObject<RankDetailsViewModel>("RankDetailsViewModel", this.RankDetailsViewModel);
+            SaveObject<MeritBadgeDetailsViewModel>("MeritBadgeDetailsViewModel", this.MeritBadgeDetailsViewModel);
+        }
+
+        private void SaveObject<T>(string Key, T ViewModel)
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            using (var store = IsolatedStorageFile.GetUserStoreForApplication())
+            using (var stream = new IsolatedStorageFileStream(Key + ".json", FileMode.Create, FileAccess.Write, store))
+            using (StreamWriter sw = new StreamWriter(stream))
+            using (JsonWriter writer = new JsonTextWriter(sw))
+                serializer.Serialize(writer, ViewModel);
+        }
+
+        public void LoadState()
+        {
+            LoadObject<MainViewModel>("MainViewModel");
+            LoadObject<RankDetailsViewModel>("RankDetailsViewModel");
+            LoadObject<MeritBadgeDetailsViewModel>("MeritBadgeDetailsViewModel");
+        }
+
+        private T LoadObject<T>(string Key)
+        {
+            JsonSerializer serializer = new JsonSerializer();
+            string value = "";
+            using (var store = IsolatedStorageFile.GetUserStoreForApplication())
+            using (var stream = new IsolatedStorageFileStream(Key + ".json", FileMode.Open, FileAccess.Read, store))
+            using (var reader = new StreamReader(stream))
+                value = reader.ReadToEnd();
+
+            return JsonConvert.DeserializeObject<T>(value);
+        }
+
+        #endregion Tombstoning Support
     }
 }

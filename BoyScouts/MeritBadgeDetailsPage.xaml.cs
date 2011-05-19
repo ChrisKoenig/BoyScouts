@@ -18,13 +18,19 @@ namespace BoyScouts
         public MeritBadgeDetailsPage()
         {
             InitializeComponent();
+            Loaded += new RoutedEventHandler(MeritBadgeDetailsPage_Loaded);
         }
 
-        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        private void MeritBadgeDetailsPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            ResetOrientation();
+        }
+
+        private void ResetOrientation()
         {
             if (Orientation == PageOrientation.Landscape ||
-                Orientation == PageOrientation.LandscapeLeft ||
-                Orientation == PageOrientation.LandscapeRight)
+                            Orientation == PageOrientation.LandscapeLeft ||
+                            Orientation == PageOrientation.LandscapeRight)
             {
                 //TODO: Replace with a storyboard
                 LandscapeLayout.Visibility = Visibility.Visible;
@@ -36,6 +42,11 @@ namespace BoyScouts
                 PortraitLayout.Visibility = Visibility.Visible;
                 LandscapeLayout.Visibility = Visibility.Collapsed;
             }
+        }
+
+        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        {
+            ResetOrientation();
         }
     }
 }

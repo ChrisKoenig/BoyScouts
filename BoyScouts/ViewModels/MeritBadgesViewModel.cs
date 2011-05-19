@@ -1,12 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System.Collections.ObjectModel;
 using System.Threading;
 using System.Xml.Linq;
 using BoyScouts.Messages;
 using BoyScouts.Models;
 using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Threading;
+using Newtonsoft.Json;
 
 namespace BoyScouts.ViewModels
 {
@@ -35,29 +33,16 @@ namespace BoyScouts.ViewModels
                         };
                         this.MeritBadges.Add(mb);
                     }
-                    DispatcherHelper.CheckBeginInvokeOnUI(() =>
-                    {
-                        this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
-                    });
+                    this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
                 });
             }
         }
-
-        //public IEnumerable<GroupingLayer<string, MeritBadge>> MeritBadgeData
-        //{
-        //    get
-        //    {
-        //        var selected = this.MeritBadges
-        //            .GroupBy(mb => mb.Key)
-        //            .Select(mb => new GroupingLayer<string, MeritBadge>(mb));
-        //        return selected;
-        //    }
-        //}
 
         #region MeritBadgesByFirstLetter
 
         private MeritBadgesByFirstLetter _mbbfl = null;
 
+        [JsonIgnore]
         public MeritBadgesByFirstLetter MeritBadgesByFirstLetter
         {
             get
@@ -72,7 +57,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _mbbfl;
                 _mbbfl = value;
                 RaisePropertyChanged(() => this.MeritBadgesByFirstLetter);
             }
@@ -98,7 +82,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _meritBadges;
                 _meritBadges = value;
                 RaisePropertyChanged(() => this.MeritBadges);
             }
@@ -124,7 +107,6 @@ namespace BoyScouts.ViewModels
                     return;
                 }
 
-                var oldValue = _selectedMeritBadge;
                 _selectedMeritBadge = value;
                 RaisePropertyChanged(() => this.SelectedMeritBadge);
                 MessengerInstance.Send<MeritBadgeSelectedMessage>(new MeritBadgeSelectedMessage(value));
@@ -132,30 +114,5 @@ namespace BoyScouts.ViewModels
         }
 
         #endregion SelectedMeritBadge
-    }
-
-    public class GroupingLayer<TKey, TElement> : IGrouping<TKey, TElement>
-    {
-        private readonly IGrouping<TKey, TElement> grouping;
-
-        public GroupingLayer(IGrouping<TKey, TElement> unit)
-        {
-            grouping = unit;
-        }
-
-        public TKey Key
-        {
-            get { return grouping.Key; }
-        }
-
-        public IEnumerator<TElement> GetEnumerator()
-        {
-            return grouping.GetEnumerator();
-        }
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
-        {
-            return grouping.GetEnumerator();
-        }
     }
 }
