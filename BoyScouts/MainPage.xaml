@@ -357,12 +357,19 @@
                                           ShowListFooter="False"
                                           ShowListHeader="False"
                                           BufferSize="4"
+                                          SelectedItem="{Binding SelectedMeritBadge, Mode=TwoWay}"
                                           ItemsSource="{Binding MeritBadgesByFirstLetter}"
                                           ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
                                           GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
                                           GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}"
                                           ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}"
-                                          GroupItemsPanel="{StaticResource ContentsItemsPanelTemplate}" />
+                                          GroupItemsPanel="{StaticResource ContentsItemsPanelTemplate}">
+                    <Custom:Interaction.Triggers>
+                        <Custom:EventTrigger EventName="SelectionChanged">
+                            <ic:NavigateToPageAction TargetPage="/MeritBadgeDetailsPage.xaml" />
+                        </Custom:EventTrigger>
+                    </Custom:Interaction.Triggers>
+                </toolkit:LongListSelector>
             </Grid>
         </controls:PanoramaItem>
 

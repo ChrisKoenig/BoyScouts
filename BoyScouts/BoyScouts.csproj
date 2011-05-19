@@ -85,6 +85,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MeritBadgeDetailsPage.xaml.cs">
+      <DependentUpon>MeritBadgeDetailsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Messages\MeritBadgeSelectedMessage.cs" />
     <Compile Include="Messages\RankDetailsPageFromMessage.cs" />
     <Compile Include="Messages\RankSelectedMessage.cs" />
@@ -103,6 +106,7 @@
     <Compile Include="ViewModels\ContentsViewModel.cs" />
     <Compile Include="ViewModels\GlobalViewModelLocator.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MeritBadgeDetailsViewModel.cs" />
     <Compile Include="ViewModels\MeritBadgesViewModel.cs" />
     <Compile Include="ViewModels\RankDetailsViewModel.cs" />
     <Compile Include="ViewModels\ScoutLawViewModel.cs" />
@@ -115,6 +119,10 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MeritBadgeDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -561,6 +569,9 @@
   </ItemGroup>
   <ItemGroup>
     <DesignData Include="SampleData\MainViewModelSampleData.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </DesignData>
+    <DesignData Include="SampleData\MeritBadgeDetailsViewModelSampleData.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
     </DesignData>
     <DesignData Include="SampleData\RankDetailsViewModelSampleData.xaml">
