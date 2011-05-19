@@ -1,0 +1,62 @@
+﻿<phone:PhoneApplicationPage x:Class="BoyScouts.MeritBadgeDetailsPage"
+                            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                            xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+                            xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+                            xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
+                            FontSize="{StaticResource PhoneFontSizeNormal}"
+                            Foreground="{StaticResource PhoneForegroundBrush}"
+                            SupportedOrientations="PortraitOrLandscape"
+                            Orientation="Portrait"
+                            OrientationChanged="PhoneApplicationPage_OrientationChanged"
+                            mc:Ignorable="d"
+                            d:DesignHeight="768"
+                            d:DesignWidth="480"
+                            shell:SystemTray.IsVisible="True" d:DataContext="{d:DesignData /SampleData/MeritBadgeDetailsViewModelSampleData.xaml}">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot"
+          Background="Transparent">
+        <Grid x:Name="PortraitLayout">
+        	<Grid.Background>
+        		<ImageBrush Stretch="Fill" ImageSource="/Images/SinglePageBackgroundPortrait.jpg"/>
+        	</Grid.Background>
+            <Border BorderBrush="{Binding MeritBadgeBorderColor}">
+                <Grid>
+                	<Grid.ColumnDefinitions>
+                		<ColumnDefinition Width="0.353*"/>
+                		<ColumnDefinition Width="0.647*"/>
+                	</Grid.ColumnDefinitions>
+                	<Grid.RowDefinitions>
+                		<RowDefinition Height="0.338*"/>
+                		<RowDefinition Height="0.662*"/>
+                	</Grid.RowDefinitions>
+            		<Image x:Name="MeritBadgeImagePortrait"
+            			Width="150"
+            			Height="150"
+            			Source="{Binding ImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"/>
+            		<TextBlock x:Name="NameTextBlock" TextWrapping="Wrap" Text="{Binding MeritBadgeObject.Name}" Foreground="{StaticResource BoyScoutBlue}" FontSize="48" Grid.Column="1" Margin="15,25,15,15"/>
+            		<ScrollViewer Grid.ColumnSpan="2" Margin="25" Grid.Row="1" >
+            			<TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Text="TextBlock" Foreground="{StaticResource BoyScoutBlue}" FontSize="36"/>
+            		</ScrollViewer>
+            	</Grid>
+            </Border>
+        </Grid>
+        <Grid
+              x:Name="LandscapeLayout" Width="800" Height="480" d:IsHidden="True">
+        	<Grid.Background>
+        		<ImageBrush Stretch="Fill" ImageSource="/Images/SinglePageBackgroundLandscape.jpg"/>
+        	</Grid.Background>
+            <Border BorderBrush="{Binding MeritBadgeBorderColor}">
+
+                <Image x:Name="MeritBadgeImageLandscape"
+                       Width="75"
+                       Height="75"
+                       Source="{Binding ImageUrl}"></Image>
+            </Border>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

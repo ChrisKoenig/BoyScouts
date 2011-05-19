@@ -1,0 +1,5 @@
+<BoyScouts_ViewModels:MeritBadgeDetailsViewModel xmlns:BoyScouts_ViewModels="clr-namespace:BoyScouts.ViewModels" xmlns:BoyScouts_Models="clr-namespace:BoyScouts.Models" IsInDesignMode="False" IsInDesignModeStatic="True" MeritBadgeBorderColor="#FFF73BB6">
+	<BoyScouts_ViewModels:MeritBadgeDetailsViewModel.MeritBadgeObject>
+		<BoyScouts_Models:MeritBadge HandbookUrl="Aenean aliquam" IsEagleRequired="True" ImageUrl="Class curae cras" Key="Vestibulum duis donec" Name="Adipiscing etiam nunc integer"/>
+	</BoyScouts_ViewModels:MeritBadgeDetailsViewModel.MeritBadgeObject>
+</BoyScouts_ViewModels:MeritBadgeDetailsViewModel>
