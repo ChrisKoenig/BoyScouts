@@ -11,52 +11,79 @@
                             SupportedOrientations="PortraitOrLandscape"
                             Orientation="Portrait"
                             OrientationChanged="PhoneApplicationPage_OrientationChanged"
+                            DataContext="{Binding MeritBadgeDetailsViewModel, Source={StaticResource Locator}}"
+                            Background="White"
                             mc:Ignorable="d"
                             d:DesignHeight="768"
                             d:DesignWidth="480"
-                            shell:SystemTray.IsVisible="True" d:DataContext="{d:DesignData /SampleData/MeritBadgeDetailsViewModelSampleData.xaml}">
+                            d:DataContext="{d:DesignData /SampleData/MeritBadgeDetailsViewModelSampleData.xaml}">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot"
-          Background="Transparent">
-        <Grid x:Name="PortraitLayout">
-        	<Grid.Background>
-        		<ImageBrush Stretch="Fill" ImageSource="/Images/SinglePageBackgroundPortrait.jpg"/>
-        	</Grid.Background>
-            <Border BorderBrush="{Binding MeritBadgeBorderColor}">
-                <Grid>
-                	<Grid.ColumnDefinitions>
-                		<ColumnDefinition Width="0.353*"/>
-                		<ColumnDefinition Width="0.647*"/>
-                	</Grid.ColumnDefinitions>
-                	<Grid.RowDefinitions>
-                		<RowDefinition Height="0.338*"/>
-                		<RowDefinition Height="0.662*"/>
-                	</Grid.RowDefinitions>
-            		<Image x:Name="MeritBadgeImagePortrait"
-            			Width="150"
-            			Height="150"
-            			Source="{Binding ImageUrl}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,25,0,0"/>
-            		<TextBlock x:Name="NameTextBlock" TextWrapping="Wrap" Text="{Binding MeritBadgeObject.Name}" Foreground="{StaticResource BoyScoutBlue}" FontSize="48" Grid.Column="1" Margin="15,25,15,15"/>
-            		<ScrollViewer Grid.ColumnSpan="2" Margin="25" Grid.Row="1" >
-            			<TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Text="TextBlock" Foreground="{StaticResource BoyScoutBlue}" FontSize="36"/>
-            		</ScrollViewer>
-            	</Grid>
-            </Border>
-        </Grid>
-        <Grid
-              x:Name="LandscapeLayout" Width="800" Height="480" d:IsHidden="True">
-        	<Grid.Background>
-        		<ImageBrush Stretch="Fill" ImageSource="/Images/SinglePageBackgroundLandscape.jpg"/>
-        	</Grid.Background>
-            <Border BorderBrush="{Binding MeritBadgeBorderColor}">
+    <Grid x:Name="LayoutRoot">
 
-                <Image x:Name="MeritBadgeImageLandscape"
-                       Width="75"
-                       Height="75"
-                       Source="{Binding ImageUrl}"></Image>
+        <Grid x:Name="PortraitLayout"
+              Background="White">
+            <Border BorderBrush="{Binding MeritBadgeBorderColor}"
+                    BorderThickness="24">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <!--<ScrollViewer Margin="15,0">
+                        <Grid Height="458"
+                              Width="382">
+                            <TextBlock x:Name="DescriptionTextBlock"
+                                       TextWrapping="Wrap"
+                                       Foreground="{StaticResource BoyScoutBlue}"></TextBlock>
+                        </Grid>
+                    </ScrollViewer>-->
+
+                    <Button x:Name="HandbookButtonPortrait"
+                            Tag="{Binding MeritBadgeObject.HandbookUrl}"
+                            Foreground="{StaticResource BoyScoutRed}"
+                            BorderBrush="{StaticResource BoyScoutRed}"
+                            Content="Handbook"
+                            Click="HandbookButton_Click"
+                            VerticalAlignment="Bottom"
+                            Grid.Row="3"
+                            Margin="0,0,0,2" />
+                    <TextBlock x:Name="MeritBadgeDescriptionPortrait"
+                               TextWrapping="Wrap"
+                               Text="TextBlock"
+                               Grid.Row="2" />
+                    <Grid Margin="8" Grid.Row="1">
+                    	<Rectangle Fill="{StaticResource BoyScoutBlue}" Stroke="Black" RadiusY="25" RadiusX="25"/>
+                    	<TextBlock x:Name="MeritBadgeNamePortrait"
+                    		TextWrapping="Wrap"
+                    		Text="{Binding MeritBadgeObject.Name}"
+                    		FontSize="48"
+                    		TextAlignment="Center"
+                    		Margin="8" Height="128" VerticalAlignment="Center" d:LayoutOverrides="GridBox"
+                    		Foreground="White"
+                    		/>
+                    </Grid>
+                    <Image x:Name="MeritBadgeImagePortrait"
+                           Width="300"
+                           Height="300"
+                           Source="{Binding MeritBadgeObject.ImageUrl}"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Top"
+                           d:LayoutOverrides="VerticalAlignment" Margin="10" />
+
+                </Grid>
             </Border>
         </Grid>
+
+        <Grid x:Name="LandscapeLayout"
+              Width="800"
+              Height="480"
+              Background="White"
+              d:IsHidden="True">
+        </Grid>
+
     </Grid>
 
 </phone:PhoneApplicationPage>

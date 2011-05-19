@@ -66,6 +66,9 @@
     <Reference Include="Microsoft.Phone.Controls.Maps, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Controls.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b772ad94eb9ca604, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.Phone.Interop" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\Hg\mvvmlight\GalaSoft.MvvmLight\_Binaries\Debug\WP7\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json.WindowsPhone">
       <HintPath>..\..\..\..\Users\chkoenig\Downloads\Json40r1\Bin\WindowsPhone\Newtonsoft.Json.WindowsPhone.dll</HintPath>
     </Reference>

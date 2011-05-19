@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Tasks;
 
 namespace BoyScouts
 {
@@ -47,6 +48,20 @@ namespace BoyScouts
         private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
         {
             ResetOrientation();
+        }
+
+        private void HandbookButton_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+                return;
+
+            string url = button.Tag.ToString();
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                var task = new WebBrowserTask { URL = url };
+                task.Show();
+            }
         }
     }
 }

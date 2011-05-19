@@ -9,6 +9,7 @@ namespace BoyScouts.ViewModels
     {
         public MeritBadgeDetailsViewModel()
         {
+            MessengerInstance.Register<MeritBadgeSelectedMessage>(this, (message) => this.MeritBadgeObject = message.MeritBadge);
             if (IsInDesignMode)
             {
                 // Code runs in Blend --> create design time data.
