@@ -28,6 +28,7 @@ namespace BoyScouts.ViewModels
                         {
                             Name = item.Element("Title").Value,
                             ImageUrl = item.Element("ImageUrl").Value,
+                            Description = item.Element("Description").Value,
                             IsEagleRequired = bool.Parse(item.Element("IsEagleRequired").Value),
                             HandbookUrl = item.Element("HandbookUrl").Value,
                         };

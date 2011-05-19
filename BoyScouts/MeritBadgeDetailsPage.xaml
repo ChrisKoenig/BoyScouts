@@ -50,20 +50,29 @@
                             VerticalAlignment="Bottom"
                             Grid.Row="3"
                             Margin="0,0,0,2" />
-                    <TextBlock x:Name="MeritBadgeDescriptionPortrait"
-                               TextWrapping="Wrap"
-                               Text="TextBlock"
-                               Grid.Row="2" />
-                    <Grid Margin="8" Grid.Row="1">
-                    	<Rectangle Fill="{StaticResource BoyScoutBlue}" Stroke="Black" RadiusY="25" RadiusX="25"/>
-                    	<TextBlock x:Name="MeritBadgeNamePortrait"
-                    		TextWrapping="Wrap"
-                    		Text="{Binding MeritBadgeObject.Name}"
-                    		FontSize="48"
-                    		TextAlignment="Center"
-                    		Margin="8" Height="128" VerticalAlignment="Center" d:LayoutOverrides="GridBox"
-                    		Foreground="White"
-                    		/>
+                    <ScrollViewer Margin="10"
+                                  Grid.Row="2">
+                        <TextBlock x:Name="MeritBadgeDescriptionPortrait"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding MeritBadgeObject.Description}"
+                                   Foreground="{StaticResource BoyScoutBlue}"
+                                   FontSize="24" />
+                    </ScrollViewer>
+                    <Grid Margin="8"
+                          Grid.Row="1">
+                        <Rectangle Fill="{Binding MeritBadgeBorderColor}"
+                                   Stroke="Black"
+                                   RadiusY="25"
+                                   RadiusX="25" />
+                        <TextBlock x:Name="MeritBadgeNamePortrait"
+                                   TextWrapping="Wrap"
+                                   Text="{Binding MeritBadgeObject.Name}"
+                                   FontSize="48"
+                                   TextAlignment="Center"
+                                   Margin="8"
+                                   VerticalAlignment="Center"
+                                   d:LayoutOverrides="GridBox"
+                                   Foreground="White" />
                     </Grid>
                     <Image x:Name="MeritBadgeImagePortrait"
                            Width="300"
@@ -71,7 +80,8 @@
                            Source="{Binding MeritBadgeObject.ImageUrl}"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top"
-                           d:LayoutOverrides="VerticalAlignment" Margin="10" />
+                           d:LayoutOverrides="VerticalAlignment"
+                           Margin="10" />
 
                 </Grid>
             </Border>

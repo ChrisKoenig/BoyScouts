@@ -1,45 +1,46 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Chris Koenig (Microsoft) -->
 <ScoutRanks>
-  <Rank>
-    <SequenceNumber>1</SequenceNumber>
-    <Name>Scout</Name>
-    <ImageUrl>/Images/Ranks/Scout.png</ImageUrl>
-    <Requirements>http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards/joining.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>2</SequenceNumber>
-    <Name>Tenderfoot</Name>
-    <ImageUrl>/Images/Ranks/Tenderfoot.png</ImageUrl>
-    <Requirements>http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards/tenderfoot.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>3</SequenceNumber>
-    <Name>Second Class</Name>
-    <ImageUrl>/Images/Ranks/SecondClass.png</ImageUrl>
-    <Requirements>http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards/secondclass.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>4</SequenceNumber>
-    <Name>First Class</Name>
-    <ImageUrl>/Images/Ranks/FirstClass.png</ImageUrl>
-    <Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/firstclass.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>5</SequenceNumber>
-    <Name>Star</Name>
-    <ImageUrl>/Images/Ranks/Star.png</ImageUrl>
-    <Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/star.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>6</SequenceNumber>
-    <Name>Life</Name>
-    <ImageUrl>/Images/Ranks/Life.png</ImageUrl>
-    <Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/life.aspx</Requirements>
-  </Rank>
-  <Rank>
-    <SequenceNumber>7</SequenceNumber>
-    <Name>Eagle</Name>
-    <ImageUrl>/Images/Ranks/Eagle.png</ImageUrl>
-    <Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/eagle.aspx</Requirements>
-  </Rank>
+	<Rank>
+		<SequenceNumber>2</SequenceNumber>
+		<Name>Tenderfoot</Name>
+		<ImageUrl>/Images/Ranks/Tenderfoot.png</ImageUrl>
+		<Requirements>http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards/tenderfoot.aspx</Requirements>
+		<Description>Tenderfoot is the first rank earned as a Boy Scout. The requirements for Tenderfoot provide basic skills that begin to prepare the Scout for higher adventure outings. Earning badges and receiving recognition can be very satisfying to boys. However, each badge is a representation of a valuable set of skills that a Scout has learned and demonstrated. The skills, wisdom, and experience gained through the activities of the Scouting program are valuable than a small badge.</Description>
+	</Rank>
+	<Rank>
+		<SequenceNumber>3</SequenceNumber>
+		<Name>Second Class</Name>
+		<ImageUrl>/Images/Ranks/SecondClass.png</ImageUrl>
+		<Requirements>http://www.scouting.org/scoutsource/BoyScouts/AdvancementandAwards/secondclass.aspx</Requirements>
+		<Description>Second Class Scouts work on building their outdoor survival and camping skills. Compass work, nature observation, camp tools, and swimming are areas where new skills are mastered and demonstrated. A Second Class Scout, having completed all the requirements, should be able to lead a hike, care for his own equipment, set up a campsite, and perform basic first aid.</Description>
+	</Rank>
+	<Rank>
+		<SequenceNumber>4</SequenceNumber>
+		<Name>First Class</Name>
+		<ImageUrl>/Images/Ranks/FirstClass.png</ImageUrl>
+		<Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/firstclass.aspx</Requirements>
+		<Description>When the First Class rank is attained, a Scout has learned all the basic camping and outdoors skills of a scout. He can fend for himself in the wild, lead others on a hike or camp-out, set up a camp site, plan and properly prepare meals, and provide first aid for most situations he may encounter. A First Class scout is prepared.</Description>
+	</Rank>
+	<Rank>
+		<SequenceNumber>5</SequenceNumber>
+		<Name>Star</Name>
+		<ImageUrl>/Images/Ranks/Star.png</ImageUrl>
+		<Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/star.aspx</Requirements>
+		<Description>Up through First Class rank, a Scout was busy learning skills and becoming self-sufficient. He now moves from being a learner to being a leader. The Star rank is attained with participation, leadership, service, and self-directed advancement through merit badges.</Description>
+	</Rank>
+	<Rank>
+		<SequenceNumber>6</SequenceNumber>
+		<Name>Life</Name>
+		<ImageUrl>/Images/Ranks/Life.png</ImageUrl>
+		<Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/life.aspx</Requirements>
+		<Description>Continuing to develop leadership skills, the Life Scout rank is earned by fulfilling additional leadership positions, service hours, and merit badges. A Life Scout is expected to be a role model and leader in the troop. He provides guidance to new Scouts and helps the troop however he can. It is only possible to learn how to be a good leader by practicing leadership. Troop leadership positions allow the scout to make decisions, lead discussions, and encourage others.</Description>
+	</Rank>
+	<Rank>
+		<SequenceNumber>7</SequenceNumber>
+		<Name>Eagle</Name>
+		<ImageUrl>/Images/Ranks/Eagle.png</ImageUrl>
+		<Requirements>http://www.scouting.org/BoyScouts/AdvancementandAwards/eagle.aspx</Requirements>
+		<Description>Attaining the Eagle rank is often the end goal of a Scout and his parents. It looks good on a resume and shows commitment to a program over an extended span of time. As with the predecessor ranks, the Eagle rank is a major advancement milestone. But the Eagle rank is not the culmination of Scouting.</Description>
+	</Rank>
 </ScoutRanks>
