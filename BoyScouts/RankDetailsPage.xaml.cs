@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using BoyScouts.Messages;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Phone.Controls;
@@ -25,7 +17,11 @@ namespace BoyScouts
 
         private void RequirementsButton_Click(object sender, RoutedEventArgs e)
         {
-            string url = RequirementsButton.Tag.ToString();
+            var button = sender as Button;
+            if (button == null)
+                return;
+
+            string url = button.Tag.ToString();
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 var task = new WebBrowserTask { URL = url };

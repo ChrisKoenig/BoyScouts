@@ -133,9 +133,6 @@
     </Content>
     <Content Include="Data\Links.xml" />
     <Content Include="Data\ScoutRanks.xml" />
-    <Content Include="Images\background.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Images\MeritBadges\AART.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -536,13 +533,18 @@
     <Content Include="Images\Ranks\Tenderfoot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\SinglePageBackgroundLandscape.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SplashScreenImage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Tile_99x99.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Tile_173x173.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\ScoutLaw.xml">
@@ -553,7 +555,7 @@
     <Content Include="Images\background.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\SinglePageBackground.jpg">
+    <Content Include="Images\SinglePageBackgroundPortrait.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

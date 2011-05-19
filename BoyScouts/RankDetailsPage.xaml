@@ -22,7 +22,9 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot"
           Background="Transparent">
-        <Grid x:Name="PortraitLayout">
+
+        <Grid d:IsHidden="True"
+              x:Name="PortraitLayout">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.532*" />
@@ -32,10 +34,10 @@
 
             <Grid.Background>
                 <ImageBrush Stretch="None"
-                            ImageSource="/Images/SinglePageBackground.jpg" />
+                            ImageSource="/Images/SinglePageBackgroundPortrait.jpg" />
             </Grid.Background>
 
-            <Button x:Name="RequirementsButton"
+            <Button x:Name="RequirementsButtonPortrait"
                     Tag="{Binding RankObject.Requirements}"
                     Content="Requirements"
                     Click="RequirementsButton_Click"
@@ -45,7 +47,7 @@
                     Margin="25"
                     FontSize="36" />
 
-            <TextBlock x:Name="RankName"
+            <TextBlock x:Name="RankNamePortrait"
                        TextWrapping="Wrap"
                        Text="{Binding RankObject.Name}"
                        FontSize="72"
@@ -56,15 +58,46 @@
                        Grid.Row="1"
                        VerticalAlignment="Center" />
 
-            <Image x:Name="BadgeImage"
+            <Image x:Name="BadgeImagePortrait"
                    Source="{Binding RankObject.ImageUrl}"
                    HorizontalAlignment="Center"
                    Margin="0,50,0,76"
                    Width="244" />
+
         </Grid>
 
-        <Grid x:Name="LandscapeLayout"
-              d:IsHidden="True" />
+        <Grid x:Name="LandscapeLayout">
+
+            <Grid.Background>
+                <ImageBrush Stretch="None"
+                            ImageSource="/Images/SinglePageBackgroundLandscape.jpg" />
+            </Grid.Background>
+
+            <Button x:Name="RequirementsButtonLandscape"
+                    Tag="{Binding RankObject.Requirements}"
+                    Content="Requirements"
+                    Click="RequirementsButton_Click"
+                    Foreground="{StaticResource BoyScoutBlue}"
+                    BorderBrush="{StaticResource BoyScoutBlue}"
+                    Margin="25"
+                    FontSize="36" />
+
+            <TextBlock x:Name="RankNameLandscape"
+                       TextWrapping="Wrap"
+                       Text="{Binding RankObject.Name}"
+                       FontSize="72"
+                       FontFamily="Segoe WP SemiLight"
+                       TextAlignment="Center"
+                       LineHeight="8"
+                       Foreground="{StaticResource BoyScoutBlue}"
+                       VerticalAlignment="Center" />
+
+            <Image x:Name="BadgeImageLandscape"
+                   Source="{Binding RankObject.ImageUrl}"
+                   HorizontalAlignment="Center"
+                   Width="244" />
+
+        </Grid>
 
     </Grid>
 </phone:PhoneApplicationPage>
