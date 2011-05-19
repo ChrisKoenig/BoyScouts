@@ -39,8 +39,14 @@ namespace BoyScouts
 
         private void HandbookButton_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            var url = button.Tag.ToString();
+        }
+
+        private void VisualSearchButton_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void ShowHandbook(string url)
+        {
             if (url.Length > 0)
             {
                 WebBrowserTask task = new WebBrowserTask();

@@ -24,6 +24,12 @@
             <toolkit:WrapPanel />
         </ItemsPanelTemplate>
 
+        <SolidColorBrush x:Key="BoyScoutBlue"
+                         Color="#FF005696" />
+
+        <SolidColorBrush x:Key="BoyScoutRed"
+                         Color="#FFD92F38" />
+
         <!-- Content Data Template -->
         <DataTemplate x:Key="ContentsDataTemplate">
             <Button Click="ContentButton_Click"
@@ -33,7 +39,7 @@
                         <Grid Width="173"
                               Height="173"
                               Margin="12"
-                              Background="{StaticResource PhoneAccentBrush}">
+                              Background="{StaticResource BoyScoutRed}">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="0.775*" />
                                 <RowDefinition Height="0.225*" />
@@ -68,37 +74,37 @@
         </DataTemplate>
 
         <!-- Merit Badge Data Template -->
+        <DataTemplate x:Key="MeritBadgeListHeaderTemplate">
+            <Grid>
+                <Button Content="Visual Search"
+                        Click="VisualSearchButton_Click" />
+            </Grid>
+        </DataTemplate>
         <DataTemplate x:Key="MeritBadgeListItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Image Width="110"
-                       Height="150"
-                       Source="{Binding ImageUrl}"
-                       VerticalAlignment="Top" />
-                <StackPanel Grid.Column="1"
-                            VerticalAlignment="Top">
-                    <TextBlock Text="{Binding Name}"
-                               Style="{StaticResource MeritBadgeNameStyle}"
-                               Margin="12,-12,12,6" />
-                    <Button Content="Handbook"
-                            Click="HandbookButton_Click"
-                            Tag="{Binding HandbookUrl}"
-                            FontFamily="{StaticResource PhoneFontFamilySemiBold}" />
-                </StackPanel>
+                <TextBlock Grid.Column="1"
+                           Text="{Binding Name}"
+                           Margin="12,-12,12,6"
+                           FontFamily="Segoe WP Semibold"
+                           FontSize="36"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Center"
+                           Foreground="{StaticResource BoyScoutBlue}" />
             </Grid>
         </DataTemplate>
 
         <DataTemplate x:Key="MeritBadgeListGroupHeaderTemplate">
             <Border Background="Transparent">
-                <Border Background="{StaticResource PhoneAccentBrush}"
+                <Border Background="{StaticResource BoyScoutRed}"
                         Width="75"
                         Height="75"
                         HorizontalAlignment="Left">
                     <TextBlock Text="{Binding Key}"
-                               Foreground="{StaticResource PhoneForegroundBrush}"
+                               Foreground="White"
                                Style="{StaticResource PhoneTextExtraLargeStyle}"
                                VerticalAlignment="Bottom" />
                 </Border>
@@ -109,12 +115,12 @@
             <Border Width="99"
                     Height="99"
                     Margin="6"
-                    Background="{StaticResource PhoneAccentBrush}">
+                    Background="{StaticResource BoyScoutRed}">
                 <TextBlock Text="{Binding Key}"
                            FontFamily="{StaticResource PhoneFontFamilySemiBold}"
                            FontSize="36"
                            Margin="{StaticResource PhoneTouchTargetOverhang}"
-                           Foreground="{StaticResource PhoneForegroundBrush}"
+                           Foreground="White"
                            VerticalAlignment="Bottom" />
             </Border>
         </DataTemplate>
@@ -136,12 +142,34 @@
                        Source="{Binding ImageUrl}" />
             </Grid>
         </DataTemplate>
+        <DataTemplate x:Key="PanoramaHeaderTemplate">
+            <Grid>
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding}"
+                           d:LayoutOverrides="Width, Height"
+                           FontSize="48"
+                           Foreground="{StaticResource BoyScoutBlue}" />
+            </Grid>
+        </DataTemplate>
+        <DataTemplate x:Key="PanoramaTitleTemplate">
+            <Grid>
+                <TextBlock Margin="0,105,1,0"
+                           TextWrapping="Wrap"
+                           Text="{Binding Mode=OneWay}"
+                           d:LayoutOverrides="Width, Height"
+                           FontSize="56"
+                           Foreground="{StaticResource BoyScoutRed}"
+                           FontFamily="Segoe WP Semibold" />
+            </Grid>
+        </DataTemplate>
 
     </phone:PhoneApplicationPage.Resources>
 
     <!-- LAYOUT ROOT -->
     <controls:Panorama x:Name="LayoutRoot"
-                       Title="boy scouts">
+                       Title="Boy Scouts of America"
+                       HeaderTemplate="{StaticResource PanoramaHeaderTemplate}"
+                       TitleTemplate="{StaticResource PanoramaTitleTemplate}">
         <controls:Panorama.Background>
             <ImageBrush ImageSource="/Images/background.png"
                         Stretch="UniformToFill" />
@@ -171,10 +199,13 @@
                 <TextBlock Text="A Scout Is..."
                            TextAlignment="Center"
                            Margin="0,0,0,15"
-                           FontSize="32" />
+                           FontSize="32"
+                           Foreground="{StaticResource BoyScoutBlue}"
+                           FontFamily="Segoe WP Semibold" />
                 <ScrollViewer Grid.Row="1">
                     <ItemsControl ItemsSource="{Binding Laws}"
-                                  ItemTemplate="{StaticResource ScoutLawDataTemplate}" />
+                                  ItemTemplate="{StaticResource ScoutLawDataTemplate}"
+                                  Foreground="{StaticResource BoyScoutRed}" />
                 </ScrollViewer>
             </Grid>
         </controls:PanoramaItem>
@@ -188,14 +219,20 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <StackPanel>
-                    <TextBlock FontSize="24">On my honor, I will do my best</TextBlock>
-                    <TextBlock FontSize="24">To do my duty to God and my country</TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">and to obey the Scout Law;</TextBlock>
-                    <TextBlock FontSize="24">To help other people at all times;</TextBlock>
-                    <TextBlock FontSize="24">To keep myself physically strong,</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}">On my honor, I will do my best</TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">mentally awake and morally straight.</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}">To do my duty to God and my country</TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">and to obey the Scout Law;</TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutRed}">To help other people at all times;</TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutRed}">To keep myself physically strong,</TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">mentally awake and morally straight.</TextBlock>
                 </StackPanel>
                 <Image Source="/Images/ScoutOath.jpg"
                        Grid.Row="1"
@@ -204,7 +241,7 @@
                 <Rectangle Height="250"
                            Width="480"
                            Grid.Row="1"
-                           Fill="Red" />
+                           Fill="{StaticResource BoyScoutRed}" />
             </Grid>
         </controls:PanoramaItem>
 
@@ -217,16 +254,22 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <StackPanel>
-                    <TextBlock FontSize="24">As an American, I will do my best to -</TextBlock>
-                    <TextBlock FontSize="24"></TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">• Be clean in my outdoor manners</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}">As an American, I will do my best to -</TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">• Be careful with fire</TextBlock>
+                               Foreground="{StaticResource BoyScoutRed}"></TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">• •Be considerate in the outdoors, and</TextBlock>
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">• Be clean in my outdoor manners</TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0">• Be conservation minded.</TextBlock>
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">• Be careful with fire</TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">• Be considerate in the outdoors, and</TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutRed}">• Be conservation minded.</TextBlock>
                 </StackPanel>
                 <Image Source="/Images/ScoutOath.jpg"
                        Grid.Row="1"
@@ -235,7 +278,7 @@
                 <Rectangle Height="250"
                            Width="480"
                            Grid.Row="1"
-                           Fill="Red" />
+                           Fill="{StaticResource BoyScoutRed}" />
             </Grid>
 
         </controls:PanoramaItem>
@@ -263,7 +306,8 @@
                                           ItemsSource="{Binding MeritBadgesByFirstLetter}"
                                           ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
                                           GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
-                                          GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}">
+                                          GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}"
+                                          ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}">
                     <toolkit:LongListSelector.GroupItemsPanel>
                         <ItemsPanelTemplate>
                             <toolkit:WrapPanel Orientation="Horizontal" />
