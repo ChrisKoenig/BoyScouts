@@ -72,10 +72,12 @@
         <!-- Merit Badge Data Template -->
         <DataTemplate x:Key="MeritBadgeListHeaderTemplate">
             <Grid>
-                <Button Content="Visual Search"
+                <Button x:Name="VisualSearchButton"
+                        Content="Visual Search"
                         Click="VisualSearchButton_Click" />
             </Grid>
         </DataTemplate>
+
         <DataTemplate x:Key="MeritBadgeListItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <Grid.ColumnDefinitions>
@@ -355,7 +357,7 @@
                 <toolkit:LongListSelector x:Name="MeritBadgeList"
                                           IsBouncy="True"
                                           ShowListFooter="False"
-                                          ShowListHeader="False"
+                                          ShowListHeader="True"
                                           BufferSize="4"
                                           SelectedItem="{Binding SelectedMeritBadge, Mode=TwoWay}"
                                           ItemsSource="{Binding MeritBadgesByFirstLetter}"

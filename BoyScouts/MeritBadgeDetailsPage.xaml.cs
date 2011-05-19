@@ -19,7 +19,7 @@ namespace BoyScouts
         public MeritBadgeDetailsPage()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(MeritBadgeDetailsPage_Loaded);
+            Loaded += MeritBadgeDetailsPage_Loaded;
         }
 
         private void MeritBadgeDetailsPage_Loaded(object sender, RoutedEventArgs e)

@@ -13,7 +13,7 @@ namespace BoyScouts
         public RankDetailsPage()
         {
             InitializeComponent();
-            Loaded += new RoutedEventHandler(RankDetailsPage_Loaded);
+            Loaded += RankDetailsPage_Loaded;
         }
 
         private void RankDetailsPage_Loaded(object sender, RoutedEventArgs e)
