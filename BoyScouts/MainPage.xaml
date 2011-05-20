@@ -17,8 +17,7 @@
                             SupportedOrientations="Portrait"
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
-                            shell:SystemTray.IsVisible="False"
-                            d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
+                            shell:SystemTray.IsVisible="False" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
 
         <!-- Contents ItemsPanel Templates -->

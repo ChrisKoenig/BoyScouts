@@ -1,5 +1,5 @@
 <BoyScouts_ViewModels:RankDetailsViewModel xmlns:BoyScouts_ViewModels="clr-namespace:BoyScouts.ViewModels" xmlns:BoyScouts_Models="clr-namespace:BoyScouts.Models" IsInDesignMode="True" IsInDesignModeStatic="False">
-	<BoyScouts_ViewModels:RankDetailsViewModel.Rank>
-		<BoyScouts_Models:Rank ImageUrl="Aenean maecenas curabitur" Name="Nam cras mauris vestibulum" Requirements="Nullam aptent duis phasellus class" SequenceNumber="49"/>
-	</BoyScouts_ViewModels:RankDetailsViewModel.Rank>
+	<BoyScouts_ViewModels:RankDetailsViewModel.RankObject>
+		<BoyScouts_Models:Rank ImageUrl="Class curae donec" Name="Maecenas aenean vestibulum" Requirements="Cras adipiscing aliquam" SequenceNumber="83"/>
+	</BoyScouts_ViewModels:RankDetailsViewModel.RankObject>
 </BoyScouts_ViewModels:RankDetailsViewModel>

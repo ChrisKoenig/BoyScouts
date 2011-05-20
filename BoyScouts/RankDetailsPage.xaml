@@ -9,21 +9,20 @@
                             x:Class="BoyScouts.RankDetailsPage"
                             FontFamily="{StaticResource PhoneFontFamilyNormal}"
                             FontSize="{StaticResource PhoneFontSizeNormal}"
-                            SupportedOrientations="PortraitOrLandscape"
                             Orientation="Portrait"
+                            SupportedOrientations="PortraitOrLandscape"
                             OrientationChanged="PhoneApplicationPage_OrientationChanged"
                             DataContext="{Binding RankDetailsViewModel, Source={StaticResource Locator}}"
                             mc:Ignorable="d"
                             shell:SystemTray.IsVisible="False"
-                            d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}"
                             d:DesignHeight="800"
-                            d:DesignWidth="480">
+                            d:DesignWidth="480" d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot"
           Background="Transparent">
 
-        <Grid d:IsHidden="True"
+        <Grid
               x:Name="PortraitLayout">
 
             <Grid.RowDefinitions>
@@ -66,18 +65,54 @@
 
         </Grid>
 
-        <Grid x:Name="LandscapeLayout">
+        <Grid x:Name="LandscapeLayout" d:IsHidden="True">
 
             <Grid.Background>
                 <ImageBrush Stretch="None"
                             ImageSource="/Images/SinglePageBackgroundLandscape.jpg" />
             </Grid.Background>
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
             <Image x:Name="BadgeImageLandscape"
+                   Grid.Column="0"
+                   Grid.Row="0"
+                   Grid.RowSpan="2"
                    Source="{Binding RankObject.ImageUrl}"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Width="244" />
+
+            <TextBlock x:Name="RankNameLandscape"
+                       TextWrapping="Wrap"
+                       Text="{Binding RankObject.Name}"
+                       FontSize="72"
+                       FontFamily="Segoe WP SemiLight"
+                       TextAlignment="Center"
+                       LineHeight="8"
+                       Foreground="{StaticResource BoyScoutBlue}"
+                       Grid.Row="0"
+                       Grid.Column="1"
+                       VerticalAlignment="Top" />
+
+            <Button x:Name="RequirementsButtonLandscape"
+                    Tag="{Binding RankObject.Requirements}"
+                    Content="Requirements"
+                    Click="RequirementsButton_Click"
+                    Foreground="{StaticResource BoyScoutBlue}"
+                    BorderBrush="{StaticResource BoyScoutBlue}"
+                    VerticalAlignment="Bottom"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="36" />
 
         </Grid>
 

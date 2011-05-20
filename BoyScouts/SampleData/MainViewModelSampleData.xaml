@@ -1,158 +1,161 @@
-﻿<BoyScouts_ViewModels:MainViewModel xmlns:BoyScouts_ViewModels="clr-namespace:BoyScouts.ViewModels" xmlns:BoyScouts_Models="clr-namespace:BoyScouts.Models" IsInDesignMode="False" IsInDesignModeStatic="True">
+<BoyScouts_ViewModels:MainViewModel xmlns:BoyScouts_ViewModels="clr-namespace:BoyScouts.ViewModels" xmlns:BoyScouts_Models="clr-namespace:BoyScouts.Models" IsInDesignMode="False" IsInDesignModeStatic="True">
 	<BoyScouts_ViewModels:MainViewModel.ContentsViewModel>
 		<BoyScouts_ViewModels:ContentsViewModel IsInDesignMode="True" IsInDesignModeStatic="False">
 			<BoyScouts_ViewModels:ContentsViewModel.Contents>
-				<BoyScouts_Models:Content ImagePath="Class curae aliquam" PageIndex="77" Title="Nam aenean mauris"/>
-				<BoyScouts_Models:Content ImagePath="Integer maecenas donec nullam" PageIndex="16" Title="Vestibulum praesent"/>
-				<BoyScouts_Models:Content ImagePath="Adipiscing aptent quisque" PageIndex="92" Title="Parturient sed vivamus"/>
-				<BoyScouts_Models:Content ImagePath="Accumsan dis vestibulum vestibulum" PageIndex="87" Title="Bibendum curabitur est cras"/>
-				<BoyScouts_Models:Content ImagePath="Auctor adipiscing congue" PageIndex="95" Title="Cursus dictumst phasellus"/>
-				<BoyScouts_Models:Content ImagePath="Hac dictum etiam eleifend fusce" PageIndex="65" Title="Lorem facilisi parturient leo"/>
-				<BoyScouts_Models:Content ImagePath="Faucibus morbi consequat mus habitant" PageIndex="21" Title="Lectus nec duis"/>
-				<BoyScouts_Models:Content ImagePath="Convallis nunc nulla vestibulum" PageIndex="26" Title="Dignissim vestibulum proin inceptos elementum"/>
-				<BoyScouts_Models:Content ImagePath="Non amet" PageIndex="24" Title="Per aliquam augue facilisis"/>
-				<BoyScouts_Models:Content ImagePath="Fermentum ante aliquet libero" PageIndex="13" Title="Sed fringilla"/>
+				<BoyScouts_Models:Content ImagePath="Nam vestibulum class" PageIndex="48" Title="Sed dis"/>
+				<BoyScouts_Models:Content ImagePath="Aenean cras" PageIndex="28" Title="Adipiscing est curabitur curae mauris"/>
+				<BoyScouts_Models:Content ImagePath="Hac phasellus" PageIndex="15" Title="Consequat duis maecenas"/>
+				<BoyScouts_Models:Content ImagePath="Nunc convallis parturient leo" PageIndex="97" Title="Mus dignissim donec nec"/>
+				<BoyScouts_Models:Content ImagePath="Nullam vestibulum amet elementum" PageIndex="32" Title="Ante facilisis etiam"/>
+				<BoyScouts_Models:Content ImagePath="Non vestibulum" PageIndex="35" Title="Fermentum aliquam arcu per integer"/>
+				<BoyScouts_Models:Content ImagePath="Praesent adipiscing parturient vestibulum fusce" PageIndex="59" Title="Quisque diam lorem aptent"/>
+				<BoyScouts_Models:Content ImagePath="Auctor congue accumsan bibendum morbi" PageIndex="65" Title="Sed cursus"/>
+				<BoyScouts_Models:Content ImagePath="Sem eget" PageIndex="62" Title="Sit vestibulum dictumst vivamus adipiscing"/>
+				<BoyScouts_Models:Content ImagePath="Elit parturient vel vestibulum" PageIndex="45" Title="Dictum nam vestibulum"/>
 			</BoyScouts_ViewModels:ContentsViewModel.Contents>
 		</BoyScouts_ViewModels:ContentsViewModel>
 	</BoyScouts_ViewModels:MainViewModel.ContentsViewModel>
 	<BoyScouts_ViewModels:MainViewModel.LinksViewModel>
 		<BoyScouts_ViewModels:LinksViewModel IsInDesignMode="True" IsInDesignModeStatic="False">
 			<BoyScouts_ViewModels:LinksViewModel.Links>
-				<BoyScouts_Models:Link Title="Blandit habitasse hendrerit interdum sem" Url="Arcu commodo adipiscing himenaeos dolor"/>
-				<BoyScouts_Models:Link Title="Imperdiet ligula lobortis nascetur" Url="Fames felis parturient diam conubia"/>
-				<BoyScouts_Models:Link Title="Vestibulum sit" Url="Cubilia ipsum"/>
-				<BoyScouts_Models:Link Title="Dapibus vestibulum litora" Url="Luctus egestas vel malesuada eget"/>
-				<BoyScouts_Models:Link Title="Adipiscing parturient magnis" Url="Elit mattis euismod"/>
-				<BoyScouts_Models:Link Title="Justo penatibus porttitor tincidunt" Url="Pharetra vestibulum placerat mauris pulvinar"/>
-				<BoyScouts_Models:Link Title="Vestibulum sagittis" Url="Feugiat mollis lacus"/>
-				<BoyScouts_Models:Link Title="Lorem adipiscing nam" Url="Senectus parturient montes magna"/>
-				<BoyScouts_Models:Link Title="Sociosqu gravida suscipit" Url="Sed vestibulum vestibulum"/>
-				<BoyScouts_Models:Link Title="Enim tristique nostra massa" Url="Ornare adipiscing ultricies iaculis platea"/>
+				<BoyScouts_Models:Link Title="Enim adipiscing eleifend facilisi erat" Url="Sed dis est aliquam"/>
+				<BoyScouts_Models:Link Title="Fringilla parturient hac" Url="Aliquet faucibus nulla lectus"/>
+				<BoyScouts_Models:Link Title="Leo vestibulum mus" Url="Libero habitasse proin eros nec"/>
+				<BoyScouts_Models:Link Title="Hendrerit nibh vestibulum himenaeos non" Url="Nisi blandit imperdiet"/>
+				<BoyScouts_Models:Link Title="Nisl ligula nunc litora per" Url="Adipiscing odio parturient augue sed"/>
+				<BoyScouts_Models:Link Title="Habitant dolor sem commodo" Url="Vestibulum fames malesuada luctus vestibulum"/>
+				<BoyScouts_Models:Link Title="Adipiscing felis conubia orci parturient" Url="Penatibus cubilia porttitor sit"/>
+				<BoyScouts_Models:Link Title="Pede ipsum" Url="Vestibulum justo"/>
+				<BoyScouts_Models:Link Title="Quam vel vestibulum nam magnis" Url="Adipiscing mattis sed"/>
+				<BoyScouts_Models:Link Title="Tincidunt dis" Url="Est inceptos interdum"/>
 			</BoyScouts_ViewModels:LinksViewModel.Links>
 		</BoyScouts_ViewModels:LinksViewModel>
 	</BoyScouts_ViewModels:MainViewModel.LinksViewModel>
 	<BoyScouts_ViewModels:MainViewModel.MeritBadgesViewModel>
 		<BoyScouts_ViewModels:MeritBadgesViewModel IsInDesignMode="False" IsInDesignModeStatic="True">
 			<BoyScouts_ViewModels:MeritBadgesViewModel.MeritBadgesByFirstLetter>
-				<BoyScouts_Models:MeritBadgesByFirstLetter Capacity="33">
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="86" HasItems="True" Key="Parturient vestibulum feugiat nam gravida">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Varius sed vestibulum" IsEagleRequired="False" ImageUrl="Iaculis erat suscipit eros" Key="Torquent curae lacinia nibh" Name="Laoreet natoque nisi"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Adipiscing donec porttitor" IsEagleRequired="True" ImageUrl="Ultrices nisl posuere nunc odio" Key="Orci pede" Name="Parturient vestibulum dis vestibulum"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Etiam fusce est aenean quam" IsEagleRequired="False" ImageUrl="Hac tincidunt" Key="Adipiscing lorem morbi leo" Name="Nulla tristique proin"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Vehicula mus mauris nec" IsEagleRequired="True" ImageUrl="Nullam aptent volutpat non per" Key="Augue dolor auctor" Name="Congue fames ultricies"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Venenatis potenti quis maecenas" IsEagleRequired="False" ImageUrl="Urna felis" Key="Sed cursus praesent dictum lectus" Name="Libero sem"/>
+				<BoyScouts_Models:MeritBadgesByFirstLetter Capacity="10">
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="97" HasItems="True" Key="Feugiat orci">
+						<BoyScouts_Models:MeritBadge Description="Non gravida tortor" IsEagleRequired="False" ImageUrl="Iaculis per convallis lacinia laoreet" Key="Turpis varius bibendum dignissim" Name="Augue pede aenean dolor quam" WorksheetUrl="Natoque elementum posuere dictumst adipiscing"/>
+						<BoyScouts_Models:MeritBadge Description="Facilisis mauris nullam" IsEagleRequired="True" ImageUrl="Parturient aptent quis urna fermentum" Key="Vestibulum potenti sed eleifend" Name="Facilisi auctor fames cras felis" WorksheetUrl="Sem fringilla"/>
+						<BoyScouts_Models:MeritBadge Description="Ipsum duis" IsEagleRequired="False" ImageUrl="Sit faucibus vestibulum pretium rhoncus" Key="Justo lacus lorem adipiscing" Name="Magna vel congue" WorksheetUrl="Nunc habitasse"/>
+						<BoyScouts_Models:MeritBadge Description="Parturient nam sed" IsEagleRequired="True" ImageUrl="Cursus dictum" Key="Lectus sodales viverra amet" Name="Habitant aliquam integer dis" WorksheetUrl="Vestibulum est massa hendrerit himenaeos"/>
+						<BoyScouts_Models:MeritBadge Description="Libero inceptos" IsEagleRequired="False" ImageUrl="Imperdiet malesuada ligula metus penatibus" Key="Vestibulum porttitor litora adipiscing" Name="Ante hac" WorksheetUrl="Arcu luctus"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="35" HasItems="True" Key="Sit pretium accumsan parturient vulputate">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Vestibulum ligula cras bibendum vestibulum" IsEagleRequired="False" ImageUrl="Rhoncus sodales ipsum" Key="Justo duis" Name="Dictumst nunc curabitur"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Eleifend litora vel luctus" IsEagleRequired="True" ImageUrl="Phasellus consequat viverra" Key="Facilisi adipiscing aliquam integer faucibus" Name="Habitant parturient vestibulum quisque vestibulum"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Vivamus inceptos lacus interdum magnis" IsEagleRequired="False" ImageUrl="Convallis lobortis amet nascetur" Key="Aliquam nam dignissim sed elementum" Name="Facilisis aliquet pharetra placerat"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Adipiscing parturient pulvinar" IsEagleRequired="True" ImageUrl="Sagittis fermentum lorem dis" Key="Vestibulum fringilla blandit vestibulum magna" Name="Senectus commodo sociosqu massa"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Suscipit est habitasse ante" IsEagleRequired="False" ImageUrl="Arcu conubia mattis" Key="Diam eget metus" Name="Cubilia hendrerit adipiscing"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="86" HasItems="True" Key="Interdum morbi leo">
+						<BoyScouts_Models:MeritBadge Description="Diam quisque neque tincidunt" IsEagleRequired="False" ImageUrl="Vivamus magnis aliquam netus" Key="Parturient mus eget" Name="Nulla porta lobortis aliquet" WorksheetUrl="Elit vestibulum mattis"/>
+						<BoyScouts_Models:MeritBadge Description="Vestibulum enim" IsEagleRequired="True" ImageUrl="Nascetur tristique blandit" Key="Commodo conubia erat cubilia" Name="Adipiscing dapibus mauris nec mollis" WorksheetUrl="Pharetra non per purus montes"/>
+						<BoyScouts_Models:MeritBadge Description="Egestas eros" IsEagleRequired="False" ImageUrl="Risus nibh nisi" Key="Velit ultricies placerat euismod" Name="Nisl vitae" WorksheetUrl="Pulvinar venenatis"/>
+						<BoyScouts_Models:MeritBadge Description="Nunc sed" IsEagleRequired="True" ImageUrl="Sagittis sem class nostra sit" Key="Vulputate odio" Name="Ornare parturient" WorksheetUrl="Feugiat senectus gravida vel"/>
+						<BoyScouts_Models:MeritBadge Description="Curabitur sociosqu" IsEagleRequired="False" ImageUrl="Orci iaculis pede phasellus" Key="Curae donec" Name="Suscipit vestibulum lacinia platea consequat" WorksheetUrl="Convallis nam sed"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="90" HasItems="True" Key="Torquent himenaeos elit parturient enim">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Hac ultrices" IsEagleRequired="False" ImageUrl="Morbi imperdiet vestibulum leo" Key="Dapibus egestas vestibulum mus erat" Name="Mauris adipiscing mollis"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Eros malesuada nibh" IsEagleRequired="True" ImageUrl="Penatibus porttitor euismod montes" Key="Neque feugiat nostra gravida" Name="Iaculis tincidunt netus nec"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nisi tristique" IsEagleRequired="False" ImageUrl="Ultricies nulla ornare lacinia non" Key="Parturient vestibulum per venenatis laoreet" Name="Vehicula natoque"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Porta sed volutpat purus sem" IsEagleRequired="True" ImageUrl="Maecenas sit posuere" Key="Vestibulum risus platea" Name="Vulputate praesent vel"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Curabitur nisl velit nunc odio" IsEagleRequired="False" ImageUrl="Primis phasellus vitae rutrum nam" Key="Potenti consequat sed convallis" Name="Class accumsan dis"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="68" HasItems="True" Key="Quam etiam">
+						<BoyScouts_Models:MeritBadge Description="Dignissim quis dis" IsEagleRequired="False" ImageUrl="Torquent laoreet ultrices" Key="Vehicula urna" Name="Natoque primis volutpat rutrum" WorksheetUrl="Maecenas sapien"/>
+						<BoyScouts_Models:MeritBadge Description="Praesent elementum vestibulum" IsEagleRequired="True" ImageUrl="Adipiscing parturient facilisis semper" Key="Est vestibulum accumsan hac" Name="Leo fermentum mus fusce nec" WorksheetUrl="Cras sociis"/>
+						<BoyScouts_Models:MeritBadge Description="Bibendum duis vestibulum" IsEagleRequired="False" ImageUrl="Taciti adipiscing" Key="Non per posuere parturient" Name="Sed nunc" WorksheetUrl="Vestibulum potenti lorem"/>
+						<BoyScouts_Models:MeritBadge Description="Morbi sem dictumst vestibulum adipiscing" IsEagleRequired="True" ImageUrl="Sit vel tellus" Key="Fringilla eleifend" Name="Nulla proin facilisi" WorksheetUrl="Tempor parturient pretium vestibulum rhoncus"/>
+						<BoyScouts_Models:MeritBadge Description="Amet augue faucibus tempus sodales" IsEagleRequired="False" ImageUrl="Dolor habitasse hendrerit himenaeos" Key="Tortor imperdiet turpis vestibulum adipiscing" Name="Nam malesuada" WorksheetUrl="Penatibus habitant"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="87" HasItems="True" Key="Adipiscing dignissim elementum curae">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Sapien facilisis" IsEagleRequired="False" ImageUrl="Orci bibendum pretium" Key="Parturient rhoncus fermentum semper" Name="Fringilla dictumst vestibulum vestibulum"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Pede eleifend" IsEagleRequired="True" ImageUrl="Habitasse sodales donec" Key="Etiam hendrerit adipiscing viverra" Name="Facilisi himenaeos quam aliquam fusce"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Lorem morbi nulla integer parturient" IsEagleRequired="False" ImageUrl="Vestibulum imperdiet proin augue" Key="Quis sociis faucibus taciti" Name="Dolor quisque vestibulum fames malesuada"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Adipiscing urna habitant vivamus parturient" IsEagleRequired="True" ImageUrl="Tellus aliquam tempor vestibulum felis" Key="Penatibus cras ipsum aliquet" Name="Est inceptos"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Justo tempus duis nunc interdum" IsEagleRequired="False" ImageUrl="Hac amet" Key="Porttitor tortor lobortis ante" Name="Nascetur vestibulum blandit"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="96" HasItems="True" Key="Fames felis sed dis">
+						<BoyScouts_Models:MeritBadge Description="Varius ante" IsEagleRequired="False" ImageUrl="Ipsum justo arcu inceptos" Key="Lacus interdum" Name="Viverra lorem est aliquam lobortis" WorksheetUrl="Magna integer porttitor quisque"/>
+						<BoyScouts_Models:MeritBadge Description="Massa diam eget" IsEagleRequired="True" ImageUrl="Elit vivamus aliquam" Key="Aenean nascetur metus" Name="Enim parturient aliquet morbi" WorksheetUrl="Erat pharetra"/>
+						<BoyScouts_Models:MeritBadge Description="Mauris eros vestibulum nullam" IsEagleRequired="False" ImageUrl="Hac neque leo" Key="Nibh aptent nisi vestibulum blandit" Name="Auctor netus nisl tincidunt" WorksheetUrl="Nunc mus nec adipiscing"/>
+						<BoyScouts_Models:MeritBadge Description="Odio parturient" IsEagleRequired="True" ImageUrl="Tristique ultricies placerat" Key="Vestibulum commodo venenatis congue cursus" Name="Non orci per nulla sed" WorksheetUrl="Conubia dictum pede pulvinar"/>
+						<BoyScouts_Models:MeritBadge Description="Porta purus vestibulum" IsEagleRequired="False" ImageUrl="Sagittis adipiscing" Key="Senectus sem" Name="Sit lectus" WorksheetUrl="Quam libero"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="37" HasItems="True" Key="Turpis pharetra">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Lacus adipiscing lorem varius placerat" IsEagleRequired="False" ImageUrl="Pulvinar aenean parturient leo commodo" Key="Vestibulum mauris conubia mus tincidunt" Name="Vestibulum cubilia sagittis adipiscing"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nec tristique non arcu" IsEagleRequired="True" ImageUrl="Ultricies parturient" Key="Venenatis diam magna eget" Name="Vulputate dapibus"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nullam vestibulum elit curabitur" IsEagleRequired="False" ImageUrl="Aptent enim egestas per" Key="Euismod sed erat eros" Name="Nibh nisi phasellus massa metus"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Consequat nisl nunc" IsEagleRequired="True" ImageUrl="Odio feugiat morbi vestibulum neque" Key="Convallis auctor congue" Name="Dignissim gravida orci"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Senectus pede adipiscing cursus dictum" IsEagleRequired="False" ImageUrl="Netus quam" Key="Lectus sociosqu parturient" Name="Suscipit nulla"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="27" HasItems="True" Key="Vulputate cubilia risus quis dapibus">
+						<BoyScouts_Models:MeritBadge Description="Egestas velit urna curabitur" IsEagleRequired="False" ImageUrl="Cras sociosqu vitae suscipit" Key="Vel duis" Name="Torquent ligula nam class euismod" WorksheetUrl="Curae sed donec ultrices"/>
+						<BoyScouts_Models:MeritBadge Description="Vehicula nunc" IsEagleRequired="True" ImageUrl="Amet phasellus dis" Key="Feugiat parturient ante volutpat" Name="Est maecenas litora" WorksheetUrl="Vestibulum consequat"/>
+						<BoyScouts_Models:MeritBadge Description="Convallis gravida etiam" IsEagleRequired="False" ImageUrl="Fusce lorem" Key="Luctus praesent vestibulum morbi" Name="Accumsan dignissim hac bibendum adipiscing" WorksheetUrl="Leo iaculis mus dictumst arcu"/>
+						<BoyScouts_Models:MeritBadge Description="Lacinia magnis" IsEagleRequired="True" ImageUrl="Nulla proin mattis" Key="Nec diam augue" Name="Laoreet natoque eleifend" WorksheetUrl="Dolor elementum"/>
+						<BoyScouts_Models:MeritBadge Description="Facilisi faucibus fames" IsEagleRequired="False" ImageUrl="Habitant felis non inceptos facilisis" Key="Per fermentum fringilla" Name="Posuere sed sem parturient" WorksheetUrl="Vestibulum sit eget"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="70" HasItems="True" Key="Vestibulum torquent elementum sem ultrices">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Quis iaculis" IsEagleRequired="False" ImageUrl="Facilisis libero vestibulum" Key="Vehicula ligula adipiscing" Name="Volutpat porta lacinia"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Laoreet maecenas sit urna vel" IsEagleRequired="True" ImageUrl="Parturient litora vestibulum cras" Key="Praesent luctus vestibulum nam" Name="Magnis mattis"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Duis mauris nunc purus risus" IsEagleRequired="False" ImageUrl="Mollis fermentum accumsan velit" Key="Vitae bibendum dictumst eleifend natoque" Name="Posuere potenti"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Fringilla sed facilisi habitasse" IsEagleRequired="True" ImageUrl="Dis adipiscing montes" Key="Class est amet parturient" Name="Hendrerit hac faucibus pretium"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Himenaeos vestibulum" IsEagleRequired="False" ImageUrl="Rhoncus sodales vestibulum" Key="Habitant curae" Name="Leo ante imperdiet adipiscing inceptos"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="20" HasItems="True" Key="Vestibulum adipiscing elit mauris ipsum">
+						<BoyScouts_Models:MeritBadge Description="Mollis enim" IsEagleRequired="False" ImageUrl="Habitasse erat vel" Key="Eros nam" Name="Montes interdum" WorksheetUrl="Justo sed lacus parturient"/>
+						<BoyScouts_Models:MeritBadge Description="Lobortis lorem magna vestibulum vestibulum" IsEagleRequired="True" ImageUrl="Nostra ornare nascetur potenti" Key="Hendrerit massa adipiscing metus" Name="Morbi pretium platea pharetra primis" WorksheetUrl="Rhoncus neque netus himenaeos sodales"/>
+						<BoyScouts_Models:MeritBadge Description="Rutrum imperdiet placerat" IsEagleRequired="False" ImageUrl="Pulvinar dis nulla nibh nisi" Key="Est sagittis parturient" Name="Porta senectus malesuada vestibulum" WorksheetUrl="Vestibulum penatibus"/>
+						<BoyScouts_Models:MeritBadge Description="Adipiscing viverra" IsEagleRequired="True" ImageUrl="Parturient sapien" Key="Semper purus porttitor vestibulum" Name="Aliquam vestibulum hac adipiscing" WorksheetUrl="Integer leo"/>
+						<BoyScouts_Models:MeritBadge Description="Sociosqu tincidunt" IsEagleRequired="False" ImageUrl="Tristique ultricies mus risus suscipit" Key="Sociis taciti velit quisque vitae" Name="Class curae parturient" WorksheetUrl="Venenatis vivamus torquent tellus"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="94" HasItems="True" Key="Malesuada donec arcu interdum">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nostra lobortis diam" IsEagleRequired="False" ImageUrl="Nascetur parturient ornare pharetra platea" Key="Eget vestibulum penatibus etiam mus" Name="Viverra vestibulum placerat aliquam porttitor"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Adipiscing tincidunt elit nec" IsEagleRequired="True" ImageUrl="Integer tristique primis non quisque" Key="Per sed enim" Name="Pulvinar sem ultricies rutrum vivamus"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Erat venenatis sit aliquam fusce" IsEagleRequired="False" ImageUrl="Lorem vel morbi parturient vulputate" Key="Nam vestibulum" Name="Aliquet vestibulum eros"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nibh sed nulla" IsEagleRequired="True" ImageUrl="Sapien semper proin dis" Key="Sociis nisi adipiscing" Name="Curabitur blandit taciti est"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Augue phasellus" IsEagleRequired="False" ImageUrl="Tellus commodo hac sagittis" Key="Parturient tempor nisl" Name="Conubia tempus"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="99" HasItems="True" Key="Ultrices donec vehicula vestibulum">
+						<BoyScouts_Models:MeritBadge Description="Nisl vestibulum aliquam adipiscing volutpat" IsEagleRequired="False" ImageUrl="Tempor tempus" Key="Nunc etiam aliquet blandit" Name="Odio commodo parturient vestibulum" WorksheetUrl="Vestibulum maecenas"/>
+						<BoyScouts_Models:MeritBadge Description="Nec tortor orci" IsEagleRequired="True" ImageUrl="Conubia vulputate pede non" Key="Turpis adipiscing curabitur fusce" Name="Lorem varius phasellus consequat parturient" WorksheetUrl="Vestibulum praesent vestibulum cubilia aenean"/>
+						<BoyScouts_Models:MeritBadge Description="Per sed sem" IsEagleRequired="False" ImageUrl="Quam quis" Key="Convallis accumsan urna" Name="Mauris adipiscing bibendum dignissim" WorksheetUrl="Elementum dapibus parturient"/>
+						<BoyScouts_Models:MeritBadge Description="Egestas morbi nulla facilisis euismod" IsEagleRequired="True" ImageUrl="Nullam fermentum" Key="Dictumst sit fringilla habitasse eleifend" Name="Hendrerit proin feugiat cras vel" WorksheetUrl="Aptent duis nam auctor"/>
+						<BoyScouts_Models:MeritBadge Description="Nunc augue" IsEagleRequired="False" ImageUrl="Facilisi dolor fames felis gravida" Key="Himenaeos faucibus" Name="Iaculis habitant" WorksheetUrl="Ipsum vestibulum congue lacinia"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="66" HasItems="True" Key="Nunc consequat cubilia vestibulum tortor">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Leo vestibulum odio convallis" IsEagleRequired="False" ImageUrl="Mus dapibus" Key="Dignissim dolor adipiscing orci" Name="Pede turpis parturient senectus egestas"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Sociosqu suscipit quam torquent nec" IsEagleRequired="True" ImageUrl="Euismod fames feugiat quis" Key="Felis ultrices vestibulum vehicula" Name="Vestibulum ipsum gravida varius"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Aenean elementum adipiscing parturient mauris" IsEagleRequired="False" ImageUrl="Iaculis non volutpat vestibulum" Key="Per maecenas" Name="Facilisis lacinia"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Laoreet natoque nullam" IsEagleRequired="True" ImageUrl="Sed fermentum posuere potenti vestibulum" Key="Adipiscing fringilla praesent" Name="Aptent parturient auctor justo"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Accumsan urna lacus bibendum" IsEagleRequired="False" ImageUrl="Dictumst eleifend" Key="Sem sit habitasse pretium cras" Name="Vel nam"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="66" HasItems="True" Key="Justo amet vestibulum adipiscing">
+						<BoyScouts_Models:MeritBadge Description="Lacus lorem parturient magna massa" IsEagleRequired="False" ImageUrl="Sed imperdiet" Key="Malesuada penatibus inceptos interdum" Name="Cursus laoreet dictum" WorksheetUrl="Lectus metus vestibulum lobortis"/>
+						<BoyScouts_Models:MeritBadge Description="Libero ante arcu morbi porttitor" IsEagleRequired="True" ImageUrl="Neque netus diam" Key="Ligula vestibulum" Name="Tincidunt dis adipiscing tristique litora" WorksheetUrl="Nulla ultricies est"/>
+						<BoyScouts_Models:MeritBadge Description="Eget parturient" IsEagleRequired="False" ImageUrl="Porta elit" Key="Natoque luctus nascetur enim" Name="Hac leo erat venenatis magnis" WorksheetUrl="Eros posuere"/>
+						<BoyScouts_Models:MeritBadge Description="Pharetra vulputate placerat curabitur mus" IsEagleRequired="True" ImageUrl="Mattis pulvinar nec nibh" Key="Sagittis phasellus" Name="Non consequat convallis dignissim vestibulum" WorksheetUrl="Nisi senectus mauris per vestibulum"/>
+						<BoyScouts_Models:MeritBadge Description="Mollis nisl" IsEagleRequired="False" ImageUrl="Sociosqu elementum" Key="Potenti suscipit nunc odio" Name="Adipiscing torquent pretium" WorksheetUrl="Ultrices montes orci sed facilisis"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="71" HasItems="True" Key="Vestibulum sed rhoncus">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Facilisi faucibus" IsEagleRequired="False" ImageUrl="Habitant hendrerit dis congue" Key="Sodales duis himenaeos vestibulum cursus" Name="Dictum est nunc viverra lectus"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Hac inceptos" IsEagleRequired="True" ImageUrl="Leo imperdiet interdum adipiscing" Key="Amet malesuada" Name="Aliquam libero"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Integer quisque vivamus aliquam aliquet" IsEagleRequired="False" ImageUrl="Mus penatibus lorem parturient" Key="Lobortis magna nascetur massa" Name="Ante blandit arcu vestibulum pharetra"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Diam commodo nec placerat" IsEagleRequired="True" ImageUrl="Non pulvinar vestibulum metus" Key="Porttitor morbi tincidunt sagittis ligula" Name="Adipiscing neque"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Conubia tristique" IsEagleRequired="False" ImageUrl="Per senectus netus litora luctus" Key="Sociosqu ultricies" Name="Eget venenatis elit magnis"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="42" HasItems="True" Key="Rhoncus fermentum sodales viverra parturient">
+						<BoyScouts_Models:MeritBadge Description="Sem aliquam vehicula purus" IsEagleRequired="False" ImageUrl="Fringilla nostra" Key="Risus pede vestibulum" Name="Quam vestibulum sit integer velit" WorksheetUrl="Quisque vel"/>
+						<BoyScouts_Models:MeritBadge Description="Adipiscing ornare habitasse" IsEagleRequired="True" ImageUrl="Platea hendrerit" Key="Quis nam urna" Name="Vitae primis vivamus" WorksheetUrl="Himenaeos cras volutpat imperdiet"/>
+						<BoyScouts_Models:MeritBadge Description="Parturient aliquam sed class maecenas" IsEagleRequired="False" ImageUrl="Vestibulum rutrum malesuada curae" Key="Vestibulum dis est" Name="Sapien praesent accumsan penatibus" WorksheetUrl="Adipiscing semper bibendum aliquet"/>
+						<BoyScouts_Models:MeritBadge Description="Sociis dictumst hac" IsEagleRequired="True" ImageUrl="Leo parturient taciti blandit" Key="Mus tellus" Name="Porttitor tempor vestibulum duis donec" WorksheetUrl="Nec tempus commodo vestibulum adipiscing"/>
+						<BoyScouts_Models:MeritBadge Description="Nunc conubia eleifend" IsEagleRequired="False" ImageUrl="Cubilia dapibus tincidunt amet egestas" Key="Euismod facilisi feugiat" Name="Gravida tortor" WorksheetUrl="Turpis ante"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
-					<BoyScouts_Models:MeritBadgesInGroup Capacity="76" HasItems="True" Key="Mattis vulputate">
-						<BoyScouts_Models:MeritBadge HandbookUrl="Enim cubilia" IsEagleRequired="False" ImageUrl="Sed dapibus" Key="Egestas sem mauris parturient euismod" Name="Curabitur feugiat"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Erat eros gravida mollis nulla" IsEagleRequired="True" ImageUrl="Nibh porta montes phasellus nostra" Key="Iaculis lacinia laoreet purus consequat" Name="Vestibulum risus"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Ornare nisi platea natoque" IsEagleRequired="False" ImageUrl="Vestibulum sit vel nisl" Key="Posuere adipiscing primis velit" Name="Nam convallis rutrum dignissim suscipit"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Nunc vitae sed class" IsEagleRequired="True" ImageUrl="Parturient torquent vestibulum vestibulum" Key="Ultrices sapien vehicula" Name="Dis potenti odio volutpat est"/>
-						<BoyScouts_Models:MeritBadge HandbookUrl="Orci pretium semper curae hac" IsEagleRequired="False" ImageUrl="Pede quam rhoncus donec" Key="Maecenas etiam" Name="Adipiscing quis praesent sodales"/>
+					<BoyScouts_Models:MeritBadgesInGroup Capacity="84" HasItems="True" Key="Varius arcu">
+						<BoyScouts_Models:MeritBadge Description="Aenean parturient mauris" IsEagleRequired="False" ImageUrl="Diam nullam aptent etiam" Key="Auctor congue non tristique" Name="Eget faucibus elit enim vestibulum" WorksheetUrl="Cursus iaculis per"/>
+						<BoyScouts_Models:MeritBadge Description="Habitant erat lacinia" IsEagleRequired="True" ImageUrl="Eros inceptos ultricies" Key="Vestibulum fusce venenatis nibh" Name="Sed laoreet sem" WorksheetUrl="Vulputate curabitur sit"/>
+						<BoyScouts_Models:MeritBadge Description="Natoque posuere phasellus consequat" IsEagleRequired="False" ImageUrl="Vel lorem" Key="Nam sed convallis" Name="Morbi dictum adipiscing potenti nulla" WorksheetUrl="Interdum parturient vestibulum dis lobortis"/>
+						<BoyScouts_Models:MeritBadge Description="Vestibulum adipiscing" IsEagleRequired="True" ImageUrl="Dignissim nascetur proin" Key="Lectus nisi libero nisl" Name="Augue pretium elementum dolor facilisis" WorksheetUrl="Nunc pharetra"/>
+						<BoyScouts_Models:MeritBadge Description="Fames placerat fermentum parturient" IsEagleRequired="False" ImageUrl="Ligula odio" Key="Litora luctus" Name="Magnis mattis est pulvinar mauris" WorksheetUrl="Rhoncus orci sodales"/>
 					</BoyScouts_Models:MeritBadgesInGroup>
 				</BoyScouts_Models:MeritBadgesByFirstLetter>
 			</BoyScouts_ViewModels:MeritBadgesViewModel.MeritBadgesByFirstLetter>
 			<BoyScouts_ViewModels:MeritBadgesViewModel.MeritBadges>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Torquent erat" IsEagleRequired="True" ImageUrl="Primis ultrices lacinia dis" Key="Metus laoreet venenatis" Name="Parturient natoque posuere vulputate vestibulum"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Curabitur vehicula" IsEagleRequired="False" ImageUrl="Eros vestibulum nibh potenti" Key="Morbi nisi phasellus" Name="Consequat adipiscing"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Pretium rhoncus" IsEagleRequired="True" ImageUrl="Nisl sodales nunc volutpat maecenas" Key="Praesent parturient" Name="Neque vestibulum netus"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Nulla vestibulum odio rutrum est" IsEagleRequired="False" ImageUrl="Adipiscing hac porta sapien semper" Key="Convallis accumsan viverra orci parturient" Name="Aliquam vestibulum leo"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Integer purus quisque bibendum" IsEagleRequired="True" ImageUrl="Mus sociis pede vestibulum vivamus" Key="Risus adipiscing" Name="Parturient dignissim"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Dictumst elementum" IsEagleRequired="False" ImageUrl="Taciti facilisis vestibulum vestibulum" Key="Quam velit vitae" Name="Eleifend tellus aliquam quis facilisi"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Tempor nec adipiscing faucibus non" IsEagleRequired="True" ImageUrl="Habitant fermentum" Key="Fringilla inceptos interdum lobortis" Name="Parturient nascetur urna"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Per class" IsEagleRequired="False" ImageUrl="Habitasse tempus aliquet blandit cras" Key="Hendrerit duis tortor sed" Name="Commodo himenaeos imperdiet nunc conubia"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Amet ante malesuada pharetra placerat" IsEagleRequired="True" ImageUrl="Vestibulum cubilia pulvinar penatibus" Key="Arcu sem" Name="Vestibulum diam"/>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Sagittis eget sit elit" IsEagleRequired="False" ImageUrl="Adipiscing enim parturient vestibulum vestibulum" Key="Vel dapibus egestas senectus adipiscing" Name="Euismod sociosqu turpis"/>
+				<BoyScouts_Models:MeritBadge Description="Tristique hac lacus quis dapibus" IsEagleRequired="True" ImageUrl="Parturient lobortis" Key="Lorem nascetur egestas euismod" Name="Urna magna feugiat" WorksheetUrl="Mauris cras duis ultricies leo"/>
+				<BoyScouts_Models:MeritBadge Description="Mus mollis" IsEagleRequired="False" ImageUrl="Nec vestibulum gravida" Key="Vestibulum venenatis adipiscing" Name="Parturient vulputate nunc amet" WorksheetUrl="Montes iaculis ante vestibulum"/>
+				<BoyScouts_Models:MeritBadge Description="Lacinia laoreet curabitur natoque" IsEagleRequired="True" ImageUrl="Massa metus" Key="Vestibulum posuere potenti" Name="Nostra adipiscing" WorksheetUrl="Non morbi per"/>
+				<BoyScouts_Models:MeritBadge Description="Parturient pretium neque sed pharetra" IsEagleRequired="False" ImageUrl="Arcu phasellus sem placerat netus" Key="Consequat sit pulvinar" Name="Rhoncus sodales nulla vel" WorksheetUrl="Sagittis nam viverra"/>
+				<BoyScouts_Models:MeritBadge Description="Convallis aliquam porta purus" IsEagleRequired="True" ImageUrl="Dignissim senectus" Key="Ornare integer risus diam" Name="Sed elementum quisque vestibulum" WorksheetUrl="Facilisis vivamus vestibulum platea fermentum"/>
+				<BoyScouts_Models:MeritBadge Description="Dis eget" IsEagleRequired="False" ImageUrl="Primis fringilla" Key="Aliquam habitasse elit" Name="Aliquet rutrum est enim" WorksheetUrl="Velit erat adipiscing sociosqu eros"/>
+				<BoyScouts_Models:MeritBadge Description="Vitae nibh parturient" IsEagleRequired="True" ImageUrl="Class vestibulum hendrerit curae" Key="Suscipit sapien donec vestibulum semper" Name="Himenaeos torquent" WorksheetUrl="Adipiscing sociis ultrices"/>
+				<BoyScouts_Models:MeritBadge Description="Parturient hac taciti etiam" IsEagleRequired="False" ImageUrl="Imperdiet malesuada blandit commodo leo" Key="Mus conubia nisi vestibulum penatibus" Name="Porttitor tincidunt vehicula cubilia" WorksheetUrl="Fusce vestibulum"/>
+				<BoyScouts_Models:MeritBadge Description="Nisl tristique nunc" IsEagleRequired="True" ImageUrl="Adipiscing volutpat lorem" Key="Morbi ultricies maecenas venenatis vulputate" Name="Nec curabitur" WorksheetUrl="Praesent nulla"/>
+				<BoyScouts_Models:MeritBadge Description="Parturient proin vestibulum" IsEagleRequired="False" ImageUrl="Dapibus tellus tempor" Key="Phasellus vestibulum consequat accumsan" Name="Egestas euismod" WorksheetUrl="Tempus odio"/>
 			</BoyScouts_ViewModels:MeritBadgesViewModel.MeritBadges>
 			<BoyScouts_ViewModels:MeritBadgesViewModel.SelectedMeritBadge>
-				<BoyScouts_Models:MeritBadge HandbookUrl="Leo accumsan parturient" IsEagleRequired="True" ImageUrl="Mus sociis" Key="Elementum nec taciti viverra aliquam" Name="Integer fusce quisque lorem"/>
+				<BoyScouts_Models:MeritBadge Description="Vestibulum pede fringilla hac" IsEagleRequired="True" ImageUrl="Habitasse vestibulum mollis felis" Key="Adipiscing hendrerit himenaeos sagittis ipsum" Name="Viverra leo quam montes" WorksheetUrl="Senectus justo lacus quis"/>
 			</BoyScouts_ViewModels:MeritBadgesViewModel.SelectedMeritBadge>
 		</BoyScouts_ViewModels:MeritBadgesViewModel>
 	</BoyScouts_ViewModels:MainViewModel.MeritBadgesViewModel>
 	<BoyScouts_ViewModels:MainViewModel.ScoutRanksViewModel>
 		<BoyScouts_ViewModels:ScoutRanksViewModel IsInDesignMode="False" IsInDesignModeStatic="True">
 			<BoyScouts_ViewModels:ScoutRanksViewModel.Ranks>
-				<BoyScouts_Models:Rank ImageUrl="Eget himenaeos hac leo tortor" Name="Praesent" Requirements="Interdum magna"/>
-				<BoyScouts_Models:Rank ImageUrl="Gravida iaculis elit enim adipiscing" Name="Accumsan" Requirements="Porttitor lobortis erat"/>
-				<BoyScouts_Models:Rank ImageUrl="Nascetur lacinia" Name="Duis" Requirements="Nec vestibulum"/>
-				<BoyScouts_Models:Rank ImageUrl="Tincidunt eros" Name="Curabitur" Requirements="Per adipiscing sed nibh aenean"/>
-				<BoyScouts_Models:Rank ImageUrl="Morbi venenatis nisi" Name="Nam" Requirements="Pharetra neque"/>
-				<BoyScouts_Models:Rank ImageUrl="Laoreet natoque parturient" Name="Nunc" Requirements="Auctor posuere curabitur"/>
-				<BoyScouts_Models:Rank ImageUrl="Pulvinar sagittis phasellus sit" Name="Curae" Requirements="Potenti consequat senectus"/>
-				<BoyScouts_Models:Rank ImageUrl="Vestibulum vestibulum" Name="Vestibulum" Requirements="Netus nulla porta"/>
-				<BoyScouts_Models:Rank ImageUrl="Pretium rhoncus dignissim purus" Name="Adipiscing" Requirements="Risus odio"/>
-				<BoyScouts_Models:Rank ImageUrl="Orci vel viverra" Name="Phasellus" Requirements="Aliquam vitae class"/>
+				<BoyScouts_Models:Rank ImageUrl="Commodo conubia tortor" Name="Praesent vel elit dignissim nam" Requirements="Cubilia accumsan parturient" SequenceNumber="62"/>
+				<BoyScouts_Models:Rank ImageUrl="Vestibulum velit" Name="Elementum dapibus bibendum sed" Requirements="Turpis dis" SequenceNumber="36"/>
+				<BoyScouts_Models:Rank ImageUrl="Enim vitae erat" Name="Class varius egestas facilisis curae" Requirements="Dictumst eleifend aenean" SequenceNumber="61"/>
+				<BoyScouts_Models:Rank ImageUrl="Donec est mauris eros" Name="Nullam nibh facilisi hac euismod" Requirements="Aptent auctor etiam fermentum" SequenceNumber="37"/>
+				<BoyScouts_Models:Rank ImageUrl="Fringilla nisi" Name="Fusce leo congue mus" Requirements="Cursus lorem dictum nisl nunc" SequenceNumber="77"/>
+				<BoyScouts_Models:Rank ImageUrl="Lectus libero odio" Name="Nec orci pede" Requirements="Vestibulum non" SequenceNumber="79"/>
+				<BoyScouts_Models:Rank ImageUrl="Ligula per litora habitasse luctus" Name="Sed magnis morbi adipiscing" Requirements="Sem parturient" SequenceNumber="47"/>
+				<BoyScouts_Models:Rank ImageUrl="Faucibus hendrerit" Name="Sit nulla mattis" Requirements="Quam quis himenaeos" SequenceNumber="90"/>
+				<BoyScouts_Models:Rank ImageUrl="Vestibulum habitant" Name="Proin urna imperdiet malesuada augue" Requirements="Penatibus vestibulum" SequenceNumber="84"/>
+				<BoyScouts_Models:Rank ImageUrl="Vel inceptos porttitor dolor feugiat" Name="Fames tincidunt" Requirements="Tristique mauris mollis ultricies adipiscing" SequenceNumber="65"/>
 			</BoyScouts_ViewModels:ScoutRanksViewModel.Ranks>
+			<BoyScouts_ViewModels:ScoutRanksViewModel.SelectedRank>
+				<BoyScouts_Models:Rank ImageUrl="Parturient interdum montes cras nostra" Name="Gravida ornare platea duis" Requirements="Venenatis vulputate nam primis vestibulum" SequenceNumber="85"/>
+			</BoyScouts_ViewModels:ScoutRanksViewModel.SelectedRank>
 		</BoyScouts_ViewModels:ScoutRanksViewModel>
 	</BoyScouts_ViewModels:MainViewModel.ScoutRanksViewModel>
 	<BoyScouts_ViewModels:MainViewModel.ScoutLawViewModel>
 		<BoyScouts_ViewModels:ScoutLawViewModel IsInDesignMode="False" IsInDesignModeStatic="True">
 			<BoyScouts_ViewModels:ScoutLawViewModel.Laws>
-				<BoyScouts_Models:Law Description="Urna non" Title="Bibendum dictumst cras vestibulum"/>
-				<BoyScouts_Models:Law Description="Morbi per" Title="Vivamus aliquam vestibulum sed"/>
-				<BoyScouts_Models:Law Description="Tellus adipiscing nulla" Title="Proin parturient eleifend vestibulum"/>
-				<BoyScouts_Models:Law Description="Facilisis aliquet" Title="Augue blandit sem duis"/>
-				<BoyScouts_Models:Law Description="Dolor sit vel vestibulum" Title="Facilisi commodo"/>
-				<BoyScouts_Models:Law Description="Adipiscing conubia nunc nam cubilia" Title="Dapibus amet sed"/>
-				<BoyScouts_Models:Law Description="Faucibus fames parturient ante felis" Title="Dis tempor ipsum est"/>
-				<BoyScouts_Models:Law Description="Arcu diam" Title="Egestas fermentum justo habitant"/>
-				<BoyScouts_Models:Law Description="Fringilla habitasse" Title="Euismod feugiat"/>
-				<BoyScouts_Models:Law Description="Tempus vestibulum" Title="Hendrerit lacus"/>
+				<BoyScouts_Models:Law Description="Urna lorem imperdiet nostra" Title="Magna massa malesuada"/>
+				<BoyScouts_Models:Law Description="Ornare platea mus sociosqu cras" Title="Parturient penatibus"/>
+				<BoyScouts_Models:Law Description="Duis vestibulum nec porttitor primis" Title="Nunc rutrum vestibulum"/>
+				<BoyScouts_Models:Law Description="Aliquam metus tincidunt non tristique" Title="Sapien adipiscing morbi"/>
+				<BoyScouts_Models:Law Description="Ultricies amet" Title="Parturient neque venenatis vulputate"/>
+				<BoyScouts_Models:Law Description="Per suscipit" Title="Semper torquent integer vestibulum quisque"/>
+				<BoyScouts_Models:Law Description="Curabitur ante" Title="Vivamus netus ultrices"/>
+				<BoyScouts_Models:Law Description="Phasellus arcu sociis consequat" Title="Vestibulum sed convallis diam"/>
+				<BoyScouts_Models:Law Description="Vehicula aliquam volutpat eget taciti" Title="Tellus aliquet sem nulla tempor"/>
+				<BoyScouts_Models:Law Description="Porta blandit sit purus adipiscing" Title="Risus tempus maecenas"/>
 			</BoyScouts_ViewModels:ScoutLawViewModel.Laws>
 		</BoyScouts_ViewModels:ScoutLawViewModel>
 	</BoyScouts_ViewModels:MainViewModel.ScoutLawViewModel>

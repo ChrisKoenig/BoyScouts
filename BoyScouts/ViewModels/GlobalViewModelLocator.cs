@@ -31,6 +31,7 @@ namespace BoyScouts.ViewModels
 
         public static void Cleanup()
         {
+            ClearMeritBadgeFaqViewModel();
             ClearMeritBadgeDetailsViewModel();
             ClearRankDetailsViewModel();
             ClearMainViewModel();
@@ -205,6 +206,58 @@ namespace BoyScouts.ViewModels
         }
 
         #endregion MeritBadgeDetailsViewModel
+
+        private static MeritBadgeFaqViewModel _meritBadgeFaqViewModel;
+
+        /// <summary>
+        /// Gets the MeritBadgeFaqViewModel property.
+        /// </summary>
+        public static MeritBadgeFaqViewModel MeritBadgeFaqViewModelStatic
+        {
+            get
+            {
+                if (_meritBadgeFaqViewModel == null)
+                {
+                    CreateMeritBadgeFaqViewModel();
+                }
+
+                return _meritBadgeFaqViewModel;
+            }
+        }
+
+        /// <summary>
+        /// Gets the MeritBadgeFaqViewModel property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1822:MarkMembersAsStatic",
+            Justification = "This non-static member is needed for data binding purposes.")]
+        public MeritBadgeFaqViewModel MeritBadgeFaqViewModel
+        {
+            get
+            {
+                return MeritBadgeFaqViewModelStatic;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the MeritBadgeFaqViewModel property.
+        /// </summary>
+        public static void ClearMeritBadgeFaqViewModel()
+        {
+            _meritBadgeFaqViewModel.Cleanup();
+            _meritBadgeFaqViewModel = null;
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the MeritBadgeFaqViewModel property.
+        /// </summary>
+        public static void CreateMeritBadgeFaqViewModel()
+        {
+            if (_meritBadgeFaqViewModel == null)
+            {
+                _meritBadgeFaqViewModel = new MeritBadgeFaqViewModel();
+            }
+        }
 
         #region Tombstoning Support
 

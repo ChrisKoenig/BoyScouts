@@ -88,6 +88,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\DataTemplateSelector.cs" />
+    <Compile Include="Models\FAQ.cs" />
     <Compile Include="Helpers\WebBrowserHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -117,6 +118,7 @@
     <Compile Include="ViewModels\GlobalViewModelLocator.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MeritBadgeDetailsViewModel.cs" />
+    <Compile Include="ViewModels\MeritBadgeFaqViewModel.cs" />
     <Compile Include="ViewModels\MeritBadgesViewModel.cs" />
     <Compile Include="ViewModels\RankDetailsViewModel.cs" />
     <Compile Include="ViewModels\ScoutLawViewModel.cs" />
@@ -590,6 +592,9 @@
       <Generator>MSBuild:MarkupCompilePass1</Generator>
     </DesignData>
     <DesignData Include="SampleData\MeritBadgeDetailsViewModelSampleData.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+    </DesignData>
+    <DesignData Include="SampleData\MeritBadgeFaqViewModelSampleData.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
     </DesignData>
     <DesignData Include="SampleData\RankDetailsViewModelSampleData.xaml">

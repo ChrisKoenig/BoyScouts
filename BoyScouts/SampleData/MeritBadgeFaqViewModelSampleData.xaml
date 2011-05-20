@@ -1,0 +1,294 @@
+﻿<BoyScouts_ViewModels:MeritBadgeFaqViewModel xmlns:BoyScouts_ViewModels="clr-namespace:BoyScouts.ViewModels" xmlns:BoyScouts_Model="clr-namespace:BoyScouts.Model" IsInDesignMode="True" IsInDesignModeStatic="False">
+	<BoyScouts_ViewModels:MeritBadgeFaqViewModel.FAQList>
+		<BoyScouts_Model:FAQ Question="Maecenas nam praesent aenean aliquam accumsan cras duis nunc sed amet">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Aliquam nam class cras duis maecenas aenean sed curae mauris nunc nullam amet donec">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adatum.com/" Text="Cras"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Dis integer ante quisque est praesent aptent vivamus hac arcu leo etiam auctor aliquam mus diam nec non congue per cursus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adventure-works.com/" Text="Nam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Fusce aliquet dictum lectus eget blandit accumsan lorem sed sem morbi nulla proin commodo">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adventure-works.com/" Text="Sed"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Elit conubia libero augue dolor sit vel nam sed dis bibendum enim dictumst eleifend est ligula hac leo mus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.alpineskihouse.com/" Text="Aenean"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Cubilia litora facilisi luctus nec dapibus erat egestas fames faucibus eros euismod habitant">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.baldwinmuseumofscience.com/" Text="Maecenas"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Integer class dis curae est ante hac mauris quisque arcu nullam donec etiam fusce vivamus">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Nibh inceptos interdum magnis felis feugiat non per mattis nisi mauris ipsum mollis sed">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.blueyonderairlines.com/" Text="Praesent"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Lobortis sem nisl montes nascetur justo nunc nostra odio orci sit ornare platea">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cpandl.com/" Text="Mauris"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Pede lacus gravida vel pharetra lorem placerat nam pulvinar sed primis quam magna sagittis dis est quis urna cras rutrum iaculis duis">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cohovineyard.com/" Text="Dis"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Lacinia hac massa nunc amet laoreet sapien natoque semper sociis senectus ante posuere taciti sociosqu">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cohowinery.com/" Text="Aliquam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Leo potenti suscipit tellus torquent ultrices vehicula pretium metus tempor morbi mus tempus volutpat nec rhoncus maecenas praesent non sodales tortor viverra aliquam">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.contoso.com/" Text="Nullam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Lorem bibendum dictumst diam leo aptent eleifend facilisi faucibus mus nec morbi aliquam">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Arcu diam turpis eget varius accumsan neque per elit netus enim sed aenean">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.consolidatedmessenger.com/" Text="Accumsan"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Erat bibendum integer nulla quisque porta sem mauris dictumst nullam eleifend vivamus aptent aliquam facilisi eros aliquet faucibus nibh purus habitant">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fabrikam.com/" Text="Est"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Blandit risus velit auctor vitae commodo sit class nisi conubia nisl cubilia curae donec vel nam congue">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fourthcoffee.com/" Text="Aptent"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Inceptos nunc dapibus sed etiam egestas cursus dictum interdum odio fusce lobortis lorem lectus nascetur euismod libero ligula litora orci feugiat pede luctus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.graphicdesigninstitute.com/" Text="Duis"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Dis est magnis pharetra gravida placerat hac quam pulvinar leo mus sagittis nec mattis senectus morbi iaculis sociosqu non nulla proin mauris mollis lacinia">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.humongousinsurance.com/" Text="Nunc"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Eget aliquet habitant inceptos elit blandit non auctor">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Per augue sed laoreet suscipit dolor natoque torquent montes nostra posuere ultrices potenti pretium">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.litwareinc.com/" Text="Auctor"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Vehicula ornare volutpat sem platea rhoncus fames primis sodales sit viverra quis maecenas felis rutrum praesent vel ipsum sapien accumsan">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.lucernepublishing.com/" Text="Class"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Aliquam urna integer justo lacus lorem cras nam duis semper bibendum dictumst quisque eleifend facilisi sociis taciti magna sed faucibus nunc massa tellus dis est">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.margiestravel.com/" Text="Integer"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Tempor tempus metus morbi vivamus neque amet netus aliquam hac tortor aliquet turpis blandit leo nulla ante porta arcu mus habitant varius inceptos purus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.northwindtraders.com/" Text="Congue"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Interdum diam commodo risus aenean mauris eget nullam conubia velit cubilia dapibus lobortis egestas aptent nec euismod vitae nascetur pharetra class placerat non feugiat">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.proseware.com/" Text="Amet"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Commodo enim per interdum lobortis sed conubia cubilia erat dapibus nulla">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Pulvinar curae per sed elit sagittis sem sit gravida senectus donec etiam iaculis lacinia laoreet vel natoque sociosqu suscipit">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fineartschool.net" Text="Bibendum"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Nam torquent fusce lorem morbi posuere enim erat nulla auctor sed dis est eros ultrices congue">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.southridgevideo.com/" Text="Curae"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Nibh cursus hac proin potenti nisi pretium vehicula volutpat augue leo nisl maecenas dictum praesent mus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.tailspintoys.com/" Text="Donec"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Dolor accumsan bibendum rhoncus fames nec sodales nunc non lectus libero felis ligula dictumst">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.treyresearch.net/" Text="Hac"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Odio orci eleifend pede litora luctus magnis mattis quam facilisi quis ipsum justo per viverra sed urna aliquam">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.thephone-company.com/" Text="Ante"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Sem nascetur proin augue eros sit vel congue egestas dolor nibh nisi pharetra placerat">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Integer sem mauris cras duis nunc amet ante faucibus quisque arcu diam mollis eget lacus sit vel habitant lorem vivamus nam elit">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.wideworldimporters.com/" Text="Etiam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Magna inceptos aliquam sed massa interdum montes nostra ornare dis enim lobortis platea primis metus nascetur pharetra rutrum est morbi">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.wingtiptoys.com/" Text="Cursus"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Aliquet blandit erat placerat neque pulvinar hac netus sagittis senectus sapien semper commodo sociis taciti conubia tellus eros">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.woodgrovebank.com/" Text="Leo"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Cubilia nibh dapibus nisi nisl nunc sociosqu egestas euismod feugiat gravida leo">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adatum.com/" Text="Quisque"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Suscipit iaculis lacinia tempor tempus laoreet tortor natoque turpis nulla torquent mus posuere potenti porta pretium">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adventure-works.com/" Text="Fusce"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Fames nisl pulvinar nunc euismod nam cursus felis">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Nec non per varius purus rhoncus ultrices sodales viverra aenean mauris sed sem nullam odio risus aliquam integer vehicula volutpat quisque sit vel maecenas nam">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.adventure-works.com/" Text="Dictum"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Praesent aptent orci pede auctor velit vitae accumsan sed congue cursus dictum dis vivamus quam bibendum est dictumst eleifend hac lectus libero">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.alpineskihouse.com/" Text="Arcu"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Leo quis ligula class mus aliquam litora nec non per urna curae luctus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.baldwinmuseumofscience.com/" Text="Dictumst"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Sed aliquet donec sem sit cras duis vel nam magnis blandit mattis facilisi commodo">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.blueyonderairlines.com/" Text="Vivamus"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Sed mauris dis est conubia mollis nunc montes faucibus cubilia amet etiam nostra ante habitant fusce ornare lorem platea arcu hac">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cpandl.com/" Text="Mus"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Odio feugiat dictum gravida ipsum sed justo orci pede lectus lacus libero quam iaculis sagittis lorem">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Leo primis dapibus inceptos interdum morbi rutrum lobortis sapien egestas euismod mus nec semper nulla nascetur non proin feugiat diam augue gravida iaculis pharetra">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cohovineyard.com/" Text="Lorem"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Lacinia sociis placerat per laoreet pulvinar dolor sed natoque taciti sagittis sem fames eget senectus elit posuere potenti">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.cohowinery.com/" Text="Eleifend"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Enim sociosqu tellus felis tempor pretium tempus ipsum tortor suscipit rhoncus torquent turpis justo ultrices">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.contoso.com/" Text="Aliquam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Vehicula sit lacus lorem magna erat sodales massa viverra eros metus varius morbi aenean aliquam mauris nullam aptent integer neque quisque netus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.consolidatedmessenger.com/" Text="Aliquet"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Nulla volutpat vel auctor nibh porta purus nisi vivamus maecenas risus nisl velit nam congue aliquam nunc vitae">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fabrikam.com/" Text="Morbi"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Ligula senectus quis urna magna dis litora sociosqu cras suscipit luctus torquent ultrices massa metus">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Cursus dictum praesent sed odio orci pede aliquet blandit class quam curae accumsan dis est lectus commodo">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fourthcoffee.com/" Text="Nec"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Donec etiam bibendum dictumst quis hac fusce libero lorem leo mus nec">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.graphicdesigninstitute.com/" Text="Lectus"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Conubia non cubilia urna cras dapibus duis morbi nulla ligula eleifend nunc proin litora per facilisi amet sed augue sem faucibus ante">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.humongousinsurance.com/" Text="Blandit"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Sit dolor arcu fames felis ipsum justo lacus habitant vel nam luctus sed lorem magna diam magnis">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.litwareinc.com/" Text="Commodo"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Eget inceptos dis massa egestas mattis mauris mollis euismod est montes elit enim feugiat hac erat metus interdum morbi lobortis gravida">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.lucernepublishing.com/" Text="Facilisi"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+		<BoyScouts_Model:FAQ Question="Lacinia vehicula laoreet natoque posuere potenti morbi magnis est duis neque hac mattis volutpat netus">
+			<BoyScouts_Model:FAQ.Answers>
+				<BoyScouts_Model:Answer Description="Neque iaculis leo nascetur lacinia laoreet eros natoque nostra ornare netus mus platea nec non pharetra placerat nibh posuere primis pulvinar">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.margiestravel.com/" Text="Faucibus"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Rutrum nulla sagittis nisi sapien nisl per porta semper purus sed nunc">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.northwindtraders.com/" Text="Diam"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Potenti senectus odio sociosqu risus sem pretium velit rhoncus sit vitae vel orci">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.proseware.com/" Text="Nulla"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Sodales sociis suscipit pede taciti viverra tellus class torquent aliquam curae quam integer quis tempor nam donec sed urna etiam quisque vivamus">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.fineartschool.net" Text="Proin"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+				<BoyScouts_Model:Answer Description="Cras ultrices dis fusce duis vehicula nunc amet lorem volutpat aliquam maecenas aliquet blandit ante est hac commodo morbi praesent">
+					<BoyScouts_Model:Answer.Citation>
+						<BoyScouts_Model:Citation Link="http://www.southridgevideo.com/" Text="Conubia"/>
+					</BoyScouts_Model:Answer.Citation>
+				</BoyScouts_Model:Answer>
+			</BoyScouts_Model:FAQ.Answers>
+		</BoyScouts_Model:FAQ>
+	</BoyScouts_ViewModels:MeritBadgeFaqViewModel.FAQList>
+</BoyScouts_ViewModels:MeritBadgeFaqViewModel>

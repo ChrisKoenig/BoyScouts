@@ -5,14 +5,49 @@
                             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
                             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                            FontFamily="{StaticResource PhoneFontFamilyNormal}"
-                            FontSize="{StaticResource PhoneFontSizeNormal}"
-                            Foreground="{StaticResource PhoneForegroundBrush}"
-                            SupportedOrientations="Portrait"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            SupportedOrientations="PortraitOrLandscape"
                             Orientation="Portrait"
+                            DataContext="{Binding MeritBadgeFaqViewModel, Source={StaticResource Locator}}"
                             mc:Ignorable="d"
                             d:DesignHeight="768"
-                            d:DesignWidth="480">
+                            d:DesignWidth="480"
+                            d:DataContext="{d:DesignData /SampleData/MeritBadgeFaqViewModelSampleData.xaml}">
+    <phone:PhoneApplicationPage.Resources>
+
+        <DataTemplate x:Key="FAQTemplate">
+            <Grid Margin="10,0,10,50">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0"
+                           FontWeight="Bold"
+                           TextWrapping="Wrap"
+                           Foreground="{StaticResource BoyScoutRed}"
+                           Text="{Binding Question}" />
+                <ItemsControl Margin="25,0"
+                              Grid.Row="1"
+                              ItemsSource="{Binding Answers}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <toolkit:WrapPanel Orientation="Horizontal"
+                                               Margin="0,0,0,10">
+                                <TextBlock TextWrapping="Wrap"
+                                           Text="{Binding Description}" />
+                                <TextBlock Text="[ Citation: " />
+                                <HyperlinkButton Content="{Binding Citation.Text}"
+                                                 Foreground="Black"
+                                                 NavigateUri="{Binding Citation.Link}" />
+                                <TextBlock Text="] " />
+                            </toolkit:WrapPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </DataTemplate>
+
+    </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
@@ -40,7 +75,9 @@
         <Grid x:Name="ContentPanel"
               Grid.Row="1"
               Margin="12,0,12,0">
-        	<ListBox/>
+            <ListBox Foreground="{StaticResource BoyScoutBlue}"
+                     ItemTemplate="{StaticResource FAQTemplate}"
+                     ItemsSource="{Binding FAQList}" />
         </Grid>
     </Grid>
 
