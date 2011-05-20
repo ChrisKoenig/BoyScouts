@@ -17,7 +17,8 @@
                             SupportedOrientations="Portrait"
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
-                            shell:SystemTray.IsVisible="False" d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
+                            shell:SystemTray.IsVisible="False"
+                            d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
 
         <!-- Contents ItemsPanel Templates -->
@@ -314,9 +315,6 @@
                 <Image Source="/Images/ScoutOath.jpg"
                        Grid.Row="1"
                        Margin="10,20,20,10" />
-                <Rectangle Grid.Row="1"
-                           Margin="10,20,20,10"
-                           Fill="{StaticResource BoyScoutBlue}" />
             </Grid>
         </controls:PanoramaItem>
 
@@ -334,24 +332,21 @@
                     <TextBlock FontSize="24"
                                Foreground="{StaticResource BoyScoutRed}" />
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
+                               Margin="25,10,0,0"
                                Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be clean in my outdoor manners" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
+                               Margin="25,10,0,0"
                                Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be careful with fire" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
+                               Margin="25,10,0,0"
                                Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be considerate in the outdoors, and" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
+                               Margin="25,10,0,0"
                                Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be conservation minded." /></TextBlock>
                 </StackPanel>
-                <Image Source="/Images/ScoutOath.jpg"
-                       Margin="10,20,20,10"
+                <Image Source="/Images/OutdoorCode.jpg"
+                       Margin="10,0,20,10"
                        Grid.Row="1" />
-                <Rectangle Margin="10,20,20,10"
-                           Grid.Row="1"
-                           Fill="{StaticResource BoyScoutBlue}" />
             </Grid>
 
         </controls:PanoramaItem>
