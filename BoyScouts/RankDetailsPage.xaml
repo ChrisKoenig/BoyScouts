@@ -73,27 +73,9 @@
                             ImageSource="/Images/SinglePageBackgroundLandscape.jpg" />
             </Grid.Background>
 
-            <Button x:Name="RequirementsButtonLandscape"
-                    Tag="{Binding RankObject.Requirements}"
-                    Content="Requirements"
-                    Click="RequirementsButton_Click"
-                    Foreground="{StaticResource BoyScoutBlue}"
-                    BorderBrush="{StaticResource BoyScoutBlue}"
-                    Margin="25"
-                    FontSize="36" />
-
-            <TextBlock x:Name="RankNameLandscape"
-                       TextWrapping="Wrap"
-                       Text="{Binding RankObject.Name}"
-                       FontSize="72"
-                       FontFamily="Segoe WP SemiLight"
-                       TextAlignment="Center"
-                       LineHeight="8"
-                       Foreground="{StaticResource BoyScoutBlue}"
-                       VerticalAlignment="Center" />
-
             <Image x:Name="BadgeImageLandscape"
                    Source="{Binding RankObject.ImageUrl}"
+                   VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Width="244" />
 

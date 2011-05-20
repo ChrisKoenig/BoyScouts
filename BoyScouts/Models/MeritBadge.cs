@@ -13,7 +13,7 @@ namespace BoyScouts.Models
 
         public bool IsEagleRequired { get; set; }
 
-        public string HandbookUrl { get; set; }
+        public string WorksheetUrl { get; set; }
 
         public string Description { get; set; }
 

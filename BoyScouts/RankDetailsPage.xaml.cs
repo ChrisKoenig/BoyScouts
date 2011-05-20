@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using BoyScouts.Helpers;
 using BoyScouts.Messages;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Phone.Controls;
@@ -16,6 +17,11 @@ namespace BoyScouts
             Loaded += RankDetailsPage_Loaded;
         }
 
+        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
+        {
+            ResetOrientation();
+        }
+
         private void RankDetailsPage_Loaded(object sender, RoutedEventArgs e)
         {
             ResetOrientation();
@@ -28,18 +34,14 @@ namespace BoyScouts
                 return;
 
             string url = button.Tag.ToString();
-            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
-            {
-                var task = new WebBrowserTask { URL = url };
-                task.Show();
-            }
+            WebBrowserHelper.LaunchWebBrowserTask(url);
         }
 
         private void ResetOrientation()
         {
             if (Orientation == PageOrientation.Landscape ||
-                            Orientation == PageOrientation.LandscapeLeft ||
-                            Orientation == PageOrientation.LandscapeRight)
+                Orientation == PageOrientation.LandscapeLeft ||
+                Orientation == PageOrientation.LandscapeRight)
             {
                 //TODO: Replace with a storyboard
                 LandscapeLayout.Visibility = Visibility.Visible;
@@ -51,11 +53,6 @@ namespace BoyScouts
                 PortraitLayout.Visibility = Visibility.Visible;
                 LandscapeLayout.Visibility = Visibility.Collapsed;
             }
-        }
-
-        private void PhoneApplicationPage_OrientationChanged(object sender, OrientationChangedEventArgs e)
-        {
-            ResetOrientation();
         }
     }
 }

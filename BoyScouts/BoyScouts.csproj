@@ -88,11 +88,15 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\DataTemplateSelector.cs" />
+    <Compile Include="Helpers\WebBrowserHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MeritBadgeDetailsPage.xaml.cs">
       <DependentUpon>MeritBadgeDetailsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MeritBadgeFAQ.xaml.cs">
+      <DependentUpon>MeritBadgeFAQ.xaml</DependentUpon>
     </Compile>
     <Compile Include="Messages\MeritBadgeSelectedMessage.cs" />
     <Compile Include="Messages\RankSelectedMessage.cs" />
@@ -132,6 +136,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MeritBadgeFAQ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RankDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -146,6 +154,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\Links.xml" />
+    <Content Include="Data\MeritBadgeFAQ.xml" />
     <Content Include="Data\ScoutRanks.xml" />
     <Content Include="Images\MeritBadges\AART.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -526,6 +535,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\MeritBadges.xml" />
+    <Content Include="Images\question.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Ranks\Eagle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

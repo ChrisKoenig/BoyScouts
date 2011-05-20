@@ -32,21 +32,13 @@
                         <RowDefinition />
                         <RowDefinition Height="Auto" />
                     </Grid.RowDefinitions>
-                    <!--<ScrollViewer Margin="15,0">
-                        <Grid Height="458"
-                              Width="382">
-                            <TextBlock x:Name="DescriptionTextBlock"
-                                       TextWrapping="Wrap"
-                                       Foreground="{StaticResource BoyScoutBlue}"></TextBlock>
-                        </Grid>
-                    </ScrollViewer>-->
 
-                    <Button x:Name="HandbookButtonPortrait"
-                            Tag="{Binding MeritBadgeObject.HandbookUrl}"
-                            Foreground="{StaticResource BoyScoutRed}"
-                            BorderBrush="{StaticResource BoyScoutRed}"
-                            Content="Handbook"
-                            Click="HandbookButton_Click"
+                    <Button x:Name="WorksheetButtonPortrait"
+                            Tag="{Binding MeritBadgeObject.WorksheetUrl}"
+                            Foreground="{Binding MeritBadgeBorderColor}"
+                            BorderBrush="{Binding MeritBadgeBorderColor}"
+                            Content="Worksheet"
+                            Click="WorksheetButton_Click"
                             VerticalAlignment="Bottom"
                             Grid.Row="3"
                             Margin="0,0,0,2" />
@@ -58,18 +50,19 @@
                                    Foreground="{StaticResource BoyScoutBlue}"
                                    FontSize="24" />
                     </ScrollViewer>
-                    <Grid Margin="8"
+                    <Grid Margin="8,8,8,0"
                           Grid.Row="1">
                         <Rectangle Fill="{Binding MeritBadgeBorderColor}"
                                    Stroke="Black"
                                    RadiusY="25"
-                                   RadiusX="25" />
+                                   RadiusX="25"
+                                   Margin="10" />
                         <TextBlock x:Name="MeritBadgeNamePortrait"
                                    TextWrapping="Wrap"
                                    Text="{Binding MeritBadgeObject.Name}"
                                    FontSize="48"
                                    TextAlignment="Center"
-                                   Margin="8"
+                                   Margin="20"
                                    VerticalAlignment="Center"
                                    d:LayoutOverrides="GridBox"
                                    Foreground="White" />
@@ -81,7 +74,7 @@
                            HorizontalAlignment="Center"
                            VerticalAlignment="Top"
                            d:LayoutOverrides="VerticalAlignment"
-                           Margin="10" />
+                           Margin="10,10,10,0" />
 
                 </Grid>
             </Border>
@@ -90,8 +83,19 @@
         <Grid x:Name="LandscapeLayout"
               Width="800"
               Height="480"
-              Background="White"
               d:IsHidden="True">
+
+            <Grid.Background>
+                <ImageBrush Stretch="None"
+                            ImageSource="/Images/SinglePageBackgroundLandscape.jpg" />
+            </Grid.Background>
+
+            <Image x:Name="MeritBadgeImageLandscape"
+                   Width="300"
+                   Height="300"
+                   Source="{Binding MeritBadgeObject.ImageUrl}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
         </Grid>
 
     </Grid>

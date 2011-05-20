@@ -30,7 +30,7 @@ namespace BoyScouts.ViewModels
                             ImageUrl = item.Element("ImageUrl").Value,
                             Description = item.Element("Description").Value,
                             IsEagleRequired = bool.Parse(item.Element("IsEagleRequired").Value),
-                            HandbookUrl = item.Element("HandbookUrl").Value,
+                            WorksheetUrl = item.Element("WorksheetUrl").Value,
                         };
                         this.MeritBadges.Add(mb);
                     }

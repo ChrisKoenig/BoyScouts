@@ -70,14 +70,6 @@
         </DataTemplate>
 
         <!-- Merit Badge Data Template -->
-        <DataTemplate x:Key="MeritBadgeListHeaderTemplate">
-            <Grid>
-                <Button x:Name="VisualSearchButton"
-                        Content="Visual Search"
-                        Click="VisualSearchButton_Click" />
-            </Grid>
-        </DataTemplate>
-
         <DataTemplate x:Key="MeritBadgeListItemTemplate">
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <Grid.ColumnDefinitions>
@@ -121,6 +113,40 @@
                            Foreground="White"
                            VerticalAlignment="Bottom" />
             </Border>
+        </DataTemplate>
+
+        <ControlTemplate x:Key="MeritBadgeFaqButtonTemplate"
+                         TargetType="Button">
+            <Grid>
+                <Image Source="/Images/question.jpg" />
+            </Grid>
+        </ControlTemplate>
+
+        <DataTemplate x:Key="MeritBadgeHeaderTemplate">
+            <Grid Width="400">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="1"
+                        VerticalAlignment="Center"
+                        Width="48"
+                        Height="48"
+                        Margin="0,10,0,0"
+                        Template="{StaticResource MeritBadgeFaqButtonTemplate}">
+                    <Custom:Interaction.Triggers>
+                        <Custom:EventTrigger EventName="Click">
+                            <ic:NavigateToPageAction TargetPage="/MeritBadgeFAQ.xaml" />
+                        </Custom:EventTrigger>
+                    </Custom:Interaction.Triggers>
+                </Button>
+
+                <TextBlock TextWrapping="Wrap"
+                           Text="{Binding}"
+                           d:LayoutOverrides="Width, Height"
+                           FontSize="48"
+                           Foreground="{StaticResource BoyScoutBlue}" />
+            </Grid>
         </DataTemplate>
 
         <!-- Ranks Templates -->
@@ -352,7 +378,8 @@
         <!-- MERIT BADGES -->
         <controls:PanoramaItem x:Name="MeritBadgesPanel"
                                DataContext="{Binding MeritBadgesViewModel}"
-                               Header="merit badges">
+                               Header="merit badges"
+                               HeaderTemplate="{StaticResource MeritBadgeHeaderTemplate}">
             <Grid>
                 <toolkit:LongListSelector x:Name="MeritBadgeList"
                                           IsBouncy="True"
@@ -364,7 +391,6 @@
                                           ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
                                           GroupItemTemplate="{StaticResource MeritBadgeListGroupItemTemplate}"
                                           GroupHeaderTemplate="{StaticResource MeritBadgeListGroupHeaderTemplate}"
-                                          ListHeaderTemplate="{StaticResource MeritBadgeListHeaderTemplate}"
                                           GroupItemsPanel="{StaticResource ContentsItemsPanelTemplate}">
                     <Custom:Interaction.Triggers>
                         <Custom:EventTrigger EventName="SelectionChanged">

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Chris Koenig (Microsoft) -->
+<MeritBadgeFaq>
+	<Faq>
+		<Question>Who can earn a merit badge?</Question>
+		<Answers>
+			<Answer>
+				<Description>Merit badges, badges of rank, and Eagle Palms are for registered Boy Scouts, Varsity Scouts, or qualified Venturers.</Description>
+				<Citation Text="BSR p. 5" Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Introduction"/>
+			</Answer>
+			<Answer>
+				<Description>Any Boy Scout may earn any merit badge at any time. You don't need to have had rank advancement to be eligible.</Description>
+				<Citation Text="BSR p. 22" Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies#Introduction"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>When can you start? </Question>
+		<Answers>
+			<Answer>
+				<Description>Unless otherwise specified, any Boy Scout may earn any merit badge at any time. You don't need to have had rank advancement to be eligible.</Description>
+				<Citation Text="BSR p. 22" Link="http://meritbadge.org/wiki/index.php/Boy_Scout_Requirements"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Where are the answers?</Question>
+		<Answers>
+			<Answer>
+				<Description>You should read the merit badge pamphlet on the subject.</Description>
+				<Citation Text="BSR p. 22 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Introduction"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Are worksheets requried?</Question>
+		<Answers>
+			<Answer>
+				<Description>No. Merit Badge Worksheets are options tools to help you organize your work and include the logs, diagrams, and checklists you need.</Description>
+				<Citation Text="MeritBadge.org" Link="http://meritbadge.org/wiki/index.php/Merit_Badge_FAQ"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Do you need a buddy?</Question>
+		<Answers>
+			<Answer>
+				<Description>You must have another person with you at each meeting with the merit badge counselor.</Description>
+				<Citation Text="BSR p. 22 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Introduction"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>How are you tested?</Question>
+		<Answers>
+			<Answer>
+				<Description>In the end, the Scout must be reviewed individually by the counselor to ensure completion of the badges requirements.</Description>
+				<Citation Text="AP p. 26 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>How do you get credit?</Question>
+		<Answers>
+			<Answer>
+				<Description>When the counselor is satisfied that you have met each requirement, he or she will sign your application.</Description>
+				<Citation Text="BSR p. 23 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Introduction"/>
+			</Answer>
+			<Answer>
+				<Description>There is no time limit for completion of merit badges other than age 18</Description>
+				<Citation Text="AP p.34 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+			<Answer>
+				<Description>Partial completion of merit badges should be credited to a Scout on the Application for Merit Badge...</Description>
+				<Citation Text="AP p.34 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>What if you have Special Needs?</Question>
+		<Answers>
+			<Answer>
+				<Description>Merit badges are awarded only when all requirements are met as stated.</Description>
+				<Citation Text="AP p.41 " Link="http://meritbadge.org/wiki/index.php/Special_Needs"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Can a merit badge be taken away?</Question>
+		<Answers>
+			<Answer>
+				<Description>A merit badge cannot be taken away once it has been earned, provided the counselor is a registered counselor for the merit badge.</Description>
+				<Citation Text="AP p.26" Link="http://meritbadge.org/wiki/index.php/Advancement_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Does a counselor "cover" the requirements or does each Scout do each requirement himself? </Question>
+		<Answers>
+			<Answer>
+				<Description>You are expected to meet the requirements as they are stated -- no more and no less. You are expected to do exactly what is stated in the requirements. If it says "show or demonstrate," that is what you must do.</Description>
+				<Citation Text="BSR p. 23 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Introduction"/>
+			</Answer>
+			<Answer>
+				<Description>In the end, the Scout must be reviewed individually by the counselor to ensure completion of the badges requirements</Description>
+				<Citation Text="AP p. 26 " Link="http://meritbadge.org/wiki/index.php/Advancement_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Can a merit badge counselor add or remove requirements</Question>
+		<Answers>
+			<Answer>
+				<Description>No. "Merit badges are awarded only when all requirements are met as stated." </Description>
+				<Citation Text="AP p. 41" Link="http://meritbadge.org/wiki/index.php/Youth_Members_with_Special_Needs"/>
+			</Answer>
+			<Answer>
+				<Description>Certification must be given by the appropriate local council...</Description>
+				<Citation Text="AP p. 42" Link="http://meritbadge.org/wiki/index.php/Youth_Members_with_Special_Needs"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>What are the requirements to be a merit badge counselor? Do you have to register again? Who approves you?</Question>
+		<Answers>
+			<Answer>
+				<Description>"Qualified: "They must be men and women of good character, age 18 or older, and recognized as having the skills and education in the subjects for which they are to serve as merit badge counselors, as well as the ability to work with Scout-age boys." </Description>
+				<Citation Text="AP p. 13 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+			<Answer>
+				<Description>"Registered: "All Merit badge counselors must…register as a merit badge counselor…" (Code 42). </Description>
+				<Citation Text="AP pp. 13-14 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+			<Answer>
+				<Description>"Approved: ...they must be approved...for each specific merit badge."</Description>
+				<Citation Text="AP p. 13 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+			<Answer>
+				<Description>"Trained: "in the aims of Scouting and in advancement procedures." and "All volunteers are expected to complete Youth Protection training...within 90 days..." </Description>
+				<Citation Text="Merit Badge Counselor Orientation" Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Counselor_Orientation"/>
+			</Answer>
+			<Answer>
+				<Description>"Trained: "All volunteers are expected to complete Youth Protection training...within 90 days..." </Description>
+				<Citation Text="Adult Leader Application 28-501 " Link="http://www.scouting.org/search.aspx?q=Adult+Application"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Can a merit badge counselor counsel their own son or relative? </Question>
+		<Answers>
+			<Answer>
+				<Description>"An approved counselor can counsel any youth member, including his or her own son, ward, or relative." </Description>
+				<Citation Text="AP p. 13 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Can a someone under 18 teach merit badges? </Question>
+		<Answers>
+			<Answer>
+				<Description>"Camp staff members who are qualified in the subject and are younger than age 18 may assist the merit badge counselor with instruction...However regardless of the class format, each Scout must be tested individually by the counselor to ensure completion of the badge's requirements." </Description>
+				<Citation Text="AP p. 34 " Link="http://meritbadge.org/wiki/index.php/Advancement_in_Summer_Camp"/>
+			</Answer>
+		</Answers>
+	</Faq>
+	<Faq>
+		<Question>Should we wait until the next court of honor to present the merit badge? </Question>
+		<Answers>
+			<Answer>
+				<Description>"Presentation of merit badges and rank badges should not wait until the next court of honor; awards and badges should be presented at the next meeting after they have been earned."</Description>
+				<Citation Text="AP p. 25 " Link="http://meritbadge.org/wiki/index.php/Merit_Badge_Policies"/>
+			</Answer>
+		</Answers>
+	</Faq>
+</MeritBadgeFaq>
