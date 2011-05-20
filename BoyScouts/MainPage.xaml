@@ -235,6 +235,69 @@
                            FontFamily="Segoe WP Semibold" />
             </Grid>
         </DataTemplate>
+        <Style x:Key="HyperlinkButtonStyle1"
+               TargetType="HyperlinkButton">
+            <Setter Property="Foreground"
+                    Value="{StaticResource PhoneForegroundBrush}" />
+            <Setter Property="Background"
+                    Value="Transparent" />
+            <Setter Property="FontSize"
+                    Value="{StaticResource PhoneFontSizeMedium}" />
+            <Setter Property="Padding"
+                    Value="0" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="HyperlinkButton">
+                        <Border Background="Transparent">
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="Pressed">
+                                        <Storyboard>
+                                            <DoubleAnimation Duration="0"
+                                                             To="0.5"
+                                                             Storyboard.TargetProperty="Opacity"
+                                                             Storyboard.TargetName="TextElement" />
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState x:Name="Disabled">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground"
+                                                                           Storyboard.TargetName="TextElement">
+                                                <DiscreteObjectKeyFrame KeyTime="0"
+                                                                        Value="{StaticResource PhoneDisabledBrush}" />
+                                            </ObjectAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                            <Border Background="{TemplateBinding Background}"
+                                    Margin="{StaticResource PhoneHorizontalMargin}"
+                                    Padding="{TemplateBinding Padding}">
+                                <TextBlock x:Name="TextElement"
+                                           Text="{TemplateBinding Content}"
+                                           TextDecorations="Underline"
+                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                           HorizontalAlignment="Left"
+                                           TextWrapping="Wrap" />
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <DataTemplate x:Key="LinkTemplate">
+            <StackPanel HorizontalAlignment="Left">
+                <HyperlinkButton Content="{Binding Title}"
+                                 NavigateUri="{Binding Url}"
+                                 Foreground="{StaticResource BoyScoutBlue}"
+                                 Margin="10"
+                                 FontFamily="Segoe WP Semibold"
+                                 HorizontalAlignment="Left"
+                                 Style="{StaticResource HyperlinkButtonStyle1}" />
+            </StackPanel>
+        </DataTemplate>
 
     </phone:PhoneApplicationPage.Resources>
 
@@ -400,25 +463,23 @@
                                DataContext="{Binding LinksViewModel}"
                                Header="links">
             <Grid>
-                <ListBox ItemsSource="{Binding Links}"
-                         DisplayMemberPath="Title" />
-            </Grid>
-        </controls:PanoramaItem>
-
-        <!-- ABOUT -->
-        <controls:PanoramaItem x:Name="AboutPanel"
-                               Header="about">
-            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+                <ListBox ItemsSource="{Binding Links}"
+                         Foreground="{StaticResource BoyScoutBlue}"
+                         ItemTemplate="{StaticResource LinkTemplate}" />
                 <ad:AdControl ApplicationId="test_client"
                               VerticalAlignment="Bottom"
                               Width="300"
                               Height="50"
-                              AdUnitId="Image300_50" />
+                              AdUnitId="Image300_50"
+                              Margin="0,15"
+                              Grid.Row="1" />
             </Grid>
         </controls:PanoramaItem>
+
+        <!-- ABOUT -->
     </controls:Panorama>
 </phone:PhoneApplicationPage>
