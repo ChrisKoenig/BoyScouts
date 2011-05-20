@@ -10,20 +10,20 @@
                             FontFamily="{StaticResource PhoneFontFamilyNormal}"
                             FontSize="{StaticResource PhoneFontSizeNormal}"
                             Orientation="Portrait"
-                            SupportedOrientations="PortraitOrLandscape"
+                            SupportedOrientations="Portrait"
                             OrientationChanged="PhoneApplicationPage_OrientationChanged"
                             DataContext="{Binding RankDetailsViewModel, Source={StaticResource Locator}}"
                             mc:Ignorable="d"
                             shell:SystemTray.IsVisible="False"
                             d:DesignHeight="800"
-                            d:DesignWidth="480" d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}">
+                            d:DesignWidth="480"
+                            d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot"
           Background="Transparent">
 
-        <Grid
-              x:Name="PortraitLayout">
+        <Grid x:Name="PortraitLayout">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.532*" />
@@ -65,7 +65,8 @@
 
         </Grid>
 
-        <Grid x:Name="LandscapeLayout" d:IsHidden="True">
+        <Grid x:Name="LandscapeLayout"
+              d:IsHidden="True">
 
             <Grid.Background>
                 <ImageBrush Stretch="None"

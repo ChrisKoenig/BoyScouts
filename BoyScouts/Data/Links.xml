@@ -1,4 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 sp1 (x64) (http://www.altova.com) by Chris Koenig (Microsoft) -->
 <Links>
-  <Link Title="Boy Scouts of America" Url="http://scouting.org" />
+	<Link Title="Boy Scouts of America" Url="http://scouting.org"/>
+	<Link Title="Philmont Scout Ranch" Url="http://philmontscoutranch.org/"/>
+	<Link Title="Florida Sea Base" Url="http://www.bsaseabase.org/"/>
+	<Link Title="Northern Tier" Url="http://www.ntier.org"/>
+	<Link Title="The Summit Bechtel Family National Scout Reserve" Url="http://www.summitbechtelreserve.org/"/>
+	<Link Title="Online Adult Training Site" Url="http://olc.scouting.org/"/>
+	<Link Title="Boys Life Magazine" Url="http://www.boyslife.org/"/>
+	<Link Title="Fieldbook Companion Site" Url="http://www.bsafieldbook.org/"/>
+	<Link Title="Good Turn for America" Url="http://www.goodturnforamerica.org/"/>
+	<Link Title="Join Cub Scouting" Url="http://www.joincubscouting.org/"/>
+	<Link Title="National Eagle Scout Association" Url="http://www.nesa.org/"/>
+	<Link Title="National Scouting Museum" Url="http://www.bsamuseum.org/"/>
+	<Link Title="Order of the Arrow" Url="http://www.scouting.org/boyscouts/orderofthearrow.aspx"/>
+	<Link Title="Scouting Friends" Url="http://www.scoutingfriends.org/"/>
+	<Link Title="Scouting Magazine" Url="http://www.scoutingmagazine.org/"/>
+	<Link Title="Scoutreach Division" Url="http://www.scoutreachbsa.org/"/>
+	<Link Title="Scout Stuff" Url="http://www.scoutstuff.org/"/>
+	<Link Title="Scout Zone" Url="http://www.thescoutzone.org/"/>
+	<Link Title="MeritBadge.org" Url="http://meritbadge.org"/>
+	<Link Title="Scoutmaster.org" Url="http://scoutmaster.org"/>
+	<Link Title="Woodbadge" Url="http://woodbadge.org"/>
 </Links>

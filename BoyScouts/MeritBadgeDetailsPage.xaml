@@ -8,7 +8,7 @@
                             FontFamily="{StaticResource PhoneFontFamilyNormal}"
                             FontSize="{StaticResource PhoneFontSizeNormal}"
                             Foreground="{StaticResource PhoneForegroundBrush}"
-                            SupportedOrientations="PortraitOrLandscape"
+                            SupportedOrientations="Portrait"
                             Orientation="Portrait"
                             OrientationChanged="PhoneApplicationPage_OrientationChanged"
                             DataContext="{Binding MeritBadgeDetailsViewModel, Source={StaticResource Locator}}"

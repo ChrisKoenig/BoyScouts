@@ -537,7 +537,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\MeritBadges.xml" />
-    <Resource Include="Images\ScoutOath.jpg" />
+    <Content Include="Images\ScoutOath.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\OutdoorCode.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\question.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
