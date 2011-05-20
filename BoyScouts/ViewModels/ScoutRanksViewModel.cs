@@ -26,6 +26,7 @@ namespace BoyScouts.ViewModels
                         Name = item.Element("Name").Value,
                         Requirements = item.Element("Requirements").Value,
                         ImageUrl = item.Element("ImageUrl").Value,
+                        Description = item.Element("Description").Value,
                         SequenceNumber = Int32.Parse(item.Element("SequenceNumber").Value),
                     };
                     this.Ranks.Add(r);

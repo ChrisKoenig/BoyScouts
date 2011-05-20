@@ -16,8 +16,7 @@
                             mc:Ignorable="d"
                             shell:SystemTray.IsVisible="False"
                             d:DesignHeight="800"
-                            d:DesignWidth="480"
-                            d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}">
+                            d:DesignWidth="480" d:DataContext="{d:DesignData /SampleData/RankDetailsViewModelSampleData.xaml}">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot"
@@ -26,9 +25,10 @@
         <Grid x:Name="PortraitLayout">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.532*" />
-                <RowDefinition Height="0.26*" />
-                <RowDefinition Height="0.208*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
             <Grid.Background>
@@ -42,9 +42,13 @@
                     Click="RequirementsButton_Click"
                     Foreground="{StaticResource BoyScoutBlue}"
                     BorderBrush="{StaticResource BoyScoutBlue}"
-                    Grid.Row="2"
+                    Grid.Row="3"
                     Margin="25"
                     FontSize="36" />
+            <ScrollViewer Grid.Row="2">
+            	<TextBlock x:Name="RankDescriptionPortrait" TextWrapping="Wrap" Text="{Binding RankObject.Description}" Height="442" Width="480"/>
+
+            </ScrollViewer>
 
             <TextBlock x:Name="RankNamePortrait"
                        TextWrapping="Wrap"
