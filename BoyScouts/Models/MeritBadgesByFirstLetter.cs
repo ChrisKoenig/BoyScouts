@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Net;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,13 +14,20 @@ using System.Windows.Shapes;
 
 namespace BoyScouts.Models
 {
-    public class MeritBadgesByFirstLetter : List<MeritBadgesInGroup>
+    public class MeritBadgesByFirstLetter
     {
-        private static readonly string Groups = "#abcdefghijklmnopqrstuvwxyz";
+        public MeritBadgesByFirstLetter(ObservableCollection<MeritBadge> MeritBadges)
+        {
+        }
+    }
+
+    public class MeritBadgesByFirstLetterXXX : List<MeritBadgesInGroup>
+    {
+        private static readonly string Groups = "abcdefghijklmnopqrstuvwxyz";
 
         private Dictionary<int, MeritBadge> _meritBadgeLookup = new Dictionary<int, MeritBadge>();
 
-        public MeritBadgesByFirstLetter(ObservableCollection<MeritBadge> MeritBadges)
+        public MeritBadgesByFirstLetterXXX(ObservableCollection<MeritBadge> MeritBadges)
         {
             Dictionary<string, MeritBadgesInGroup> groups = new Dictionary<string, MeritBadgesInGroup>();
 

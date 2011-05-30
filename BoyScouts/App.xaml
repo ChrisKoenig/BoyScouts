@@ -19,7 +19,7 @@
                          Color="#FF7d9e47" />
 
         <SolidColorBrush x:Key="MeritBadgeSilver"
-                         Color="#FFcecccd" />
+                         Color="#999999" />
 
     </Application.Resources>
 

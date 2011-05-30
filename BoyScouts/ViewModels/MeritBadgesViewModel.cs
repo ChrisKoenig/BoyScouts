@@ -1,5 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
+using System.Windows;
 using System.Xml.Linq;
 using BoyScouts.Messages;
 using BoyScouts.Models;
@@ -18,9 +21,9 @@ namespace BoyScouts.ViewModels
             }
             else
             {
+                // Code runs "for real": Connect to service, etc...
                 ThreadPool.QueueUserWorkItem((cb) =>
                 {
-                    // Code runs "for real": Connect to service, etc...
                     var doc = XDocument.Load("Data/MeritBadges.xml", LoadOptions.PreserveWhitespace);
                     foreach (var item in doc.Element("MeritBadges").Elements("MeritBadge"))
                     {
@@ -34,17 +37,72 @@ namespace BoyScouts.ViewModels
                         };
                         this.MeritBadges.Add(mb);
                     }
-                    this.MeritBadgesByFirstLetter = new MeritBadgesByFirstLetter(this.MeritBadges);
+                    MeritBadgesByFirstLetter =
+                        from badge in MeritBadges
+                        group badge by badge.Key into b
+                        orderby b.Key
+                        select new Group<MeritBadge>(b.Key, b);
                 });
             }
         }
 
+        #region ShowImagesInList property
+
+        private bool _showImagesInList = true;
+
+        public bool ShowImagesInList
+        {
+            get
+            {
+                return _showImagesInList;
+            }
+
+            set
+            {
+                if (_showImagesInList == value)
+                {
+                    return;
+                }
+                _showImagesInList = value;
+                RaisePropertyChanged(() => this.ShowImagesInList);
+                MeritBadgeImageVisibility = value ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
+        #endregion ShowImagesInList property
+
+        #region MeritBadgeImageVisibility
+
+        private Visibility _mbiv = Visibility.Visible;
+
+        public Visibility MeritBadgeImageVisibility
+        {
+            get
+            {
+                return _mbiv;
+            }
+
+            set
+            {
+                if (_mbiv == value)
+                {
+                    return;
+                }
+
+                var oldValue = _mbiv;
+                _mbiv = value;
+                RaisePropertyChanged(() => this.MeritBadgeImageVisibility);
+            }
+        }
+
+        #endregion MeritBadgeImageVisibility
+
         #region MeritBadgesByFirstLetter
 
-        private MeritBadgesByFirstLetter _mbbfl = null;
+        private IEnumerable<Group<MeritBadge>> _mbbfl = null;
 
         [JsonIgnore]
-        public MeritBadgesByFirstLetter MeritBadgesByFirstLetter
+        public IEnumerable<Group<MeritBadge>> MeritBadgesByFirstLetter
         {
             get
             {
