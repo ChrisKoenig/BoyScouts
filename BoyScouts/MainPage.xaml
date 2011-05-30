@@ -13,7 +13,7 @@
                             x:Class="BoyScouts.MainPage"
                             mc:Ignorable="d"
                             d:DesignWidth="480"
-                            d:DesignHeight="768"
+                            d:DesignHeight="800"
                             SupportedOrientations="Portrait"
                             Orientation="Portrait"
                             toolkit:TiltEffect.IsTiltEnabled="True"
@@ -214,6 +214,7 @@
             </cc:ScoutRankDataTemplateSelector>
         </DataTemplate>
 
+        <!-- Panorama Templates -->
         <DataTemplate x:Key="PanoramaHeaderTemplate">
             <Grid>
                 <TextBlock TextWrapping="Wrap"
@@ -235,6 +236,7 @@
                            FontFamily="Segoe WP Semibold" />
             </Grid>
         </DataTemplate>
+
         <Style x:Key="HyperlinkButtonStyle1"
                TargetType="HyperlinkButton">
             <Setter Property="Foreground"
@@ -287,6 +289,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
         <DataTemplate x:Key="LinkTemplate">
             <StackPanel HorizontalAlignment="Left">
                 <HyperlinkButton Content="{Binding Title}"

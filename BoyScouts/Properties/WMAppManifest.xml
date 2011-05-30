@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.0">
-  <App xmlns="" ProductID="{0ff7af9b-e8d2-42ba-b385-2428fbf6a44f}" Title="Boy Scouts of America" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BoyScouts author" Description="Sample description" Publisher="BoyScouts">
+  <App xmlns="" ProductID="{0ff7af9b-e8d2-42ba-b385-2428fbf6a44f}" Title="Boy Scouts Reference" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="BoyScouts author" Description="Sample description" Publisher="BoyScouts">
     <IconPath IsRelative="true" IsResource="false">Tile_99x99.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES" />

@@ -14,6 +14,13 @@
 
         <SolidColorBrush x:Key="BoyScoutRed"
                          Color="#FFD92F38" />
+
+        <SolidColorBrush x:Key="MeritBadgeGreen"
+                         Color="#FF7d9e47" />
+
+        <SolidColorBrush x:Key="MeritBadgeSilver"
+                         Color="#FFcecccd" />
+
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

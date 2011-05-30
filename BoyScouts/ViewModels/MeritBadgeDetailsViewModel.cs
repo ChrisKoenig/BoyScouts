@@ -27,8 +27,8 @@ namespace BoyScouts.ViewModels
                 if (MeritBadgeObject == null)
                     return null;
                 return MeritBadgeObject.IsEagleRequired
-                    ? (SolidColorBrush)App.Current.Resources["BoyScoutRed"]
-                    : (SolidColorBrush)App.Current.Resources["BoyScoutBlue"];
+                    ? (SolidColorBrush)App.Current.Resources["MeritBadgeSilver"]
+                    : (SolidColorBrush)App.Current.Resources["MeritBadgeGreen"];
             }
         }
 
