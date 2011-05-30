@@ -156,67 +156,11 @@
 
         <!-- Ranks Templates -->
         <DataTemplate x:Key="RanksListItemTemplate3">
-            <Image Width="122"
-                   Height="150"
+            <Image Width="175"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
-                   Margin="7"
+                   Margin="8"
                    Source="{Binding ImageUrl}" />
-        </DataTemplate>
-
-        <DataTemplate x:Key="RanksListItemTemplate2">
-            <TextBlock Text="{Binding Name}"
-                       Grid.Column="1"
-                       FontSize="56"
-                       VerticalAlignment="Center"
-                       Foreground="{StaticResource BoyScoutBlue}" />
-        </DataTemplate>
-
-        <DataTemplate x:Key="RanksListItemTemplate1">
-            <cc:ScoutRankDataTemplateSelector Content="{Binding}">
-                <cc:ScoutRankDataTemplateSelector.Odd>
-                    <DataTemplate>
-                        <Grid Width="420">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition />
-                            </Grid.ColumnDefinitions>
-                            <Image Grid.Column="0"
-                                   Width="122"
-                                   Height="150"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Source="{Binding ImageUrl}" />
-                            <TextBlock Text="{Binding Name}"
-                                       Grid.Column="1"
-                                       FontSize="56"
-                                       VerticalAlignment="Center"
-                                       Foreground="{StaticResource BoyScoutBlue}" />
-                        </Grid>
-                    </DataTemplate>
-                </cc:ScoutRankDataTemplateSelector.Odd>
-                <cc:ScoutRankDataTemplateSelector.Even>
-                    <DataTemplate>
-                        <Grid Width="420">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Image Grid.Column="1"
-                                   Width="122"
-                                   Height="150"
-                                   HorizontalAlignment="Center"
-                                   VerticalAlignment="Center"
-                                   Source="{Binding ImageUrl}" />
-                            <TextBlock Text="{Binding Name}"
-                                       Grid.Column="0"
-                                       FontSize="56"
-                                       VerticalAlignment="Center"
-                                       Foreground="{StaticResource BoyScoutBlue}" />
-                        </Grid>
-                    </DataTemplate>
-                </cc:ScoutRankDataTemplateSelector.Even>
-            </cc:ScoutRankDataTemplateSelector>
         </DataTemplate>
 
         <!-- Panorama Templates -->
