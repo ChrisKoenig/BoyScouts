@@ -37,68 +37,17 @@ namespace BoyScouts.ViewModels
                         };
                         this.MeritBadges.Add(mb);
                     }
-                    MeritBadgesByFirstLetter =
-                        from badge in MeritBadges
-                        group badge by badge.Key into b
-                        orderby b.Key
-                        select new Group<MeritBadge>(b.Key, b);
+                    MeritBadgesByFirstLetter = from badge in MeritBadges
+                                               group badge by badge.Key into b
+                                               orderby b.Key
+                                               select new Group<MeritBadge>(b.Key, b);
                 });
             }
         }
 
-        #region ShowImagesInList property
-
-        private bool _showImagesInList = true;
-
-        public bool ShowImagesInList
-        {
-            get
-            {
-                return _showImagesInList;
-            }
-
-            set
-            {
-                if (_showImagesInList == value)
-                {
-                    return;
-                }
-                _showImagesInList = value;
-                RaisePropertyChanged(() => this.ShowImagesInList);
-                MeritBadgeImageVisibility = value ? Visibility.Visible : Visibility.Collapsed;
-            }
-        }
-
-        #endregion ShowImagesInList property
-
-        #region MeritBadgeImageVisibility
-
-        private Visibility _mbiv = Visibility.Visible;
-
-        public Visibility MeritBadgeImageVisibility
-        {
-            get
-            {
-                return _mbiv;
-            }
-
-            set
-            {
-                if (_mbiv == value)
-                {
-                    return;
-                }
-
-                var oldValue = _mbiv;
-                _mbiv = value;
-                RaisePropertyChanged(() => this.MeritBadgeImageVisibility);
-            }
-        }
-
-        #endregion MeritBadgeImageVisibility
-
         #region MeritBadgesByFirstLetter
 
+        [JsonIgnore]
         private IEnumerable<Group<MeritBadge>> _mbbfl = null;
 
         [JsonIgnore]

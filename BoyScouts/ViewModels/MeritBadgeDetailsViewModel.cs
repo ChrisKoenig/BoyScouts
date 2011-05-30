@@ -2,6 +2,7 @@
 using BoyScouts.Messages;
 using BoyScouts.Models;
 using GalaSoft.MvvmLight;
+using Newtonsoft.Json;
 
 namespace BoyScouts.ViewModels
 {
@@ -20,6 +21,7 @@ namespace BoyScouts.ViewModels
             }
         }
 
+        [JsonIgnore]
         public SolidColorBrush MeritBadgeBorderColor
         {
             get

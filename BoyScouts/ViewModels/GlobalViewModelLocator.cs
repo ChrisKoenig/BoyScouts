@@ -263,9 +263,9 @@ namespace BoyScouts.ViewModels
 
         public void SaveState()
         {
-            SaveObject<MainViewModel>("MainViewModel", this.MainViewModel);
-            SaveObject<RankDetailsViewModel>("RankDetailsViewModel", this.RankDetailsViewModel);
             SaveObject<MeritBadgeDetailsViewModel>("MeritBadgeDetailsViewModel", this.MeritBadgeDetailsViewModel);
+            SaveObject<RankDetailsViewModel>("RankDetailsViewModel", this.RankDetailsViewModel);
+            SaveObject<MainViewModel>("MainViewModel", this.MainViewModel);
         }
 
         private void SaveObject<T>(string Key, T ViewModel)
