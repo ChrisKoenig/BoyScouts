@@ -37,13 +37,55 @@ namespace BoyScouts.ViewModels
                         };
                         this.MeritBadges.Add(mb);
                     }
-                    MeritBadgesByFirstLetter = from badge in MeritBadges
-                                               group badge by badge.Key into b
-                                               orderby b.Key
-                                               select new Group<MeritBadge>(b.Key, b);
+                    SetMeritBadgesByFirstLetter();
                 });
             }
         }
+
+        private void SetMeritBadgesByFirstLetter()
+        {
+            if (ShowEagleOnly)
+            {
+                MeritBadgesByFirstLetter = from badge in MeritBadges
+                                           where badge.IsEagleRequired == true
+                                           group badge by badge.Key into b
+                                           orderby b.Key
+                                           select new Group<MeritBadge>(b.Key, b);
+            }
+            else
+            {
+                MeritBadgesByFirstLetter = from badge in MeritBadges
+                                           group badge by badge.Key into b
+                                           orderby b.Key
+                                           select new Group<MeritBadge>(b.Key, b);
+            }
+        }
+
+        #region ShowEagleOnly property
+
+        private bool _showEagleOnly = false;
+
+        public bool ShowEagleOnly
+        {
+            get
+            {
+                return _showEagleOnly;
+            }
+
+            set
+            {
+                if (_showEagleOnly == value)
+                {
+                    return;
+                }
+
+                _showEagleOnly = value;
+                RaisePropertyChanged(() => this.ShowEagleOnly);
+                SetMeritBadgesByFirstLetter();
+            }
+        }
+
+        #endregion ShowEagleOnly property
 
         #region MeritBadgesByFirstLetter
 

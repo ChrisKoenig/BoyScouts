@@ -90,7 +90,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\DataTemplateSelector.cs" />
     <Compile Include="Models\FAQ.cs" />
     <Compile Include="Helpers\WebBrowserHelper.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -111,6 +110,7 @@
       <DependentUpon>RankDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Group.cs" />
+    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
     <Compile Include="ViewModels\GroupingLayer.cs" />
     <Compile Include="ViewModels\LinksViewModel.cs" />
     <Compile Include="Models\MeritBadge.cs" />
@@ -124,7 +124,6 @@
     <Compile Include="ViewModels\MeritBadgesViewModel.cs" />
     <Compile Include="ViewModels\RankDetailsViewModel.cs" />
     <Compile Include="ViewModels\ScoutLawViewModel.cs" />
-    <Compile Include="Controls\ScoutRankDataTemplateSelector.cs" />
     <Compile Include="ViewModels\ScoutRanksViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -160,6 +159,27 @@
     <Content Include="Data\Links.xml" />
     <Content Include="Data\MeritBadgeFAQ.xml" />
     <Content Include="Data\ScoutRanks.xml" />
+    <Content Include="Images\Contents\OutdoorCode.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Contents\Ranks.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Contents\Links.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Contents\MeritBadges.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Contents\ScoutLaw.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Contents\ScoutOath.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EagleRequired.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\MeritBadges\AART.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

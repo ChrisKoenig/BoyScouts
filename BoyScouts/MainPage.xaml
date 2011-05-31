@@ -10,7 +10,7 @@
                             xmlns:ad="clr-namespace:Microsoft.Advertising.Mobile.UI;assembly=Microsoft.Advertising.Mobile.UI"
                             xmlns:Custom="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
                             xmlns:ic="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
-                            xmlns:delay="clr-namespace:Delay;assembly=PhonePerformance"
+                            xmlns:vc="clr-namespace:BoyScouts.ValueConverters"
                             x:Class="BoyScouts.MainPage"
                             mc:Ignorable="d"
                             d:DesignWidth="480"
@@ -21,6 +21,9 @@
                             shell:SystemTray.IsVisible="False"
                             d:DataContext="{d:DesignData /SampleData/MainViewModelSampleData.xaml}">
     <phone:PhoneApplicationPage.Resources>
+
+        <!-- IValueConverter classes -->
+        <vc:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
 
         <!-- Contents ItemsPanel Templates -->
         <ItemsPanelTemplate x:Key="ContentsItemsPanelTemplate">
@@ -36,25 +39,23 @@
                         <Grid Width="173"
                               Height="173"
                               Margin="12"
-                              Background="{StaticResource BoyScoutRed}">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.775*" />
-                                <RowDefinition Height="0.225*" />
-                            </Grid.RowDefinitions>
+                              Background="{StaticResource BoyScoutGreen}">
                             <Image x:Name="DisplayImage"
-                                   Margin="0"
-                                   Width="99"
-                                   Height="99"
+                                   Margin="0,20,0,0"
+                                   Width="110"
+                                   Height="110"
                                    Source="{Binding ImagePath}"
                                    HorizontalAlignment="Center"
-                                   VerticalAlignment="Center" />
+                                   VerticalAlignment="Top" />
                             <TextBlock x:Name="DisplayTextBlock"
                                        TextWrapping="NoWrap"
                                        Margin="15,0,0,10"
                                        FontSize="20"
                                        Text="{Binding Title}"
-                                       VerticalAlignment="Center"
-                                       Grid.Row="1" />
+                                       TextAlignment="Left"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Bottom"
+                                       Grid.Row="0" />
                         </Grid>
                     </ControlTemplate>
                 </Button.Template>
@@ -75,20 +76,20 @@
             <Grid Margin="{StaticResource PhoneTouchTargetOverhang}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition />
                 </Grid.ColumnDefinitions>
-                <!--<Image delay:LowProfileImageLoader.UriSource="{Binding ImageUrl}"
-                       Width="35"
-                       Visibility="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=MeritBadgeImageVisibility}"
-                       Margin="8" />-->
+                <Image Source="/Images/EagleRequired.png"
+                       Grid.Column="0"
+                       Width="64"
+                       Visibility="{Binding IsEagleRequired,Converter={StaticResource BoolToVisibilityConverter}}" />
                 <TextBlock Grid.Column="1"
                            Text="{Binding Name}"
-                           Margin="12,-12,12,6"
+                           Margin="12,0,0,4"
                            FontFamily="Segoe WP Semibold"
                            FontSize="36"
                            TextWrapping="Wrap"
                            VerticalAlignment="Center"
-                           Foreground="{StaticResource BoyScoutBlue}" />
+                           Foreground="{StaticResource BoyScoutGreen}" />
             </Grid>
         </DataTemplate>
 
@@ -112,7 +113,7 @@
                     Margin="{StaticResource PhoneTouchTargetOverhang}"
                     Padding="{StaticResource PhoneTouchTargetOverhang}"
                     Background="{StaticResource BoyScoutRed}">
-                <TextBlock Text="{Binding Key}"
+                <TextBlock Text="{Binding Title}"
                            FontFamily="{StaticResource PhoneFontFamilySemiBold}"
                            FontSize="36"
                            Foreground="White"
@@ -186,7 +187,7 @@
             </Grid>
         </DataTemplate>
 
-        <Style x:Key="HyperlinkButtonStyle1"
+        <Style x:Key="LinksButtonStyle"
                TargetType="HyperlinkButton">
             <Setter Property="Foreground"
                     Value="{StaticResource PhoneForegroundBrush}" />
@@ -243,11 +244,12 @@
             <StackPanel HorizontalAlignment="Left">
                 <HyperlinkButton Content="{Binding Title}"
                                  NavigateUri="{Binding Url}"
-                                 Foreground="{StaticResource BoyScoutBlue}"
+                                 TargetName="_blank"
+                                 Foreground="{StaticResource BoyScoutGreen}"
                                  Margin="10"
                                  FontFamily="Segoe WP Semibold"
                                  HorizontalAlignment="Left"
-                                 Style="{StaticResource HyperlinkButtonStyle1}" />
+                                 Style="{StaticResource LinksButtonStyle}" />
             </StackPanel>
         </DataTemplate>
 
@@ -263,6 +265,7 @@
                        Title="Boy Scouts of America"
                        HeaderTemplate="{StaticResource PanoramaHeaderTemplate}"
                        TitleTemplate="{StaticResource PanoramaTitleTemplate}">
+
         <controls:Panorama.Background>
             <ImageBrush ImageSource="/Images/background.jpg"
                         Stretch="UniformToFill" />
@@ -298,7 +301,7 @@
                 <ScrollViewer Grid.Row="1">
                     <ItemsControl ItemsSource="{Binding Laws}"
                                   ItemTemplate="{StaticResource ScoutLawDataTemplate}"
-                                  Foreground="{StaticResource BoyScoutRed}" />
+                                  Foreground="{StaticResource BoyScoutGreen}" />
                 </ScrollViewer>
             </Grid>
         </controls:PanoramaItem>
@@ -313,19 +316,19 @@
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="On my honor, I will do my best" /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="On my honor, I will do my best" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To do my duty to God and my country" /></TextBlock>
-                    <TextBlock FontSize="24"
-                               Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="and to obey the Scout Law;" /></TextBlock>
-                    <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To help other people at all times;" /></TextBlock>
-                    <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="To keep myself physically strong," /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="To do my duty to God and my country" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,0,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="mentally awake and morally straight." /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="and to obey the Scout Law;" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="To help other people at all times;" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="To keep myself physically strong," /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,0,0,0"
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="mentally awake and morally straight." /></TextBlock>
                 </StackPanel>
                 <Image Source="/Images/ScoutOath.jpg"
                        Grid.Row="1"
@@ -343,21 +346,21 @@
                 </Grid.RowDefinitions>
                 <StackPanel>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="As an American, I will do my best to -" /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="As an American, I will do my best to -" /></TextBlock>
                     <TextBlock FontSize="24"
-                               Foreground="{StaticResource BoyScoutRed}" />
-                    <TextBlock FontSize="24"
-                               Margin="25,10,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be clean in my outdoor manners" /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}" />
                     <TextBlock FontSize="24"
                                Margin="25,10,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be careful with fire" /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="• Be clean in my outdoor manners" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,10,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be considerate in the outdoors, and" /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="• Be careful with fire" /></TextBlock>
                     <TextBlock FontSize="24"
                                Margin="25,10,0,0"
-                               Foreground="{StaticResource BoyScoutRed}"><Run Text="• Be conservation minded." /></TextBlock>
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="• Be considerate in the outdoors, and" /></TextBlock>
+                    <TextBlock FontSize="24"
+                               Margin="25,10,0,0"
+                               Foreground="{StaticResource BoyScoutGreen}"><Run Text="• Be conservation minded." /></TextBlock>
                 </StackPanel>
                 <Image Source="/Images/OutdoorCode.jpg"
                        Margin="10,0,20,10"
@@ -398,6 +401,7 @@
 
                 <toolkit:LongListSelector x:Name="MeritBadgeList"
                                           BufferSize="4"
+                                          Foreground="{StaticResource BoyScoutGreen}"
                                           SelectedItem="{Binding SelectedMeritBadge, Mode=TwoWay}"
                                           ItemsSource="{Binding MeritBadgesByFirstLetter}"
                                           ItemTemplate="{StaticResource MeritBadgeListItemTemplate}"
@@ -411,9 +415,10 @@
                     </Custom:Interaction.Triggers>
                 </toolkit:LongListSelector>
 
-                <!--<CheckBox IsChecked="{Binding Mode=TwoWay, Path=ShowImagesInList}"
+                <CheckBox x:Name="EagleMeritBadgesOnlyCheckbox"
                           Grid.Row="1"
-                          Content="Show images in list" />-->
+                          IsChecked="{Binding ShowEagleOnly, Mode=TwoWay}"
+                          Content="Show Eagle-required MBs only" />
 
             </Grid>
         </controls:PanoramaItem>
@@ -428,7 +433,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <ListBox ItemsSource="{Binding Links}"
-                         Foreground="{StaticResource BoyScoutBlue}"
+                         Foreground="{StaticResource BoyScoutGreen}"
                          ItemTemplate="{StaticResource LinkTemplate}" />
                 <ad:AdControl ApplicationId="test_client"
                               VerticalAlignment="Bottom"
