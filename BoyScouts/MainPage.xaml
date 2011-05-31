@@ -435,11 +435,11 @@
                 <ListBox ItemsSource="{Binding Links}"
                          Foreground="{StaticResource BoyScoutGreen}"
                          ItemTemplate="{StaticResource LinkTemplate}" />
-                <ad:AdControl ApplicationId="test_client"
+                <ad:AdControl ApplicationId="a6c3c12a-da93-4b7d-ad21-756ea0216f0a"
+                              AdUnitId="10018823"
                               VerticalAlignment="Bottom"
                               Width="300"
                               Height="50"
-                              AdUnitId="Image300_50"
                               Margin="0,15"
                               Grid.Row="1" />
             </Grid>
